@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FFF9F5">
+<meta name="robots" content="noindex, nofollow">
+<title>相談管理 💌 | つなぐの庭 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#F4A6B8;--primary-deep:#E07B96;--primary-soft:#FCE8F0;
+    --secondary:#A8D8B9;--secondary-deep:#5a8a6e;--secondary-soft:#E8F4ED;
+    --accent:#FFE5B4;--lavender:#D4C5E2;
+    --bg:#FFF9F5;--bg-soft:#FCEEE6;--surface:#FFFFFF;
+    --text:#3D342B;--text-mid:#6B5D52;--text-soft:#9B8C7F;
+    --line:rgba(61,52,43,.08);--line-strong:rgba(61,52,43,.14);
+    --shadow-sm:0 2px 8px rgba(61,52,43,.05);
+    --shadow-md:0 8px 24px rgba(61,52,43,.08);
+    --radius-sm:12px;--radius-md:18px;--radius-lg:24px;
+    --safe-bottom:env(safe-area-inset-bottom);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:'Zen Maru Gothic',sans-serif;font-size:16px;color:var(--text);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased;min-height:100vh}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 20% 30%,rgba(168,216,185,.12),transparent 45%),radial-gradient(circle at 80% 70%,rgba(244,166,184,.10),transparent 40%),var(--bg)}
+
+  header{position:sticky;top:0;z-index:100;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:rgba(255,249,245,.9);border-bottom:1px solid var(--line)}
+  .nav{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Shippori Mincho',serif;font-weight:700;font-size:1.05rem;color:var(--text);text-decoration:none}
+  .brand-mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(244,166,184,.4)}
+  .admin-badge{font-size:.68rem;background:var(--text);color:#fff;padding:2px 8px;border-radius:6px;font-weight:700;letter-spacing:.05em}
+  .nav-actions{display:flex;gap:8px;align-items:center}
+  .nav-tabs{display:flex;gap:4px;background:var(--bg-soft);padding:4px;border-radius:12px}
+  .nav-tab{padding:8px 16px;border-radius:8px;text-decoration:none;color:var(--text-mid);font-size:.85rem;font-weight:700;transition:all .2s;min-height:36px;display:inline-flex;align-items:center}
+  .nav-tab.active{background:#fff;color:var(--primary-deep);box-shadow:var(--shadow-sm)}
+  .nav-tab:hover:not(.active){color:var(--text)}
+  .btn-logout{background:transparent;border:1px solid var(--line-strong);padding:8px 16px;border-radius:999px;font-family:inherit;font-size:.82rem;font-weight:600;color:var(--text-mid);cursor:pointer;min-height:40px;transition:all .2s}
+  .btn-logout:hover{border-color:var(--primary);color:var(--primary-deep)}
+  @media(max-width:768px){.nav-tabs{display:none}.brand span:not(.admin-badge){display:none}}
+
+  .mobile-tabs{display:none;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:62px;z-index:99}
+  .mobile-tabs::-webkit-scrollbar{display:none}
+  .mobile-tabs-inner{display:flex;padding:8px 16px;gap:4px;min-width:max-content}
+  .mobile-tab{padding:10px 16px;border-radius:10px;text-decoration:none;color:var(--text-mid);font-size:.85rem;font-weight:700;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center;gap:6px}
+  .mobile-tab.active{background:var(--primary);color:#fff}
+  @media(max-width:768px){.mobile-tabs{display:block}}
+
+  main{max-width:1200px;margin:0 auto;padding:32px 20px 60px}
+  @media(max-width:768px){main{padding:24px 16px 60px}}
+
+  .page-head{margin-bottom:24px}
+  .page-head h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:700;margin-bottom:6px;line-height:1.4}
+  .page-head p{color:var(--text-mid);font-size:.9rem}
+
+  /* === ダッシュボード統計 === */
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+  @media(max-width:768px){.stats-row{grid-template-columns:repeat(2,1fr)}}
+  .stat-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:18px 20px;box-shadow:var(--shadow-sm)}
+  .stat-box .stat-label{font-size:.78rem;color:var(--text-soft);font-weight:600;margin-bottom:8px}
+  .stat-box .stat-value{font-family:'Shippori Mincho',serif;font-size:1.7rem;font-weight:700;color:var(--text);line-height:1}
+  .stat-box .stat-trend{font-size:.74rem;color:var(--secondary-deep);margin-top:6px;font-weight:600}
+  .stat-box.warn .stat-value{color:var(--primary-deep)}
+  .stat-box.warn .stat-trend{color:var(--primary-deep)}
+
+  /* フィルター */
+  .filter-bar{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+  .filter-tabs{display:flex;gap:4px;background:var(--bg-soft);padding:4px;border-radius:12px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+  .filter-tabs::-webkit-scrollbar{display:none}
+  .filter-tab{padding:9px 16px;border:none;background:transparent;border-radius:8px;font-family:inherit;font-size:.85rem;font-weight:700;color:var(--text-mid);cursor:pointer;transition:all .2s;white-space:nowrap;min-height:40px}
+  .filter-tab.active{background:#fff;color:var(--primary-deep);box-shadow:var(--shadow-sm)}
+  .filter-tab .count{font-size:.7rem;background:var(--primary-soft);color:var(--primary-deep);padding:1px 7px;border-radius:999px;margin-left:6px;font-weight:700}
+  .filter-tab.active .count{background:var(--primary);color:#fff}
+
+  /* 相談リスト */
+  .qa-list{display:flex;flex-direction:column;gap:14px}
+  .qa-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:22px;box-shadow:var(--shadow-sm);transition:all .2s}
+  .qa-card:hover{box-shadow:var(--shadow-md)}
+  .qa-card.pending{border-left:4px solid var(--accent)}
+  .qa-card.answered{border-left:4px solid var(--secondary)}
+
+  .qa-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;font-size:.78rem;color:var(--text-soft)}
+  .qa-meta-left{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .qa-cat{display:inline-block;font-size:.72rem;font-weight:700;color:var(--primary-deep);background:var(--primary-soft);padding:3px 10px;border-radius:6px}
+  .qa-status{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:6px}
+  .qa-status.pending{background:var(--accent);color:#8a6d2e}
+  .qa-status.answered{background:var(--secondary-soft);color:var(--secondary-deep)}
+
+  .qa-q-title{font-weight:700;font-size:1.05rem;line-height:1.6;margin-bottom:8px;color:var(--text)}
+  .qa-q-body{font-size:.92rem;color:var(--text-mid);line-height:1.85;margin-bottom:16px;white-space:pre-wrap}
+
+  .qa-answer{background:var(--bg-soft);border-radius:var(--radius-sm);padding:16px 18px;margin-top:14px;border-left:3px solid var(--primary)}
+  .qa-answer-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:.82rem;font-weight:700;color:var(--primary-deep)}
+  .qa-answer-text{font-size:.9rem;line-height:1.85;color:var(--text);white-space:pre-wrap}
+
+  .qa-actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+  .btn-action{
+    background:#fff;border:1px solid var(--line-strong);padding:8px 14px;border-radius:999px;
+    font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;color:var(--text);
+    transition:all .2s;min-height:38px;display:inline-flex;align-items:center;gap:5px;
+  }
+  .btn-action:hover{border-color:var(--primary);color:var(--primary-deep);background:var(--primary-soft)}
+  .btn-action.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+  .btn-action.primary:hover{background:var(--primary-deep);color:#fff}
+  .btn-action.danger{color:#A85555}
+  .btn-action.danger:hover{border-color:#A85555;background:#FFF0F0;color:#A85555}
+
+  /* 返信モーダル */
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;opacity:0;pointer-events:none;transition:opacity .25s;display:flex;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.open{opacity:1;pointer-events:auto}
+  .modal{background:#fff;border-radius:var(--radius-lg);max-width:640px;width:100%;max-height:90vh;overflow:auto;padding:28px;transform:scale(.95);transition:transform .25s;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+  @media(max-width:600px){.modal{padding:22px;border-radius:var(--radius-md)}}
+  .modal-overlay.open .modal{transform:scale(1)}
+  .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .modal-head h3{font-family:'Shippori Mincho',serif;font-size:1.2rem}
+  .modal-close{background:transparent;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.4rem;color:var(--text-mid)}
+  .modal-close:hover{background:var(--bg-soft);color:var(--text)}
+
+  .modal-q{background:var(--bg-soft);padding:14px 18px;border-radius:var(--radius-sm);margin-bottom:18px;font-size:.9rem;color:var(--text-mid);line-height:1.8}
+
+  .modal-textarea{width:100%;min-height:180px;padding:14px 16px;border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);font-family:inherit;font-size:16px;line-height:1.85;color:var(--text);background:var(--bg);resize:vertical}
+  .modal-textarea:focus{outline:none;border-color:var(--primary)}
+
+  .ai-suggest{margin-top:14px;padding:14px 16px;background:var(--secondary-soft);border-radius:var(--radius-sm);border:1px dashed rgba(168,216,185,.5)}
+  .ai-suggest-head{font-size:.82rem;font-weight:700;color:var(--secondary-deep);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .ai-suggest-text{font-size:.88rem;color:var(--text);line-height:1.85;font-family:'Shippori Mincho',serif}
+  .ai-suggest-actions{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+  .btn-mini{padding:6px 12px;border:1px solid var(--line-strong);background:#fff;border-radius:999px;font-family:inherit;font-size:.78rem;font-weight:600;cursor:pointer;color:var(--text);min-height:34px;display:inline-flex;align-items:center;gap:4px}
+  .btn-mini:hover{border-color:var(--secondary-deep);color:var(--secondary-deep)}
+
+  .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px;flex-wrap:wrap}
+  @media(max-width:520px){.modal-actions{flex-direction:column-reverse}.modal-actions button{width:100%;justify-content:center}}
+  .btn-modal{padding:12px 24px;border:none;border-radius:999px;font-family:inherit;font-size:.92rem;font-weight:700;cursor:pointer;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+  .btn-modal.primary{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(244,166,184,.45)}
+  .btn-modal.primary:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(244,166,184,.6)}
+  .btn-modal.secondary{background:var(--bg-soft);color:var(--text)}
+  .btn-modal.secondary:hover{background:var(--line)}
+
+  /* ページング */
+  .pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:28px;flex-wrap:wrap}
+  .page-btn{min-width:44px;min-height:44px;background:#fff;border:1px solid var(--line-strong);border-radius:12px;font-family:inherit;font-size:.92rem;font-weight:600;color:var(--text);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;padding:0 14px}
+  .page-btn:hover:not(:disabled){border-color:var(--primary);color:var(--primary-deep)}
+  .page-btn:disabled{opacity:.4;cursor:not-allowed}
+  .page-info{font-size:.85rem;color:var(--text-mid);padding:0 12px}
+
+  /* トースト */
+  .toast{position:fixed;bottom:calc(20px + var(--safe-bottom));left:50%;transform:translateX(-50%) translateY(120px);background:var(--text);color:#fff;padding:14px 24px;border-radius:999px;font-size:.88rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .35s;z-index:300;max-width:calc(100vw - 40px)}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+
+  .empty-state{text-align:center;padding:60px 20px;color:var(--text-soft)}
+  .empty-state-emoji{font-size:48px;margin-bottom:14px;opacity:.5}
+
+  :focus-visible{outline:2px solid var(--primary-deep);outline-offset:2px;border-radius:6px}
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="writing.html" class="brand">
+      <div class="brand-mark" aria-hidden="true">🌸</div>
+      <span>つなぐの庭</span>
+      <span class="admin-badge">管理</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-tabs">
+        <a href="writing.html" class="nav-tab">✍️ ライティング</a>
+        <a href="consult.html" class="nav-tab active">💌 相談管理</a>
+      </div>
+      <button class="btn-logout" onclick="logout()">🚪 ログアウト</button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-tabs">
+  <div class="mobile-tabs-inner">
+    <a href="writing.html" class="mobile-tab">✍️ ライティング</a>
+    <a href="consult.html" class="mobile-tab active">💌 相談管理</a>
+  </div>
+</div>
+
+<main>
+  <div class="page-head">
+    <h1>💌 相談管理</h1>
+    <p>会員さんから届いた相談に、HIROMIさんの言葉で返事を書く場所です</p>
+  </div>
+
+  <!-- 統計 -->
+  <div class="stats-row">
+    <div class="stat-box warn">
+      <div class="stat-label">⏳ 未返信</div>
+      <div class="stat-value" id="statPending">4</div>
+      <div class="stat-trend">↑ 今日2件</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">✅ 返信済み</div>
+      <div class="stat-value" id="statAnswered">12</div>
+      <div class="stat-trend">今週 +5件</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">🌸 受信総数</div>
+      <div class="stat-value">16</div>
+      <div class="stat-trend">今月のたね</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-label">💝 平均応答時間</div>
+      <div class="stat-value">2.1<span style="font-size:1rem">日</span></div>
+      <div class="stat-trend">先週より −0.5日</div>
+    </div>
+  </div>
+
+  <!-- フィルター -->
+  <div class="filter-bar">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">すべて <span class="count" id="cntAll">16</span></button>
+      <button class="filter-tab" data-filter="pending">⏳ 未返信 <span class="count" id="cntPending">4</span></button>
+      <button class="filter-tab" data-filter="answered">✅ 返信済み <span class="count" id="cntAnswered">12</span></button>
+    </div>
+  </div>
+
+  <!-- 相談リスト -->
+  <div class="qa-list" id="qaList"></div>
+
+  <div class="pagination" id="pagination"></div>
+</main>
+
+<!-- 返信モーダル -->
+<div class="modal-overlay" id="replyModal">
+  <div class="modal" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <h3 id="modalTitle">💌 返事を書く</h3>
+      <button class="modal-close" onclick="closeModal()" aria-label="閉じる">×</button>
+    </div>
+    <div class="modal-q" id="modalQ"></div>
+    <textarea class="modal-textarea" id="modalReply" placeholder="あなたの言葉で、やさしく返事を書いてください 🌷"></textarea>
+
+    <div class="ai-suggest">
+      <div class="ai-suggest-head">
+        <span>🌱 AIによる下書き提案(HIROMI文体)</span>
+        <button class="btn-mini" onclick="regenerateAI()">🔄 別案</button>
+      </div>
+      <div class="ai-suggest-text" id="aiSuggestText"></div>
+      <div class="ai-suggest-actions">
+        <button class="btn-mini" onclick="useAISuggest()">📝 この下書きを使う</button>
+        <button class="btn-mini" onclick="appendAISuggest()">➕ 末尾に追加</button>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-modal secondary" onclick="closeModal()">キャンセル</button>
+      <button class="btn-modal primary" onclick="submitReply()">🌸 返事を届ける</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">🌸 返事を届けました</div>
+
+<script>
+  // セッションチェック
+  if(sessionStorage.getItem('admin_session') !== 'authorized'){
+    window.location.href = 'login.html';
+  }
+  const loginTime = parseInt(sessionStorage.getItem('admin_login_time') || '0');
+  if(Date.now() - loginTime > 30 * 60 * 1000){
+    sessionStorage.clear();
+    window.location.href = 'login.html';
+  }
+  function logout(){
+    if(confirm('ログアウトしますか？')){
+      sessionStorage.clear();
+      window.location.href = 'login.html';
+    }
+  }
+
+  // === ダミーデータ ===
+  const consultations = [
+    {id:1, status:'pending', cat:'こころ', user:'えにしさん', date:'1日前',
+     title:'朝起きるのが、最近すごく辛いです',
+     body:'毎朝、布団から出るのに15分もかかります。"今日もがんばらなきゃ" と思うほど、体が重くて。HIROMIさんはどうやって朝を迎えていますか？'},
+    {id:2, status:'pending', cat:'こころ', user:'そらさん', date:'2日前',
+     title:'SNSを開くたびに、人と比べて疲れます',
+     body:'他の人の活躍を見ると、つい自分と比べてしまって…。少し距離を置いたほうがいいのでしょうか？'},
+    {id:3, status:'pending', cat:'くらし', user:'みかんさん', date:'2日前',
+     title:'日々の "ありがとう" を、なかなか口に出せません',
+     body:'感謝はしてるのに、照れくさくて家族にも友達にも言えなくて。HIROMIさんはどうしてますか？'},
+    {id:4, status:'pending', cat:'創作', user:'ことりさん', date:'3日前',
+     title:'noteを始めたいけど、何を書けばいいか分からない',
+     body:'HIROMIさんみたいに、優しい言葉を綴ってみたいです。最初の一歩、何から始めましたか？'},
+    {id:5, status:'answered', cat:'創作', user:'あおさん', date:'5日前',
+     title:'AI創作を始めたいけど、何から手をつければいいか分かりません',
+     body:'HIROMIさんの作品が好きで、私も挑戦してみたいです。ただ、ツールが多すぎて迷子になっています…。',
+     answer:'うれしいです、ありがとうございます 🌷\n最初は "全部を覚えよう" としないことが大事だと思います。\n私も最初は、ひとつのツールで小さな絵を1枚作る、それだけから始めました。\nあおさんが好きなものは何ですか？それを1分の動画にする、くらいのところからゆっくり ✨'},
+    {id:6, status:'answered', cat:'こころ', user:'みなみさん', date:'1週間前',
+     title:'がんばっても評価されない時、どうしてますか',
+     body:'仕事で頑張っているのに、なかなか認めてもらえません。心が折れそうです。',
+     answer:'わかります、その気持ち 🌷\n評価って、外から来るものだけじゃないと思っています。\n今日、誰かのために動いた自分。途中でやめなかった自分。\nそれを一日の終わりに "ありがとう" と言ってあげることから始めてみてください 🌱'},
+    {id:7, status:'answered', cat:'家族', user:'はるさん', date:'1週間前',
+     title:'親孝行って、何をすればいいんでしょう',
+     body:'親に何かしてあげたいけど、何が喜ばれるか分からなくて。',
+     answer:'特別なことじゃなくていいんですよ 🌸\n"元気でいるよ" の連絡を、少し頻度を上げる。\nそれだけでも、親御さんにとっては大きな贈り物だと思います。'},
+    {id:8, status:'answered', cat:'くらし', user:'ゆめさん', date:'10日前',
+     title:'忙しすぎて、自分の時間がありません',
+     body:'仕事と家事に追われて、自分のための時間が1分もないです。',
+     answer:'お疲れさまです 🌷\n"5分の朝コーヒー" だけでも、自分のための聖域を作ってみてください。\n短くてもいい、自分だけの時間があることが、心の余白になります ☕'}
+  ];
+
+  // === AI返信下書き(本番はPython+テンプレートで生成) ===
+  const aiReplyTemplates = {
+    'こころ':[
+      'わかります、その気持ち 🌷\n誰にも見えない部分でがんばっているあなたを、私は知っています。\n今日も布団から出られただけで、もう充分です。\nゆっくり、あなたのペースで大丈夫ですよ 🌱',
+      'お疲れさまです、そんな夜もありますよね 🌙\n"がんばらなきゃ" を一度脇に置いて、温かい飲み物でひといき。\n明日のあなたへ、今日のあなたから "おやすみ" を 🌸',
+      '読みながら、私自身も同じことを思い出していました。\n比べないって、本当に難しいですよね。\nでも、隣の誰かじゃなく、昨日の自分と並んでみてください。\nきっと、ちゃんと進んでいます 🌷'
+    ],
+    'くらし':[
+      'うれしい質問、ありがとうございます 🌸\n私が大切にしているのは、朝の5分だけは "誰のためでもない時間" にすること。\n温かい飲み物と窓辺の光、それだけで一日が少しやさしくなります ☕',
+      '日々の小さな所作って、不思議と心を整えてくれますよね。\n完璧にやろうとせず、"今日できた一つ" を夜に思い出してみてください。\nそれが、丁寧な暮らしの種になります 🌱'
+    ],
+    '家族':[
+      '想いがあるって、もうそれだけで充分なんです 🌷\nうまく言葉にできなくても、行動の中にちゃんと滲んでいます。\n小さな "気にかけてる" のサインを、自分のペースで送ってみてください。',
+      'ご家族を想う気持ちが、文章から伝わってきました 🌸\n何か特別なことじゃなく、いつもの "おかえり" を少しだけ温度を上げて言ってみる。\nそれだけでも、相手にはちゃんと届きますよ。'
+    ],
+    'しごと':[
+      'お疲れさまです、本当に 🌷\n結果がすぐに見えない仕事ほど、自分で自分を認める力が大事になります。\n一日の終わりに "今日できた3つ" を書き出すこと、おすすめです 📝',
+      '評価って、外から来るものを待つと、いつまでも待ち続けてしまいますよね。\nまずは自分で自分に、小さな花丸をつけてあげてください 🌸\nそこから少しずつ、流れが変わっていきます。'
+    ],
+    '創作':[
+      'うれしいです、ありがとうございます 🌷\n最初の一歩は、いつも怖いですよね。\nでも "誰かに見せるため" じゃなくて、"自分のため" に書いてみる。\nそれが続けられる秘訣だと、私は思っています 🌱',
+      '創作の手が止まる時って、心が休みたがっているサインかもしれません 🌙\nそんな時は無理せず、好きな音楽を聴いたり散歩したり。\n余白が、次の言葉を運んできてくれます ✨'
+    ],
+    'その他':[
+      'メッセージ、ありがとうございます 🌷\nあなたの言葉、ゆっくり受け取りました。\n答えを急がず、一緒に考えていけたらと思います 🌸',
+      '声にしてくれて、ありがとうございます 🌱\nこのお返事が、少しでもあなたの心の温度を上げられたら嬉しいです。'
+    ]
+  };
+
+  // === 状態管理 ===
+  const PER_PAGE = 5;
+  let currentFilter = 'all';
+  let currentPage = 1;
+  let currentReplyId = null;
+
+  function updateCounts(){
+    const pending = consultations.filter(c=>c.status==='pending').length;
+    const answered = consultations.filter(c=>c.status==='answered').length;
+    document.getElementById('cntAll').textContent = consultations.length;
+    document.getElementById('cntPending').textContent = pending;
+    document.getElementById('cntAnswered').textContent = answered;
+    document.getElementById('statPending').textContent = pending;
+    document.getElementById('statAnswered').textContent = answered;
+  }
+
+  function getFilteredList(){
+    if(currentFilter === 'all') return consultations;
+    return consultations.filter(c=>c.status === currentFilter);
+  }
+
+  function renderList(){
+    const all = getFilteredList();
+    const totalPages = Math.ceil(all.length / PER_PAGE) || 1;
+    if(currentPage > totalPages) currentPage = 1;
+    const start = (currentPage - 1) * PER_PAGE;
+    const items = all.slice(start, start + PER_PAGE);
+    const list = document.getElementById('qaList');
+
+    if(items.length === 0){
+      list.innerHTML = `<div class="empty-state"><div class="empty-state-emoji">🌱</div><div>このカテゴリには相談がありません</div></div>`;
+    } else {
+      list.innerHTML = items.map(c=>`
+        <article class="qa-card ${c.status}">
+          <div class="qa-meta">
+            <div class="qa-meta-left">
+              <span class="qa-cat">${c.cat}</span>
+              <span class="qa-status ${c.status}">${c.status==='pending'?'⏳ 未返信':'✅ 返信済み'}</span>
+              <span>${c.user} · ${c.date}</span>
+            </div>
+          </div>
+          <h3 class="qa-q-title">${c.title}</h3>
+          <div class="qa-q-body">${c.body}</div>
+          ${c.answer ? `
+            <div class="qa-answer">
+              <div class="qa-answer-head">🌸 HIROMIの返事</div>
+              <div class="qa-answer-text">${c.answer}</div>
+            </div>` : ''}
+          <div class="qa-actions">
+            ${c.status === 'pending'
+              ? `<button class="btn-action primary" onclick="openReply(${c.id})">💌 返事を書く</button>
+                 <button class="btn-action" onclick="markAnswered(${c.id})">⏭ あとで</button>`
+              : `<button class="btn-action" onclick="openReply(${c.id})">✏️ 編集</button>`}
+            <button class="btn-action danger" onclick="deleteConsult(${c.id})">🗑 削除</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // ページング
+    const pag = document.getElementById('pagination');
+    if(totalPages <= 1){pag.innerHTML='';return}
+    pag.innerHTML = `
+      <button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''} aria-label="前へ">←</button>
+      <span class="page-info">${currentPage} / ${totalPages}</span>
+      <button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled':''} aria-label="次へ">→</button>
+    `;
+  }
+
+  function goPage(p){
+    currentPage = p;
+    renderList();
+    window.scrollTo({top:200, behavior:'smooth'});
+  }
+
+  document.querySelectorAll('.filter-tab').forEach(t=>{
+    t.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-tab').forEach(b=>b.classList.remove('active'));
+      t.classList.add('active');
+      currentFilter = t.dataset.filter;
+      currentPage = 1;
+      renderList();
+    });
+  });
+
+  // === 返信モーダル ===
+  function openReply(id){
+    const c = consultations.find(x=>x.id===id);
+    if(!c) return;
+    currentReplyId = id;
+    document.getElementById('modalQ').innerHTML = `
+      <strong style="display:block;margin-bottom:6px;color:var(--text);font-size:.95rem">📝 ${c.title}</strong>
+      ${c.body}
+    `;
+    document.getElementById('modalReply').value = c.answer || '';
+    generateAISuggest(c.cat);
+    document.getElementById('replyModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(){
+    document.getElementById('replyModal').classList.remove('open');
+    document.body.style.overflow = '';
+    currentReplyId = null;
+  }
+
+  function generateAISuggest(cat){
+    const templates = aiReplyTemplates[cat] || aiReplyTemplates['その他'];
+    const choice = templates[Math.floor(Math.random()*templates.length)];
+    document.getElementById('aiSuggestText').innerHTML = choice.replace(/\n/g,'<br>');
+    document.getElementById('aiSuggestText').dataset.raw = choice;
+  }
+
+  function regenerateAI(){
+    const c = consultations.find(x=>x.id===currentReplyId);
+    if(c) generateAISuggest(c.cat);
+  }
+
+  function useAISuggest(){
+    document.getElementById('modalReply').value = document.getElementById('aiSuggestText').dataset.raw;
+  }
+
+  function appendAISuggest(){
+    const ta = document.getElementById('modalReply');
+    const cur = ta.value.trim();
+    ta.value = (cur ? cur + '\n\n' : '') + document.getElementById('aiSuggestText').dataset.raw;
+  }
+
+  function submitReply(){
+    const text = document.getElementById('modalReply').value.trim();
+    if(!text){
+      showToast('🌷 返事を書いてくださいね');
+      return;
+    }
+    const c = consultations.find(x=>x.id===currentReplyId);
+    if(c){
+      c.answer = text;
+      c.status = 'answered';
+      updateCounts();
+      renderList();
+      closeModal();
+      showToast('🌸 返事を届けました');
+    }
+  }
+
+  function markAnswered(id){
+    const c = consultations.find(x=>x.id===id);
+    if(c && confirm('この相談を "保留" にしますか？')){
+      // デモ: 何もしない(本番は別ステータスを用意)
+      showToast('⏭ あとで対応リストに移しました');
+    }
+  }
+
+  function deleteConsult(id){
+    if(!confirm('この相談を削除しますか？\nこの操作は取り消せません。')) return;
+    const idx = consultations.findIndex(x=>x.id===id);
+    if(idx >= 0){
+      consultations.splice(idx,1);
+      updateCounts();
+      renderList();
+      showToast('🗑 削除しました');
+    }
+  }
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'), 2400);
+  }
+
+  // モーダル外クリックで閉じる
+  document.getElementById('replyModal').addEventListener('click',(e)=>{
+    if(e.target.id==='replyModal') closeModal();
+  });
+  // Escで閉じる
+  document.addEventListener('keydown',(e)=>{
+    if(e.key==='Escape' && document.getElementById('replyModal').classList.contains('open')) closeModal();
+  });
+
+  // 初期化
+  updateCounts();
+  renderList();
+</script>
+
+</body>
+</html>
