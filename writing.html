@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FFF9F5">
+<meta name="robots" content="noindex, nofollow">
+<title>AIライティング工房 🌸 | つなぐの庭 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#F4A6B8;--primary-deep:#E07B96;--primary-soft:#FCE8F0;
+    --secondary:#A8D8B9;--secondary-deep:#5a8a6e;--secondary-soft:#E8F4ED;
+    --accent:#FFE5B4;--lavender:#D4C5E2;
+    --bg:#FFF9F5;--bg-soft:#FCEEE6;--surface:#FFFFFF;
+    --text:#3D342B;--text-mid:#6B5D52;--text-soft:#9B8C7F;
+    --line:rgba(61,52,43,.08);--line-strong:rgba(61,52,43,.14);
+    --shadow-sm:0 2px 8px rgba(61,52,43,.05);
+    --shadow-md:0 8px 24px rgba(61,52,43,.08);
+    --radius-sm:12px;--radius-md:18px;--radius-lg:24px;
+    --safe-bottom:env(safe-area-inset-bottom);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:'Zen Maru Gothic',sans-serif;font-size:16px;color:var(--text);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased;min-height:100vh}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 15% 20%,rgba(244,166,184,.12),transparent 40%),radial-gradient(circle at 85% 70%,rgba(168,216,185,.10),transparent 45%),var(--bg)}
+
+  /* === 管理用ヘッダー === */
+  header{position:sticky;top:0;z-index:100;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:rgba(255,249,245,.9);border-bottom:1px solid var(--line)}
+  .nav{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Shippori Mincho',serif;font-weight:700;font-size:1.05rem;color:var(--text);text-decoration:none}
+  .brand-mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(244,166,184,.4)}
+  .admin-badge{font-size:.68rem;background:var(--text);color:#fff;padding:2px 8px;border-radius:6px;font-weight:700;letter-spacing:.05em}
+  .nav-actions{display:flex;gap:8px;align-items:center}
+  .nav-tabs{display:flex;gap:4px;background:var(--bg-soft);padding:4px;border-radius:12px}
+  .nav-tab{padding:8px 16px;border-radius:8px;text-decoration:none;color:var(--text-mid);font-size:.85rem;font-weight:700;transition:all .2s;min-height:36px;display:inline-flex;align-items:center}
+  .nav-tab.active{background:#fff;color:var(--primary-deep);box-shadow:var(--shadow-sm)}
+  .nav-tab:hover:not(.active){color:var(--text)}
+  .btn-logout{background:transparent;border:1px solid var(--line-strong);padding:8px 16px;border-radius:999px;font-family:inherit;font-size:.82rem;font-weight:600;color:var(--text-mid);cursor:pointer;min-height:40px;transition:all .2s}
+  .btn-logout:hover{border-color:var(--primary);color:var(--primary-deep)}
+
+  @media(max-width:768px){
+    .nav-tabs{display:none}
+    .brand span:not(.admin-badge){display:none}
+  }
+
+  /* タブ(モバイル用 横スクロール) */
+  .mobile-tabs{display:none;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:62px;z-index:99}
+  .mobile-tabs::-webkit-scrollbar{display:none}
+  .mobile-tabs-inner{display:flex;padding:8px 16px;gap:4px;min-width:max-content}
+  .mobile-tab{padding:10px 16px;border-radius:10px;text-decoration:none;color:var(--text-mid);font-size:.85rem;font-weight:700;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center;gap:6px}
+  .mobile-tab.active{background:var(--primary);color:#fff}
+  @media(max-width:768px){.mobile-tabs{display:block}}
+
+  /* === メイン === */
+  main{max-width:1200px;margin:0 auto;padding:32px 20px 60px}
+  @media(max-width:768px){main{padding:24px 16px 60px}}
+
+  .page-head{margin-bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .page-head-left h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:700;margin-bottom:6px;line-height:1.4}
+  .page-head-left p{color:var(--text-mid);font-size:.9rem}
+
+  /* === スタジオレイアウト === */
+  .studio{display:grid;grid-template-columns:260px 1fr;gap:20px}
+  @media(max-width:900px){.studio{grid-template-columns:1fr}}
+
+  /* サイドメニュー */
+  .menu{background:#fff;border-radius:var(--radius-md);padding:16px;border:1px solid var(--line);box-shadow:var(--shadow-sm);height:fit-content;position:sticky;top:78px}
+  @media(max-width:900px){.menu{position:static;padding:14px}}
+  .menu-label{font-size:.72rem;color:var(--text-soft);font-weight:700;letter-spacing:.12em;padding:8px 10px}
+  .menu-item{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:10px;cursor:pointer;transition:all .2s;border:none;background:transparent;width:100%;text-align:left;font-family:inherit;font-size:.9rem;color:var(--text);font-weight:600;margin-bottom:2px;min-height:48px}
+  .menu-item:hover{background:var(--bg-soft)}
+  .menu-item.active{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(244,166,184,.4)}
+  .menu-emoji{font-size:1.2rem;flex-shrink:0}
+
+  @media(max-width:900px){
+    .menu{display:flex;flex-wrap:wrap;gap:6px;padding:12px}
+    .menu-label{display:none}
+    .menu-item{flex:0 0 auto;margin-bottom:0;padding:10px 14px;min-height:44px;font-size:.85rem}
+  }
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+  @media(max-width:900px){.stats{display:none}}
+  .stat-card{background:var(--bg-soft);border-radius:10px;padding:12px 8px;text-align:center}
+  .stat-num{font-family:'Shippori Mincho',serif;font-size:1.2rem;font-weight:700;color:var(--primary-deep);line-height:1}
+  .stat-label{font-size:.68rem;color:var(--text-soft);margin-top:4px}
+
+  /* メインパネル */
+  .panel{background:#fff;border-radius:var(--radius-md);padding:28px;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+  @media(max-width:768px){.panel{padding:20px;border-radius:var(--radius-md)}}
+  .panel-head{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .panel-head h2{font-family:'Shippori Mincho',serif;font-size:1.35rem;margin-bottom:6px}
+  .panel-head p{color:var(--text-mid);font-size:.86rem;line-height:1.7}
+
+  .input-group{margin-bottom:16px}
+  .input-group label{display:block;font-size:.82rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+  .input-group input,.input-group textarea,.input-group select{
+    width:100%;padding:13px 16px;border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);
+    font-family:inherit;font-size:16px;color:var(--text);background:var(--bg);
+    transition:border-color .2s;resize:vertical;min-height:48px;
+  }
+  .input-group input:focus,.input-group textarea:focus,.input-group select:focus{outline:none;border-color:var(--primary)}
+  .input-group textarea{min-height:90px;line-height:1.7}
+  .input-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.input-row{grid-template-columns:1fr}}
+
+  .btn-generate{
+    background:var(--primary);color:#fff;padding:14px 28px;border-radius:999px;
+    font-family:inherit;font-weight:700;font-size:.95rem;border:none;cursor:pointer;
+    box-shadow:0 6px 18px rgba(244,166,184,.45);transition:all .25s;
+    display:inline-flex;align-items:center;gap:8px;min-height:52px;
+  }
+  .btn-generate:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(244,166,184,.6)}
+  .btn-generate:disabled{opacity:.6;cursor:wait}
+  @media(max-width:520px){.btn-generate{width:100%;justify-content:center}}
+
+  /* 出力エリア */
+  .output{
+    margin-top:24px;background:var(--bg);border-radius:var(--radius-md);padding:24px;
+    border:1px dashed var(--line-strong);font-family:'Shippori Mincho',serif;
+    min-height:180px;line-height:2;
+  }
+  .output.empty{display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text-soft);font-family:'Zen Maru Gothic',sans-serif;font-size:.9rem;text-align:center;min-height:180px}
+  .output.empty .empty-emoji{font-size:42px;margin-bottom:10px;opacity:.5}
+  .output h3{font-size:1.15rem;margin-bottom:14px;color:var(--primary-deep);line-height:1.5}
+  .output p{font-size:.95rem;color:var(--text);line-height:2}
+  .output-meta{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:.78rem;color:var(--text-soft);font-family:'Zen Maru Gothic',sans-serif;flex-wrap:wrap;gap:10px}
+  .output-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .btn-icon{
+    background:#fff;border:1px solid var(--line-strong);padding:8px 14px;border-radius:999px;
+    font-family:inherit;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;
+    color:var(--text);display:inline-flex;align-items:center;gap:5px;min-height:36px;
+  }
+  .btn-icon:hover{border-color:var(--primary);color:var(--primary-deep);background:var(--primary-soft)}
+
+  .loading{display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text-soft);font-family:'Zen Maru Gothic',sans-serif;min-height:180px}
+  .spinner{width:36px;height:36px;border:3px solid var(--bg-soft);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:14px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* トースト */
+  .toast{position:fixed;bottom:calc(20px + var(--safe-bottom));left:50%;transform:translateX(-50%) translateY(120px);background:var(--text);color:#fff;padding:14px 24px;border-radius:999px;font-size:.88rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .35s;z-index:300;max-width:calc(100vw - 40px)}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+
+  :focus-visible{outline:2px solid var(--primary-deep);outline-offset:2px;border-radius:6px}
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="writing.html" class="brand">
+      <div class="brand-mark" aria-hidden="true">🌸</div>
+      <span>つなぐの庭</span>
+      <span class="admin-badge">管理</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-tabs">
+        <a href="writing.html" class="nav-tab active">✍️ ライティング</a>
+        <a href="consult.html" class="nav-tab">💌 相談管理</a>
+      </div>
+      <button class="btn-logout" onclick="logout()">🚪 ログアウト</button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-tabs">
+  <div class="mobile-tabs-inner">
+    <a href="writing.html" class="mobile-tab active">✍️ ライティング</a>
+    <a href="consult.html" class="mobile-tab">💌 相談管理</a>
+  </div>
+</div>
+
+<main>
+  <div class="page-head">
+    <div class="page-head-left">
+      <h1>✍️ AIライティング工房</h1>
+      <p>過去のnoteを学習した文体で、記事の下書きを提案します</p>
+    </div>
+  </div>
+
+  <div class="studio">
+    <aside class="menu">
+      <div class="menu-label">生成メニュー</div>
+      <button class="menu-item active" onclick="switchMode('diary',this)">
+        <span class="menu-emoji">🌸</span> 3行日記
+      </button>
+      <button class="menu-item" onclick="switchMode('news',this)">
+        <span class="menu-emoji">🕊️</span> ニュース要約
+      </button>
+      <button class="menu-item" onclick="switchMode('review',this)">
+        <span class="menu-emoji">📖</span> 月次振り返り
+      </button>
+      <button class="menu-item" onclick="switchMode('member',this)">
+        <span class="menu-emoji">💌</span> 会員向け短文
+      </button>
+      <button class="menu-item" onclick="switchMode('tsubuyaki',this)">
+        <span class="menu-emoji">🌙</span> つぶやき
+      </button>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-num">87</div>
+          <div class="stat-label">学習記事</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">12</div>
+          <div class="stat-label">今月生成</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">文体一致</div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="panel">
+      <div class="panel-head" id="panelHead">
+        <h2 id="panelTitle">🌸 3行日記を生成</h2>
+        <p id="panelDesc">今日の出来事から、HIROMIさんらしい3行日記を提案します。</p>
+      </div>
+
+      <div id="inputArea">
+        <div class="input-group">
+          <label for="keyword">今日のキーワード(任意)</label>
+          <input type="text" id="keyword" placeholder="例: 朝のコーヒー、家族との時間、桜">
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="mood">気分</label>
+            <select id="mood">
+              <option>やわらかい</option>
+              <option>すこし切ない</option>
+              <option>あたたかい</option>
+              <option>静かな決意</option>
+              <option>はじまり</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="length">長さ</label>
+            <select id="length">
+              <option>短め(3行)</option>
+              <option>標準(150字)</option>
+              <option>長め(300字)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-generate" onclick="generate()">✨ 生成する</button>
+      </div>
+
+      <div class="output empty" id="output">
+        <div class="empty-emoji">🌱</div>
+        <div>左のメニューを選んで、<br>「生成する」ボタンを押してください</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite">📋 コピーしました</div>
+
+<script>
+  // セッションチェック
+  if(sessionStorage.getItem('admin_session') !== 'authorized'){
+    window.location.href = 'login.html';
+  }
+
+  // 30分でセッション切れ
+  const loginTime = parseInt(sessionStorage.getItem('admin_login_time') || '0');
+  if(Date.now() - loginTime > 30 * 60 * 1000){
+    sessionStorage.clear();
+    window.location.href = 'login.html';
+  }
+
+  function logout(){
+    if(confirm('ログアウトしますか？')){
+      sessionStorage.clear();
+      window.location.href = 'login.html';
+    }
+  }
+
+  // === モード設定 ===
+  const modes = {
+    diary: {
+      title:"🌸 3行日記を生成",
+      desc:"今日の出来事から、HIROMIさんらしい3行日記を提案します。",
+      samples:[
+        {h:"【0523】小さなお土産が運んだ、思いがけない優しさ",
+         body:`今日、ふと立ち寄った場所で、ちょっとしたお土産をいただきました。<br>"ちょこっとだけ" と渡してくれたその気持ちが、なんだか胸にしみて。<br>誰かを想う時間って、それ自体がもう、たねを蒔いているのかもしれません。🌱`},
+        {h:"【0523】朝のコーヒーが教えてくれたこと",
+         body:`いつもより少しだけ早く起きた朝。<br>湯気の向こうに、昨日までは見えなかった景色がありました。<br>変わらない毎日の中にも、ちゃんと"はじまり"はあるんですね。☕`},
+        {h:"【0523】静かな夜に、ありがとうを数える",
+         body:`今日もたくさんの人にやさしさをもらいました。<br>ひとつひとつは小さくても、集めるとこんなにあたたかい。<br>誰かに返せる日まで、大切にしまっておきます。🌙`},
+        {h:"【0523】比べることをやめた朝の風景",
+         body:`SNSを開かずに迎えた朝は、いつもより少し息がしやすい。<br>誰かのペースに合わせなくていい時間が、こんなに優しいなんて。<br>今日は、私のリズムで歩いてみます。🌷`}
+      ]
+    },
+    news:{
+      title:"🕊️ ニュース要約を生成",
+      desc:"RSSで集めたやさしいニュースを、HIROMIさんの視点でまとめます。",
+      samples:[
+        {h:"今日のやさしい便りダイジェスト 🕊️",
+         body:`今朝届いた4つの優しいニュースから、HIROMIさんの視点で要約をお届けします。<br>1️⃣ 折り紙の鶴に込められた、海を越える想い。<br>2️⃣ 春の桜が運んでくる、毎年変わらない小さな奇跡。<br>3️⃣ 世代を超えて伝わる、たった一つのメッセージ。<br>どれも、心の温度をそっと上げてくれる物語でした。`},
+        {h:"週末に読みたい、5つのあたたかい話 ☕",
+         body:`今週も、世界のあちこちで小さな奇跡が起きていました。<br>図書館の絵本会、地域のこども食堂、夜空を見上げる人々──<br>遠くにいても、誰かの優しさは確かに繋がっています。`}
+      ]
+    },
+    review:{
+      title:"📖 月次振り返り記事を生成",
+      desc:"過去ログから、その月のHIROMIさんの軌跡をまとめます。",
+      samples:[
+        {h:"【月のふりかえり】5月のあなたへ 🌸",
+         body:`5月、HIROMIさんは12本の記事を書き、たくさんの言葉のたねを蒔いてくれました。<br>「比べて落ち込む夜」「夢のあと」「迷いながら夢に向かう日」<br>──どの記事にも、迷いと前進のリズムが流れていました。<br>その積み重ねが、誰かの夜をきっと温めています。`}
+      ]
+    },
+    member:{
+      title:"💌 会員向け短文を生成",
+      desc:"つなぐの庭の会員さん向けに、毎日のおやすみ便りを生成します。",
+      samples:[
+        {h:"【会員限定】今夜のおやすみ便り 🌙",
+         body:`今日もお疲れさまでした。<br>がんばった日も、なんとなく過ごした日も、両方おなじくらい大切です。<br>明日はまた、あなたのペースで。<br>──つなぐの庭より、おやすみのたねを。`},
+        {h:"【会員限定】月曜の朝に、そっと 🌷",
+         body:`週のはじまりは、無理に張り切らなくていい。<br>窓を開けて深呼吸、それだけで充分なスタートです。<br>今週も、あなたらしいペースで。`}
+      ]
+    },
+    tsubuyaki:{
+      title:"🌙 つぶやきを生成",
+      desc:"SNS用の短いつぶやき(140字以内)を提案します。",
+      samples:[
+        {h:"つぶやき #1",
+         body:`「ちょこっとだけ」が、こんなにあたたかいんだ。<br>大きな贈り物じゃなくていい。<br>誰かを想う一瞬が、もう優しさのたね。🌱`},
+        {h:"つぶやき #2",
+         body:`比べないって、難しい。<br>でも、隣の誰かじゃなくて、昨日の自分と比べたら、ちゃんと1ミリは進んでる。<br>それでいい、それがいい。✨`}
+      ]
+    }
+  };
+
+  let currentMode = 'diary';
+
+  function switchMode(mode, btn){
+    currentMode = mode;
+    document.querySelectorAll('.menu-item').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panelTitle').textContent = modes[mode].title;
+    document.getElementById('panelDesc').textContent = modes[mode].desc;
+    resetOutput();
+  }
+
+  function resetOutput(){
+    const out = document.getElementById('output');
+    out.className = 'output empty';
+    out.innerHTML = '<div class="empty-emoji">🌱</div><div>左のメニューを選んで、<br>「生成する」ボタンを押してください</div>';
+  }
+
+  function generate(){
+    const out = document.getElementById('output');
+    out.className = 'output';
+    out.innerHTML = '<div class="loading"><div class="spinner"></div>HIROMIさんの文体で生成中...</div>';
+
+    setTimeout(()=>{
+      const m = modes[currentMode];
+      const sample = m.samples[Math.floor(Math.random()*m.samples.length)];
+      out.innerHTML = `
+        <h3>${sample.h}</h3>
+        <p>${sample.body}</p>
+        <div class="output-meta">
+          <span>📊 過去87記事の文体を学習 / 生成 ${(Math.random()*1.5+0.8).toFixed(1)}秒</span>
+          <div class="output-actions">
+            <button class="btn-icon" onclick="copyText()">📋 コピー</button>
+            <button class="btn-icon" onclick="generate()">🔄 もう一つ</button>
+          </div>
+        </div>`;
+    }, 1100);
+  }
+
+  function copyText(){
+    const out = document.getElementById('output');
+    const h3 = out.querySelector('h3')?.innerText || '';
+    const p = out.querySelector('p')?.innerText || '';
+    const text = (h3 + '\n\n' + p).trim();
+    navigator.clipboard.writeText(text).then(()=>{
+      const t = document.getElementById('toast');
+      t.textContent = '📋 コピーしました';
+      t.classList.add('show');
+      setTimeout(()=>t.classList.remove('show'),1800);
+    });
+  }
+</script>
+
+</body>
+</html>
