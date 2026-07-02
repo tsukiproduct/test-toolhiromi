@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI SIDE LAB Editor OS — 使い方ガイド</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d12;--panel:#11161f;--panel2:#161d29;--line:#232d3d;
+  --txt:#e8edf5;--sub:#8a97ab;--dim:#5a6577;--acc:#ffb03a;--acc2:#4ade80;--acc3:#60a5fa;--ng:#f87171}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Noto Sans JP',sans-serif;font-size:15px;
+  line-height:1.85;overflow-wrap:anywhere;word-break:break-word;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(255,176,58,.06),transparent)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px calc(60px + env(safe-area-inset-bottom))}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--sub)}
+.logo b{color:var(--acc)}
+h1{font-size:22px;line-height:1.5;margin:6px 0 4px}
+.lead{color:var(--sub);font-size:13.5px;margin-bottom:28px}
+h2{font-size:17px;margin:40px 0 14px;padding-left:12px;border-left:3px solid var(--acc)}
+h3{font-size:14.5px;margin:20px 0 8px;color:var(--acc)}
+p{margin-bottom:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.step{display:flex;gap:14px;margin-bottom:14px}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#0a0d12;
+  font-family:'Space Grotesk';font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step h4{font-size:14.5px;margin-bottom:2px}
+.step p{font-size:13.5px;color:var(--sub);margin:0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:700;margin-right:6px}
+.ok{background:rgba(74,222,128,.14);color:var(--acc2)}
+.no{background:rgba(248,113,113,.13);color:var(--ng)}
+.soon{background:rgba(96,165,250,.14);color:var(--acc3)}
+ul{list-style:none}
+li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;display:flex;gap:10px;align-items:flex-start}
+li:last-child{border-bottom:none}
+li .tag{flex:none;margin-top:2px}
+.tabrow{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.tabrow:last-child{border-bottom:none}
+.tabname{flex:none;width:96px;font-weight:700;color:var(--acc);font-size:12.5px;padding-top:2px}
+.tabrow p{margin:0;color:var(--sub);font-size:13px}
+.ex{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin:10px 0;font-size:13px}
+.ex b{color:var(--acc2)}
+.flow{display:flex;flex-direction:column;margin:12px 0}
+.flow span{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:13px;position:relative}
+.flow span+span{margin-top:15px}
+.flow span+span::before{content:"↓";position:absolute;top:-15px;left:15px;color:var(--acc);font-size:11px}
+.flow b{color:var(--acc)}
+.note{background:rgba(255,176,58,.07);border:1px solid rgba(255,176,58,.25);border-radius:11px;
+  padding:13px 15px;font-size:13px;margin:14px 0}
+.note b{color:var(--acc)}
+.lv{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.lv:last-child{border-bottom:none}
+.lv .l{flex:none;font-family:'Space Grotesk';font-size:10.5px;font-weight:700;color:var(--acc);width:34px}
+.lv .p{margin-left:auto;flex:none;font-size:11px;color:var(--dim)}
+.lv .p.paid{color:var(--acc2);font-weight:700}
+footer{text-align:center;color:var(--dim);font-size:11px;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">AI SIDE <b>LAB</b> / EDITOR OS</div>
+  <h1>使い方ガイド（プレビュー版）</h1>
+  <p class="lead">このツールは「AIニュースを、noteに投稿できる記事の材料に変える」ための編集作業台です。ニュースを読むためのサイトではなく、記事を量産するための道具です。</p>
+
+  <h2>プレビュー版でできること・できないこと</h2>
+  <div class="card">
+    <ul>
+      <li><span class="tag ok">できる</span><span>ニュースを選んで、記事ネタ・設計書・プロンプト・タイトル案・SNS投稿文を見る／コピーする</span></li>
+      <li><span class="tag ok">できる</span><span>プロンプトをClaude等に貼って、記事本文を実際に生成する（記事化はここで完結）</span></li>
+      <li><span class="tag ok">できる</span><span>1つのニュースから無料記事〜有料記事まで、複数の記事を作る（下の育成ロードマップ参照）</span></li>
+      <li><span class="tag no">できない</span><span>本物の最新ニュースの表示 — プレビュー版は<b>練習用のデモニュース8件で固定</b>です。本物を流すにはGitHubへの公開（push）が必要</span></li>
+      <li><span class="tag no">できない</span><span>自動更新 — デモデータなので何度開いても同じ8件です</span></li>
+      <li><span class="tag no">できない</span><span>noteへの自動投稿 — noteに公式の投稿APIがないため、本番版でも「コピペ投稿」が仕様です（これは制限ではなく安全策）</span></li>
+      <li><span class="tag soon">未実装</span><span>記事ネタとプロンプトの連動 — 現状は汎用プロンプトのため、角度を変えたいときはプロンプト冒頭に「初心者向けの角度で」等を一言足してください（連動機能は追加開発で対応可能）</span></li>
+    </ul>
+  </div>
+
+  <h2>基本の使い方（5ステップ）</h2>
+  <div class="card">
+    <div class="step"><div class="num">1</div><div><h4>ニュースを1つタップ</h4><p>一覧のカードの「タイトル文字」をタップ。note/X/YT…の数字はスコア表示で、押す場所ではありません。</p></div></div>
+    <div class="step"><div class="num">2</div><div><h4>「記事ネタ」で角度を決める</h4><p>初心者向け／副業／比較／体験談／収益化の5案から「今回はこれで書く」と決めるだけ。</p></div></div>
+    <div class="step"><div class="num">3</div><div><h4>「プロンプト」タブへ</h4><p>使うLLMの枠（Claudeなど）の「コピー」を1つ押す。4つ全部は不要です。</p></div></div>
+    <div class="step"><div class="num">4</div><div><h4>LLMに貼って送信</h4><p>Claudeアプリ等を開き、入力欄を長押し→貼り付け→送信。2,600〜3,000字の記事ドラフトが出ます。</p></div></div>
+    <div class="step"><div class="num">5</div><div><h4>noteに貼って投稿</h4><p>出てきた本文をnoteの編集画面にコピペ。タイトルは「タイトル20」から、告知文は「SNS」タブから選べます。</p></div></div>
+  </div>
+  <div class="note"><b>投稿前に必ず一読を。</b>LLMは数字や固有名詞を間違えることがあります。「出典を読む ↗」の元記事と食い違いがないかだけ確認してから投稿してください。</div>
+
+  <h2>タブの役割（タップ後の画面）</h2>
+  <div class="card">
+    <div class="tabrow"><div class="tabname">記事ネタ</div><p>このニュースから書ける記事5案。角度（誰向けに書くか）を選ぶ場所。</p></div>
+    <div class="tabrow"><div class="tabname">note設計書</div><p>記事の骨組み（読者・悩み・構成・SEO）。読むだけでOK。中身はプロンプトに全部入っています。</p></div>
+    <div class="tabrow"><div class="tabname">プロンプト</div><p>記事化のエンジン。LLM別に4種。コピーして貼るだけ。</p></div>
+    <div class="tabrow"><div class="tabname">タイトル20</div><p>記事タイトルの候補20個。気に入ったものを選ぶか、組み合わせて使う。</p></div>
+    <div class="tabrow"><div class="tabname">SNS</div><p>投稿後の告知文。X／Threads／Instagram用。（記事URL）の部分だけ差し替え。</p></div>
+    <div class="tabrow"><div class="tabname">ロードマップ</div><p>このニュースを無料→有料へ育てる展開計画。詳細は次の項目へ。</p></div>
+  </div>
+
+  <h2>1つのニュースから複数の記事を作る</h2>
+  <p>このツールの核です。同じニュースでも「角度」を変えれば別の記事として成立します。無料記事で読者を集め、信頼が溜まったら有料へ——という流れを1ニュースで設計できます。</p>
+  <div class="card">
+    <div class="lv"><span class="l">LV.1</span><span>速報ポスト</span><span class="p">X / 当日</span></div>
+    <div class="lv"><span class="l">LV.2</span><span>初心者向け解説</span><span class="p">note無料 / 1〜2日後</span></div>
+    <div class="lv"><span class="l">LV.3</span><span>比較記事</span><span class="p">note無料 / 3〜4日後</span></div>
+    <div class="lv"><span class="l">LV.4</span><span>体験レビュー</span><span class="p">note無料+X / 1週間後</span></div>
+    <div class="lv"><span class="l">LV.5</span><span>収益化記事</span><span class="p paid">note有料 / 2週間後</span></div>
+    <div class="lv"><span class="l">LV.6</span><span>テンプレ集など商品化</span><span class="p paid">Brain・note有料 / 1ヶ月後</span></div>
+  </div>
+
+  <h3>使用例：デモの「生成AIの副業活用」ニュースの場合</h3>
+  <div class="flow">
+    <span><b>月曜</b>　記事ネタ「初心者向け」→ プロンプトをClaudeに貼る → 「生成AIの副業活用とは？3分で解説」を<b>note無料</b>で投稿。SNSタブのX文で告知</span>
+    <span><b>水曜</b>　同じニュースで角度を「比較」に。プロンプト冒頭に「比較記事の角度で」と一言足して生成 → <b>note無料</b>で2本目</span>
+    <span><b>翌週</b>　自分で試した感想を混ぜて「体験レビュー」→ 3本目。ここまでで読者が育つ</span>
+    <span><b>2週間後</b>　「収益化」角度で具体的ワークフロー記事 → <b>note有料（例:300〜500円）</b>。無料3本が営業マンになってくれる</span>
+  </div>
+  <p style="font-size:13px;color:var(--sub)">つまり、ニュース1件 = 記事1本ではなく、<b style="color:var(--acc)">ニュース1件 = 無料3〜4本 + 有料1〜2本の「シリーズ」</b>として使うのが本来の設計です。</p>
+
+  <h2>スコアの見方</h2>
+  <div class="card">
+    <p style="font-size:13.5px">カードの下の数字は「このニュースがどの場所に向いているか」の適性（0〜99）です。</p>
+    <div class="ex"><b>note 97</b> → note記事にすると伸びやすい題材<br><b>X 96</b> → 速報ポスト向き。まずXで反応を見るのも手<br><b>収益 80</b> → 有料記事・商品化まで育てる価値がある</div>
+    <p style="font-size:12.5px;color:var(--dim)">並び替えメニューで「収益化期待順」などに切り替えると、狙いに合うニュースが上に来ます。なおスコアはキーワードと情報源の信頼度による機械的な目安で、絶対的な評価ではありません。</p>
+  </div>
+
+  <h2>うまくいかないとき</h2>
+  <div class="card">
+    <ul>
+      <li><span class="tag no">症状</span><span><b>コピーを押しても反応しない</b> → ファイル直開きだとブラウザがコピーを止めることがあります。枠内の文字を長押し→すべて選択→コピーで代用できます</span></li>
+      <li><span class="tag no">症状</span><span><b>文字が枠からはみ出る・真っ白になる</b> → 古いファイルを開いています。最新版をダウンロードし直し、開いたら一度再読み込みしてください</span></li>
+      <li><span class="tag no">症状</span><span><b>ニュースが増えない</b> → プレビュー版の仕様です（デモ8件固定）。本物のニュースはGitHub公開後に1日3回自動で入ります</span></li>
+    </ul>
+  </div>
+
+  <h2>本番公開すると何が変わるか</h2>
+  <div class="card">
+    <ul>
+      <li><span class="tag ok">追加</span><span>本物のAIニュースが約20ソースから毎日3回（朝7時・昼12時・夜19時）自動で入る</span></li>
+      <li><span class="tag ok">追加</span><span>スマホからいつでもURLで開ける（ブックマークで毎朝チェック→その場で記事化）</span></li>
+      <li><span class="tag ok">同じ</span><span>操作方法・タブ・プロンプトの使い方はプレビュー版と完全に同じ。今の練習がそのまま活きます</span></li>
+    </ul>
+  </div>
+
+  <footer>AI SIDE LAB Editor OS — 運用コストゼロ設計 / 要約180字制限・出典リンク必須</footer>
+</div>
+</body>
+</html>
