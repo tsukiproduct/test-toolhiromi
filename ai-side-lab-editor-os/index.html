@@ -57,6 +57,19 @@ select,.search{background:var(--panel);color:var(--txt);border:1px solid var(--l
   padding:6px 12px;font-size:12px;font-family:inherit;min-height:32px}
 .search{min-width:180px;flex:1}
 .empty-note{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--sub);font-size:13px;padding:16px;text-align:center;width:100%}
+.ops{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.opbtn{border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--sub);border-radius:99px;padding:6px 10px;font-size:12px;font-family:inherit;cursor:pointer;min-height:32px;transition:all .2s}
+.opbtn:hover{border-color:var(--acc);color:var(--txt)}
+.opbtn.used.on{background:rgba(74,222,128,.16);border-color:var(--acc2);color:var(--acc2);font-weight:700}
+.opbtn.later.on{background:rgba(96,165,250,.16);border-color:var(--acc3);color:var(--acc3);font-weight:700}
+.opbtn.export{background:var(--acc);border-color:var(--acc);color:#0a0d12;font-weight:700}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0}
+.badge{border-radius:99px;padding:3px 8px;font-size:11px;font-weight:700;border:1px solid var(--line);color:var(--sub)}
+.badge.used{border-color:rgba(74,222,128,.55);color:var(--acc2);background:rgba(74,222,128,.1)}
+.badge.later{border-color:rgba(96,165,250,.55);color:var(--acc3);background:rgba(96,165,250,.1)}
+.badge.memo{border-color:rgba(255,176,58,.55);color:var(--acc);background:rgba(255,176,58,.1)}
+.memoarea{width:100%;min-height:92px;background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;margin-top:8px}
+.memoarea:focus{outline:none;border-color:var(--acc)}
 
 /* ── article cards ── */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;
@@ -212,6 +225,14 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
         <option value="30d">過去30日</option>
         <option value="alltime">全期間</option>
       </select>
+      <select id="statusFilter">
+        <option value="all">状態すべて</option>
+        <option value="unused">未使用</option>
+        <option value="used">使った</option>
+        <option value="later">あとで使う</option>
+        <option value="memo">メモあり</option>
+      </select>
+      <button class="opbtn export" onclick="exportCSV()">CSV出力</button>
       <select id="sort">
         <option value="all">総合スコア順</option>
         <option value="new">新着順</option>
@@ -241,12 +262,55 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
 <script>
 const CAT = {model:"AIモデル", imggen:"画像生成", vidgen:"動画生成", tool:"AIツール", biz:"AIビジネス", news:"AIニュース"};
 const LLM = {claude:"Claude", gpt:"GPT", gemini:"Gemini", grok:"Grok"};
-let DATA=null, ARCHIVE=null, sel=null, catFilter="all", tab="ideas";
+let DATA=null, ARCHIVE=null, sel=null, catFilter="all", tab="ideas", LAST_LIST=[];
+const STORE_KEY="editor-os-article-state-v1";
+let STATE={};
+
+function loadUiState(){
+  try{ STATE=JSON.parse(localStorage.getItem(STORE_KEY)||"{}") || {}; }
+  catch(_e){ STATE={}; }
+}
+function saveUiState(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(STATE)); }catch(_e){} }
+function stateOf(id){ return STATE[id] || {}; }
+function patchState(id, patch){
+  STATE[id]={...stateOf(id), ...patch, updatedAt:new Date().toISOString()};
+  if(!STATE[id].used && !STATE[id].later && !STATE[id].memo) delete STATE[id];
+  saveUiState();
+}
+function allArticles(){
+  const map=new Map();
+  (DATA?.articles||[]).forEach(a=>map.set(a.id,a));
+  (ARCHIVE?.articles||[]).forEach(a=>{ if(!map.has(a.id)) map.set(a.id,a); });
+  return [...map.values()];
+}
+function findArticle(id){ return allArticles().find(a=>a.id===id); }
+function toggleState(ev,id,key){
+  if(ev) ev.stopPropagation();
+  patchState(id,{[key]:!stateOf(id)[key]});
+  renderList();
+  if(sel===id) renderWS();
+}
+function saveMemo(id,value){ patchState(id,{memo:value.trim() ? value : ""}); }
+function stateBadges(id){
+  const s=stateOf(id), out=[];
+  if(s.used) out.push(`<span class="badge used">使った</span>`);
+  if(s.later) out.push(`<span class="badge later">あとで使う</span>`);
+  if(s.memo) out.push(`<span class="badge memo">メモあり</span>`);
+  return out.length ? `<div class="badges">${out.join("")}</div>` : "";
+}
+function stateControls(id){
+  const s=stateOf(id);
+  return `<div class="ops">
+    <button class="opbtn used ${s.used?'on':''}" onclick="toggleState(event,'${id}','used')">${s.used?'✓ 使った':'使った'}</button>
+    <button class="opbtn later ${s.later?'on':''}" onclick="toggleState(event,'${id}','later')">${s.later?'★ あとで使う':'あとで使う'}</button>
+  </div>`;
+}
 
 async function load(){
   try{
     const r = await fetch("data/articles.json?t="+Date.now());
     DATA = await r.json();
+    loadUiState();
     try{
       const ar = await fetch("data/archive.json?t="+Date.now());
       if(ar.ok) ARCHIVE = await ar.json();
@@ -290,23 +354,34 @@ function renderSources(){
 document.getElementById("sort").onchange=renderList;
 document.getElementById("rangeFilter").onchange=renderList;
 document.getElementById("sourceFilter").onchange=renderList;
+document.getElementById("statusFilter").onchange=renderList;
 document.getElementById("search").oninput=renderList;
 
 function renderList(){
   const key=document.getElementById("sort").value;
   const range=document.getElementById("rangeFilter").value;
   const source=document.getElementById("sourceFilter").value;
+  const status=document.getElementById("statusFilter").value;
   const q=document.getElementById("search").value.trim().toLowerCase();
   let arr=activeArticles().filter(a=>catFilter==="all"||a.category===catFilter);
   if(source!=="all") arr=arr.filter(a=>a.source===source);
-  if(q) arr=arr.filter(a=>[a.title,a.summary_ja,a.summary,a.source,CAT[a.category]].join(" ").toLowerCase().includes(q));
+  if(status!=="all") arr=arr.filter(a=>{
+    const s=stateOf(a.id);
+    if(status==="unused") return !s.used;
+    if(status==="used") return !!s.used;
+    if(status==="later") return !!s.later;
+    if(status==="memo") return !!s.memo;
+    return true;
+  });
+  if(q) arr=arr.filter(a=>[a.title,a.summary_ja,a.summary,a.source,CAT[a.category],stateOf(a.id).memo].join(" ").toLowerCase().includes(q));
   arr.sort((a,b)=>{
     if(key==="new") return new Date(b.published)-new Date(a.published);
     if(key==="old") return new Date(a.published)-new Date(b.published);
     if(key==="all") return Math.max(...Object.values(b.score))-Math.max(...Object.values(a.score));
     return (b.score[key]||0)-(a.score[key]||0);
   });
-  const combos = (DATA.combos && catFilter==="all" && range==="latest" && source==="all" && !q) ? `
+  LAST_LIST=arr.slice();
+  const combos = (DATA.combos && catFilter==="all" && range==="latest" && source==="all" && status==="all" && !q) ? `
     <div class="combo-head">⚡ COMBO — 2つのニュースを掛け合わせる</div>
     ${DATA.combos.map((c,i)=>`
       <div class="cbcard ${sel===c.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openCombo('${c.id}')">
@@ -327,8 +402,10 @@ function renderList(){
         <span>${new Date(a.published).toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})}</span>
         <span class="stars">${star(a.stars.importance)}</span>
       </div>
+      ${stateBadges(a.id)}
       <h3>${esc(a.title)}</h3>
       <p>${esc(a.summary_ja || a.summary)}</p>
+      ${stateControls(a.id)}
       ${a.tip ? `<div class="tip">💡 ${esc(a.tip)}</div>` : ""}
       <div class="scores">
         ${[["note","note"],["x","X"],["youtube","YT"],["brain","Brain"],["monetize","収益"]].map(([k,l])=>
@@ -413,7 +490,7 @@ function closeWS(){document.body.classList.remove("detail")}
 function setTab(t){tab=t;renderWS()}
 
 function renderWS(){
-  const a=DATA.articles.find(x=>x.id===sel); if(!a)return;
+  const a=findArticle(sel); if(!a)return;
   const T={ideas:"記事ネタ",bp:"note設計書",prompts:"プロンプト",titles:"タイトル20",sns:"SNS",road:"育成ロードマップ",combine:"組み合わせ"};
   let body="";
   if(tab==="ideas") body=a.ideas.map(i=>`
@@ -458,11 +535,41 @@ function renderWS(){
       <button class="back" onclick="closeWS()">← ニュース一覧へ戻る</button>
       <div class="meta"><span class="cat ${a.category}">${CAT[a.category]}</span><span>${esc(a.source)}</span>
       <span class="stars">${star(a.stars.importance)}</span></div>
+      ${stateBadges(a.id)}
       <h2>${esc(a.title)}</h2>
+      ${stateControls(a.id)}
+      <label style="display:block;color:var(--sub);font-size:12px;margin-top:10px">運用メモ</label>
+      <textarea class="memoarea" placeholder="記事化の予定、切り口、続報待ちなどをメモ" oninput="saveMemo('${a.id}',this.value)" onblur="renderList()">${esc(stateOf(a.id).memo||"")}</textarea>
       <a href="${a.link}" target="_blank" rel="noopener">出典を読む ↗</a>
     </div>
     <div class="tabs">${Object.entries(T).map(([k,l])=>`<div class="tab ${tab===k?'on':''}" onclick="setTab('${k}')">${l}</div>`).join("")}</div>
     <div class="tabbody">${body}</div>`;
+}
+
+
+function csvCell(v){
+  return `"${String(v ?? "").replace(/"/g,'""').replace(/\r?\n/g," ")}"`;
+}
+function exportCSV(){
+  const rows=[["title","url","source","published","category","note_score","monetize_score","used","later","memo"]];
+  (LAST_LIST.length ? LAST_LIST : activeArticles()).forEach(a=>{
+    const s=stateOf(a.id);
+    rows.push([
+      a.title, a.link, a.source, a.published, CAT[a.category]||a.category,
+      a.score?.note ?? "", a.score?.monetize ?? "",
+      s.used ? "yes" : "", s.later ? "yes" : "", s.memo || ""
+    ]);
+  });
+  const csv="\ufeff"+rows.map(r=>r.map(csvCell).join(",")).join("\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;
+  a.download=`editor-os-${new Date().toISOString().slice(0,10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 }
 
 function cp(btn,text){
