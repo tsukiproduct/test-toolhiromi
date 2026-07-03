@@ -63,6 +63,12 @@ select,.search{background:var(--panel);color:var(--txt);border:1px solid var(--l
 .opbtn.used.on{background:rgba(74,222,128,.16);border-color:var(--acc2);color:var(--acc2);font-weight:700}
 .opbtn.later.on{background:rgba(96,165,250,.16);border-color:var(--acc3);color:var(--acc3);font-weight:700}
 .opbtn.export{background:var(--acc);border-color:var(--acc);color:#0a0d12;font-weight:700}
+.opbtn.combo{border-color:rgba(255,176,58,.45);color:var(--acc)}
+.opbtn.combo.on{background:rgba(255,176,58,.18);border-color:var(--acc);color:var(--acc);font-weight:700}
+.combo-picker{background:linear-gradient(135deg,rgba(255,176,58,.12),rgba(96,165,250,.08));border:1px solid rgba(255,176,58,.38);border-radius:8px;padding:12px;margin:4px 0 12px;color:var(--txt)}
+.combo-picker b{color:var(--acc)}
+.combo-picker small{display:block;color:var(--sub);font-size:12px;margin-top:4px}
+.combo-picker .cancel{margin-top:8px;background:none;border:none;color:var(--sub);font-family:inherit;font-size:12px;cursor:pointer;padding:4px 0}
 .badges{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0}
 .badge{border-radius:99px;padding:3px 8px;font-size:11px;font-weight:700;border:1px solid var(--line);color:var(--sub)}
 .badge.used{border-color:rgba(74,222,128,.55);color:var(--acc2);background:rgba(74,222,128,.1)}
@@ -262,7 +268,7 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
 <script>
 const CAT = {model:"AIモデル", imggen:"画像生成", vidgen:"動画生成", tool:"AIツール", biz:"AIビジネス", news:"AIニュース"};
 const LLM = {claude:"Claude", gpt:"GPT", gemini:"Gemini", grok:"Grok"};
-let DATA=null, ARCHIVE=null, sel=null, catFilter="all", tab="ideas", LAST_LIST=[];
+let DATA=null, ARCHIVE=null, sel=null, catFilter="all", tab="ideas", LAST_LIST=[], comboBase=null, MANUAL_COMBO_PROMPT="";
 const STORE_KEY="editor-os-article-state-v1";
 let STATE={};
 
@@ -298,12 +304,37 @@ function stateBadges(id){
   if(s.memo) out.push(`<span class="badge memo">メモあり</span>`);
   return out.length ? `<div class="badges">${out.join("")}</div>` : "";
 }
+function comboButton(id){
+  if(comboBase===id) return `<button class="opbtn combo on" onclick="pickCombo(event,'${id}')">1つ目に選択中</button>`;
+  if(comboBase) return `<button class="opbtn combo on" onclick="pickCombo(event,'${id}')">この2件で生成</button>`;
+  return `<button class="opbtn combo" onclick="pickCombo(event,'${id}')">組み合わせる</button>`;
+}
 function stateControls(id){
   const s=stateOf(id);
   return `<div class="ops">
     <button class="opbtn used ${s.used?'on':''}" onclick="toggleState(event,'${id}','used')">${s.used?'✓ 使った':'使った'}</button>
     <button class="opbtn later ${s.later?'on':''}" onclick="toggleState(event,'${id}','later')">${s.later?'★ あとで使う':'あとで使う'}</button>
+    ${comboButton(id)}
   </div>`;
+}
+function clearComboPick(ev){
+  if(ev) ev.stopPropagation();
+  comboBase=null;
+  renderList();
+}
+function pickCombo(ev,id){
+  if(ev) ev.stopPropagation();
+  if(!comboBase){
+    comboBase=id;
+    renderList();
+    return;
+  }
+  if(comboBase===id){
+    comboBase=null;
+    renderList();
+    return;
+  }
+  openManualCombo(comboBase,id);
 }
 
 async function load(){
@@ -381,7 +412,9 @@ function renderList(){
     return (b.score[key]||0)-(a.score[key]||0);
   });
   LAST_LIST=arr.slice();
-  const combos = (DATA.combos && catFilter==="all" && range==="latest" && source==="all" && status==="all" && !q) ? `
+  const picked=findArticle(comboBase);
+  const picker = picked ? `<div class="combo-picker"><b>1つ目に選択中</b>: ${esc(picked.title)}<small>もう1つの記事の「この2件で生成」を押すと、組み合わせプロンプトを作れます。</small><button class="cancel" onclick="clearComboPick(event)">選択を解除</button></div>` : "";
+  const combos = (DATA.combos && catFilter==="all" && range==="latest" && source==="all" && status==="all" && !q && !comboBase) ? `
     <div class="combo-head">⚡ COMBO — 2つのニュースを掛け合わせる</div>
     ${DATA.combos.map((c,i)=>`
       <div class="cbcard ${sel===c.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openCombo('${c.id}')">
@@ -391,10 +424,10 @@ function renderList(){
       </div>`).join("")}
     <div class="combo-head" style="margin-top:18px">📰 NEWS — 単体記事</div>` : "";
   if(!arr.length){
-    document.getElementById("list").innerHTML = combos + `<div class="empty-note">条件に合う記事がありません。</div>`;
+    document.getElementById("list").innerHTML = picker + combos + `<div class="empty-note">条件に合う記事がありません。</div>`;
     return;
   }
-  document.getElementById("list").innerHTML = combos + arr.map((a,i)=>`
+  document.getElementById("list").innerHTML = picker + combos + arr.map((a,i)=>`
     <div class="card ${sel===a.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openArticle('${a.id}')">
       <div class="meta">
         <span class="cat ${a.category}">${CAT[a.category]||a.category}</span>
@@ -476,10 +509,36 @@ function comboPromptJS(a,b){
 禁止事項: 事実の捏造 / 誇大表現 / 出典のない数値 / 2つのニュースの因果関係の捏造(「関連する動き」として紹介し、無理につなげない)
 </brief>`;
 }
+
+function openManualCombo(aid,bid){
+  const a=findArticle(aid), b=findArticle(bid);
+  if(!a||!b)return;
+  comboBase=null;
+  sel=`manual_${aid}_${bid}`;
+  document.body.classList.add("detail");
+  renderList();
+  const p=comboPromptJS(a,b);
+  MANUAL_COMBO_PROMPT=p;
+  document.getElementById("ws").innerHTML=`
+    <div class="ws-head">
+      <button class="back" onclick="closeWS()">← ニュース一覧へ戻る</button>
+      <span class="cbbadge">手動組み合わせ</span>
+      <h2>${esc(a.title)} × ${esc(b.title)}</h2>
+      <div class="pair"><b>1件目</b> ${esc(a.source)} / ${new Date(a.published).toLocaleString("ja-JP",{month:"numeric",day:"numeric"})}<br><b>2件目</b> ${esc(b.source)} / ${new Date(b.published).toLocaleString("ja-JP",{month:"numeric",day:"numeric"})}</div>
+    </div>
+    <div class="tabbody">
+      <div class="phint">一覧で選んだ2件から作った組み合わせプロンプトです。コピーしてLLMに貼り付けてください。</div>
+      <div class="prow"><span class="llm claude">PROMPT</span><h4>組み合わせ記事プロンプト</h4>
+        <button class="copy" onclick="cp(this,MANUAL_COMBO_PROMPT)">コピー</button></div>
+      <pre>${esc(p)}</pre>
+    </div>`;
+  if(innerWidth<=900) scrollTo({top:0});
+}
+
 function makeManualCombo(aid){
   const bid=document.getElementById("cbsel").value;
   if(!bid)return;
-  const a=DATA.articles.find(x=>x.id===aid), b=DATA.articles.find(x=>x.id===bid);
+  const a=findArticle(aid), b=findArticle(bid);
   const p=comboPromptJS(a,b);
   document.getElementById("cbout").innerHTML=`
     <div class="prow" style="margin-top:14px"><span class="llm claude">PROMPT</span><h4>組み合わせプロンプト</h4>
