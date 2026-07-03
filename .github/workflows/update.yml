@@ -1,0 +1,56 @@
+﻿name: Update AI SIDE LAB Editor OS
+
+on:
+  schedule:
+    # JST 07:00 / 12:00 / 19:00 (UTC)
+    - cron: "0 22 * * *"
+    - cron: "0 3 * * *"
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-side-lab-editor-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install feedparser requests
+      - run: python fetch.py
+      - name: AI enrich (Cloudflare Workers AI / optional)
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python enrich.py || true
+      - run: python generate.py
+      - name: Commit data
+        run: |
+          git config user.name "editor-os-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add ai-side-lab-editor-os/data/
+          if ! git diff --cached --quiet; then
+            git commit -m "auto: update editor os articles $(date +'%Y-%m-%d %H:%M')"
+            git push
+          else
+            echo "No data changes"
+          fi
+        working-directory: .
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ai-side-lab-editor-os
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4

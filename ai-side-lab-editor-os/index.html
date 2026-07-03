@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI SIDE LAB — Editor OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0d12; --panel:#11161f; --panel2:#161d29; --line:#232d3d;
+  --txt:#e8edf5; --sub:#8a97ab; --dim:#5a6577;
+  --acc:#ffb03a; --acc2:#4ade80; --acc3:#60a5fa; --danger:#f87171;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.7;
+  overflow-wrap:anywhere;word-break:break-word;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(255,176,58,.06),transparent),
+                   radial-gradient(ellipse 60% 40% at 90% 110%,rgba(96,165,250,.05),transparent)}
+.mono{font-family:'Space Grotesk',monospace}
+.list-col,.ws-col{min-width:0}
+.ws,.card,.idea,.pgroup,.snsbox,.tabbody,.rstep,.tlist li{max-width:100%}
+
+/* ── header ── */
+header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);padding:14px 20px;padding-top:calc(14px + env(safe-area-inset-top))}
+.hrow{display:flex;align-items:center;gap:12px;max-width:1280px;margin:0 auto}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:17px;letter-spacing:.06em;white-space:nowrap}
+.logo b{color:var(--acc)}
+.logo small{display:block;font-size:9px;color:var(--dim);letter-spacing:.3em;font-weight:400}
+.status{margin-left:auto;font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--acc2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ── ticker ── */
+.ticker{overflow:hidden;border-bottom:1px solid var(--line);background:var(--panel);font-size:12px;color:var(--sub)}
+.ticker-in{display:inline-block;white-space:nowrap;padding:6px 0;animation:tick 45s linear infinite}
+@keyframes tick{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+.ticker-in b{color:var(--acc)}
+
+/* ── layout ── */
+main{max-width:1280px;margin:0 auto;padding:16px;display:grid;grid-template-columns:minmax(320px,440px) 1fr;gap:16px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+
+/* ── filters ── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{padding:6px 14px;border-radius:99px;border:1px solid var(--line);background:var(--panel);
+  color:var(--sub);font-size:12px;cursor:pointer;transition:all .2s;min-height:32px}
+.chip:hover{border-color:var(--acc);color:var(--txt)}
+.chip.on{background:var(--acc);color:#0a0d12;border-color:var(--acc);font-weight:700}
+select{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:99px;
+  padding:6px 12px;font-size:12px;font-family:inherit}
+
+/* ── article cards ── */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;
+  margin-bottom:10px;cursor:pointer;transition:all .2s;animation:fadeUp .35s ease both}
+.card:hover{border-color:var(--acc);transform:translateY(-1px)}
+.card.sel{border-color:var(--acc);background:var(--panel2);box-shadow:0 0 0 1px var(--acc)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.meta{display:flex;gap:8px;align-items:center;font-size:11px;color:var(--dim);margin-bottom:8px;flex-wrap:wrap}
+.cat{padding:2px 9px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.05em}
+.cat.model{background:rgba(96,165,250,.15);color:var(--acc3)}
+.cat.imggen{background:rgba(244,114,182,.15);color:#f472b6}
+.cat.vidgen{background:rgba(167,139,250,.15);color:#a78bfa}
+.cat.tool{background:rgba(74,222,128,.13);color:var(--acc2)}
+.cat.biz{background:rgba(255,176,58,.15);color:var(--acc)}
+.cat.news{background:rgba(138,151,171,.13);color:var(--sub)}
+.card h3{font-size:14.5px;font-weight:700;line-height:1.55;margin-bottom:8px}
+.card p{font-size:12.5px;color:var(--sub);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.scores{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.sc{flex:1;min-width:58px;text-align:center;background:var(--bg);border-radius:9px;padding:7px 4px;border:1px solid var(--line)}
+.sc small{display:block;font-size:9px;color:var(--dim);letter-spacing:.05em}
+.sc b{font-family:'Space Grotesk';font-size:16px}
+.sc.hi b{color:var(--acc2)} .sc.mid b{color:var(--acc)} .sc.lo b{color:var(--sub)}
+.stars{color:var(--acc);font-size:11px;letter-spacing:.1em}
+.tip{margin-top:8px;font-size:12px;color:var(--acc2);background:rgba(74,222,128,.07);
+  border:1px solid rgba(74,222,128,.2);border-radius:9px;padding:6px 10px}
+
+/* ── combo ── */
+.combo-head{font-family:'Space Grotesk';font-size:12px;font-weight:700;letter-spacing:.15em;
+  color:var(--acc);margin:4px 0 10px}
+.cbcard{background:linear-gradient(135deg,rgba(255,176,58,.08),rgba(96,165,250,.06)),var(--panel);
+  border:1px solid rgba(255,176,58,.35);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;
+  cursor:pointer;transition:all .2s;animation:fadeUp .35s ease both}
+.cbcard:hover{border-color:var(--acc);transform:translateY(-1px)}
+.cbcard.sel{box-shadow:0 0 0 1px var(--acc)}
+.cbcard .th{font-size:14px;font-weight:700;line-height:1.5;margin-bottom:6px}
+.cbcard .pair{font-size:11.5px;color:var(--sub);line-height:1.6}
+.cbcard .pair b{color:var(--acc)}
+.cbbadge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:10px;font-weight:700;
+  background:rgba(255,176,58,.18);color:var(--acc);margin-bottom:8px;letter-spacing:.08em}
+.combine select{width:100%;background:var(--panel2);color:var(--txt);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;font-size:13px;font-family:inherit;margin:8px 0}
+.gen{width:100%;background:var(--acc);color:#0a0d12;border:none;border-radius:10px;padding:11px;
+  font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;min-height:42px}
+.gen:active{opacity:.85}
+
+/* ── workspace ── */
+.ws{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);min-height:60vh;
+  position:sticky;top:calc(92px + env(safe-area-inset-top));max-height:calc(100vh - 108px);overflow-y:auto}
+.ws-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:70vh;color:var(--dim);gap:12px;text-align:center;padding:20px}
+.ws-empty .big{font-size:40px}
+.ws-head{padding:14px 18px 0}
+.ws-head h2{font-size:15.5px;line-height:1.45;margin:6px 0}
+.ws-head a{color:var(--acc3);font-size:12px;text-decoration:none}
+.tabs{display:flex;gap:2px;padding:10px 10px 0;border-bottom:1px solid var(--line);overflow-x:auto;position:sticky;top:0;background:var(--panel);z-index:5}
+.tab{padding:8px 12px;font-size:12px;color:var(--sub);cursor:pointer;border-radius:9px 9px 0 0;
+  white-space:nowrap;border-bottom:2px solid transparent;min-height:38px}
+.tab.on{color:var(--acc);border-bottom-color:var(--acc);font-weight:700;background:var(--panel2)}
+.tabbody{padding:14px 18px 28px}
+
+/* ── tab contents ── */
+.idea{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px 13px;margin-bottom:8px}
+.idea .tag{font-size:10px;font-weight:700;color:var(--acc);letter-spacing:.1em}
+.idea h4{font-size:13.5px;margin:3px 0;line-height:1.45}
+.idea small{color:var(--sub);font-size:11.5px}
+.bp dt{font-size:11px;color:var(--acc);font-weight:700;letter-spacing:.1em;margin-top:13px}
+.bp dt:first-child{margin-top:0}
+.bp dd{font-size:13px;margin-top:3px;color:var(--txt)}
+.bp .flow{display:flex;flex-direction:column;gap:0;margin-top:6px}
+.bp .flow span{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:12.5px;position:relative}
+.bp .flow span+span{margin-top:11px}
+.bp .flow span+span::before{content:"↓";position:absolute;top:-13px;left:14px;color:var(--acc);font-size:10px}
+.kws{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.kw{background:rgba(96,165,250,.12);color:var(--acc3);padding:3px 10px;border-radius:99px;font-size:11.5px}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:12px;font-size:11.5px;
+  line-height:1.6;white-space:pre-wrap;word-break:break-word;color:#c8d3e2;font-family:'Space Grotesk',monospace;max-height:200px;overflow-y:auto}
+.pgroup{margin-bottom:14px}
+.prow{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.prow h4{font-size:12.5px}
+.phint{font-size:11px;color:var(--dim);margin:-4px 0 12px}
+.llm{padding:2px 10px;border-radius:99px;font-size:10px;font-weight:700}
+.llm.claude{background:rgba(255,176,58,.18);color:var(--acc)}
+.llm.gpt{background:rgba(74,222,128,.15);color:var(--acc2)}
+.llm.gemini{background:rgba(96,165,250,.15);color:var(--acc3)}
+.llm.grok{background:rgba(232,237,245,.12);color:var(--txt)}
+.copy{margin-left:auto;background:var(--panel2);border:1px solid var(--line);color:var(--sub);
+  border-radius:9px;padding:6px 14px;font-size:11.5px;cursor:pointer;transition:all .2s;min-height:34px;font-family:inherit}
+.copy:hover{border-color:var(--acc);color:var(--acc)}
+.copy.done{background:var(--acc2);color:#0a0d12;border-color:var(--acc2);font-weight:700}
+.tlist li{list-style:none;background:var(--panel2);border:1px solid var(--line);border-radius:9px;
+  padding:8px 12px;margin-bottom:6px;font-size:13px;display:flex;align-items:center;gap:9px;line-height:1.4}
+.tlist .n{font-family:'Space Grotesk';color:var(--dim);font-size:11px;min-width:20px}
+.snsbox{margin-bottom:14px}
+.road{position:relative;padding-left:26px}
+.road::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--acc),var(--acc2))}
+.rstep{position:relative;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px 13px;margin-bottom:9px}
+.rstep::before{content:"";position:absolute;left:-22px;top:14px;width:9px;height:9px;border-radius:50%;background:var(--acc);border:2px solid var(--bg)}
+.rstep .lv{font-family:'Space Grotesk';font-size:10px;font-weight:700;color:var(--acc);letter-spacing:.15em}
+.rstep h4{font-size:13px;margin:2px 0}
+.rstep small{color:var(--sub);font-size:11.5px}
+
+/* ── mobile detail ── */
+.back{display:none;background:none;border:none;color:var(--acc);font-size:13px;cursor:pointer;padding:8px 0;font-family:inherit}
+@media(max-width:900px){
+  body.detail .list-col{display:none}
+  body:not(.detail) .ws-col{display:none}
+  .ws{position:static;max-height:none;min-height:auto}
+  .back{display:block}
+}
+/* ── スマホ: 詳細画面をさらに圧縮 ── */
+@media(max-width:600px){
+  main{padding:12px}
+  .ws-head{padding:10px 14px 0}
+  .ws-head h2{font-size:15px}
+  .tabbody{padding:12px 14px 24px}
+  .tab{padding:8px 11px;font-size:11.5px}
+  pre{max-height:168px;font-size:11px;padding:11px}
+  .idea h4{font-size:13px}
+  .bp dd{font-size:12.5px}
+  .tlist li{font-size:12.5px;padding:8px 11px}
+  .card{padding:14px}
+  .card h3{font-size:14px}
+  .sc{min-width:52px;padding:6px 3px}
+  .sc b{font-size:15px}
+}
+.toast{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--acc2);color:#0a0d12;font-weight:700;font-size:13px;padding:10px 22px;border-radius:99px;
+  transition:transform .3s;z-index:99}
+.toast.show{transform:translateX(-50%) translateY(0)}
+footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(30px + env(safe-area-inset-bottom))}
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="logo mono">AI SIDE <b>LAB</b><small>EDITOR OS</small></div>
+    <div class="status"><span class="dot"></span><span id="updated">LOADING…</span></div>
+  </div>
+</header>
+<div class="ticker"><div class="ticker-in" id="ticker"></div></div>
+
+<main>
+  <section class="list-col">
+    <div class="filters" id="filters"></div>
+    <div class="filters">
+      <select id="sort">
+        <option value="all">総合スコア順</option>
+        <option value="note">note適性順</option>
+        <option value="monetize">収益化期待順</option>
+        <option value="beginner">初心者向け順</option>
+        <option value="x">X適性順</option>
+      </select>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <section class="ws-col">
+    <div class="ws" id="ws">
+      <div class="ws-empty">
+        <div class="big">🗞️</div>
+        <div>左のニュースを選ぶと<br>記事ネタ・note設計書・LLMプロンプトが開きます</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>AI SIDE LAB Editor OS — RSS収集は無料 / 生成はテンプレート方式（運用コストゼロ）/ 要約は180字まで・必ず出典リンク</footer>
+<div class="toast" id="toast">コピーしました ✓</div>
+
+<script>
+const CAT = {model:"AIモデル", imggen:"画像生成", vidgen:"動画生成", tool:"AIツール", biz:"AIビジネス", news:"AIニュース"};
+const LLM = {claude:"Claude", gpt:"GPT", gemini:"Gemini", grok:"Grok"};
+let DATA=null, sel=null, catFilter="all", tab="ideas";
+
+async function load(){
+  try{
+    const r = await fetch("data/articles.json?t="+Date.now());
+    DATA = await r.json();
+  }catch(e){
+    if(window.EMBED){ DATA = window.EMBED; }
+    else { document.getElementById("list").innerHTML="<div class='ws-empty'>data/articles.json が見つかりません。<br>python3 fetch.py → generate.py を実行してください。</div>"; return; }
+  }
+  const d = new Date(DATA.updated);
+  document.getElementById("updated").textContent =
+    "UPDATED " + d.toLocaleString("ja-JP",{month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}) + " JST / " + DATA.count + "件";
+  document.getElementById("ticker").innerHTML =
+    DATA.articles.slice(0,8).map(a=>`<b>▲${Math.max(...Object.values(a.score))}</b> ${esc(a.title)}`).join("　◆　");
+  renderFilters(); renderList();
+}
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function star(n){return "★".repeat(n)+"<span style='color:var(--dim)'>"+"★".repeat(5-n)+"</span>"}
+function scClass(v){return v>=85?"hi":v>=70?"mid":"lo"}
+
+function renderFilters(){
+  const cats=["all",...new Set(DATA.articles.map(a=>a.category))];
+  document.getElementById("filters").innerHTML = cats.map(c=>
+    `<button class="chip ${c===catFilter?'on':''}" onclick="setCat('${c}')">${c==="all"?"すべて":CAT[c]||c}</button>`).join("");
+}
+function setCat(c){catFilter=c;renderFilters();renderList()}
+document.getElementById("sort").onchange=renderList;
+
+function renderList(){
+  const key=document.getElementById("sort").value;
+  let arr=DATA.articles.filter(a=>catFilter==="all"||a.category===catFilter);
+  arr.sort((a,b)=> key==="all"
+    ? Math.max(...Object.values(b.score))-Math.max(...Object.values(a.score))
+    : b.score[key]-a.score[key]);
+  const combos = (DATA.combos && catFilter==="all") ? `
+    <div class="combo-head">⚡ COMBO — 2つのニュースを掛け合わせる</div>
+    ${DATA.combos.map((c,i)=>`
+      <div class="cbcard ${sel===c.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openCombo('${c.id}')">
+        <span class="cbbadge">組み合わせ記事案</span>
+        <div class="th">${esc(c.theme)}</div>
+        <div class="pair"><b>事例</b> ${esc(c.a_title)}<br><b>手法</b> ${esc(c.b_title)}</div>
+      </div>`).join("")}
+    <div class="combo-head" style="margin-top:18px">📰 NEWS — 単体記事</div>` : "";
+  document.getElementById("list").innerHTML = combos + arr.map((a,i)=>`
+    <div class="card ${sel===a.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openArticle('${a.id}')">
+      <div class="meta">
+        <span class="cat ${a.category}">${CAT[a.category]||a.category}</span>
+        <span>${esc(a.source)}</span>
+        <span>${new Date(a.published).toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})}</span>
+        <span class="stars">${star(a.stars.importance)}</span>
+      </div>
+      <h3>${esc(a.title)}</h3>
+      <p>${esc(a.summary_ja || a.summary)}</p>
+      ${a.tip ? `<div class="tip">💡 ${esc(a.tip)}</div>` : ""}
+      <div class="scores">
+        ${[["note","note"],["x","X"],["youtube","YT"],["brain","Brain"],["monetize","収益"]].map(([k,l])=>
+          `<div class="sc ${scClass(a.score[k])}"><small>${l}</small><b>${a.score[k]}</b></div>`).join("")}
+      </div>
+    </div>`).join("");
+}
+
+function openArticle(id){
+  sel=id; tab="ideas";
+  document.body.classList.add("detail");
+  renderList(); renderWS();
+  if(innerWidth<=900) scrollTo({top:0});
+}
+function openCombo(id){
+  sel=id;
+  document.body.classList.add("detail");
+  renderList(); renderComboWS();
+  if(innerWidth<=900) scrollTo({top:0});
+}
+function renderComboWS(){
+  const c=DATA.combos.find(x=>x.id===sel); if(!c)return;
+  document.getElementById("ws").innerHTML=`
+    <div class="ws-head">
+      <button class="back" onclick="closeWS()">← ニュース一覧へ戻る</button>
+      <span class="cbbadge">組み合わせ記事案</span>
+      <h2>${esc(c.theme)}</h2>
+    </div>
+    <div class="tabbody">
+      <h3 style="font-size:12px;color:var(--acc);letter-spacing:.1em;margin-bottom:6px">なぜこの組み合わせか</h3>
+      <p style="font-size:13px;color:var(--sub);margin-bottom:16px">${esc(c.why)}</p>
+      <div class="prow"><span class="llm claude">PROMPT</span><h4>掛け合わせ記事プロンプト（どのLLMでも可）</h4>
+        <button class="copy" onclick="cp(this,\`${c.prompt.replace(/\\/g,"\\\\").replace(/`/g,"\\`").replace(/\$/g,"\\$")}\`)">コピー</button></div>
+      <div class="phint">2記事の情報が両方入っています。コピーしてLLMに貼るだけ</div>
+      <pre>${esc(c.prompt)}</pre>
+      <div class="prow" style="margin-top:18px"><h4>タイトル案</h4>
+        <button class="copy" onclick="cp(this,\`${c.titles.join("\\n").replace(/`/g,"\\`")}\`)">全てコピー</button></div>
+      <ul class="tlist">${c.titles.map((t,i)=>`<li><span class="n">0${i+1}</span>${esc(t)}</li>`).join("")}</ul>
+    </div>`;
+}
+function comboPromptJS(a,b){
+  const s=x=>x.summary_ja||x.summary||"（出典参照）";
+  return `あなたはnoteで人気のAI副業系編集者です。
+以下の2つのニュースを掛け合わせて、1本のnote記事を書いてください。
+
+<news_a role="事例・動機づけ">
+タイトル: ${a.title}
+要約: ${s(a)}
+出典: ${a.link}
+</news_a>
+
+<news_b role="手法・具体的なやり方">
+タイトル: ${b.title}
+要約: ${s(b)}
+出典: ${b.link}
+</news_b>
+
+<brief>
+記事の狙い: news_aで「稼げる・変化が起きている」という動機を作り、news_bで「では具体的にどうやるか」を示す構成
+ターゲット読者: AI副業に関心がある初心者〜中級者
+構成: 導入(2つのニュースの接点を一言で)→news_aの紹介(何が起きたか)→news_bの紹介(どう使うか)→2つを組み合わせた実践ステップ3つ→注意点→まとめ+今日やること1つ
+文字数: 2,600〜3,000字 / 見出し6〜7個 / 3〜4行ごとに改行
+口調: です・ます調。専門用語は一言で補足
+禁止事項: 事実の捏造 / 誇大表現 / 出典のない数値 / 2つのニュースの因果関係の捏造(「関連する動き」として紹介し、無理につなげない)
+</brief>`;
+}
+function makeManualCombo(aid){
+  const bid=document.getElementById("cbsel").value;
+  if(!bid)return;
+  const a=DATA.articles.find(x=>x.id===aid), b=DATA.articles.find(x=>x.id===bid);
+  const p=comboPromptJS(a,b);
+  document.getElementById("cbout").innerHTML=`
+    <div class="prow" style="margin-top:14px"><span class="llm claude">PROMPT</span><h4>組み合わせプロンプト</h4>
+      <button class="copy" onclick="cp(this,\`${p.replace(/\\/g,"\\\\").replace(/`/g,"\\`").replace(/\$/g,"\\$")}\`)">コピー</button></div>
+    <pre>${esc(p)}</pre>`;
+}
+function closeWS(){document.body.classList.remove("detail")}
+function setTab(t){tab=t;renderWS()}
+
+function renderWS(){
+  const a=DATA.articles.find(x=>x.id===sel); if(!a)return;
+  const T={ideas:"記事ネタ",bp:"note設計書",prompts:"プロンプト",titles:"タイトル20",sns:"SNS",road:"育成ロードマップ",combine:"組み合わせ"};
+  let body="";
+  if(tab==="ideas") body=a.ideas.map(i=>`
+    <div class="idea"><div class="tag">▸ ${i.type}</div><h4>${esc(i.angle)}</h4><small>想定読者: ${esc(i.reader)}</small></div>`).join("");
+  if(tab==="bp"){const b=a.blueprint; body=`<dl class="bp">
+    <dt>テーマ</dt><dd>${esc(b.theme)}</dd>
+    <dt>想定読者</dt><dd>${esc(b.reader)}</dd>
+    <dt>読者の悩み</dt><dd>${esc(b.pain)}</dd>
+    <dt>読後の状態</dt><dd>${esc(b.after)}</dd>
+    <dt>構成</dt><dd><div class="flow">${b.structure.map(s=>`<span>${esc(s)}</span>`).join("")}</div></dd>
+    <dt>SEOキーワード</dt><dd><div class="kws">${b.seo.map(k=>`<span class="kw">${esc(k)}</span>`).join("")}</div></dd>
+    <dt>差別化ポイント</dt><dd>${esc(b.diff)}</dd>
+    <dt>スペック</dt><dd>${esc(b.spec.length)} / 見出し${esc(b.spec.headings)} / ${esc(b.spec.linebreak)} / ${esc(b.spec.intro)}</dd>
+  </dl>`;}
+  if(tab==="prompts") body=`<div class="phint">使うLLMの分だけコピーすればOK（枠内は上下スクロールで全文表示）</div>`
+    + Object.entries(a.prompts).map(([k,v])=>`
+    <div class="pgroup"><div class="prow"><span class="llm ${k}">${LLM[k]}</span><h4>${LLM[k]}用プロンプト</h4>
+    <button class="copy" onclick="cp(this,\`${v.replace(/\\/g,"\\\\").replace(/`/g,"\\`").replace(/\$/g,"\\$")}\`)">コピー</button></div>
+    <pre>${esc(v)}</pre></div>`).join("");
+  if(tab==="titles") body=`<div class="prow" style="margin-bottom:12px"><h4>タイトル20案</h4>
+    <button class="copy" onclick="cp(this,\`${a.titles.join("\\n").replace(/`/g,"\\`")}\`)">全てコピー</button></div>
+    <ul class="tlist">${a.titles.map((t,i)=>`<li><span class="n">${String(i+1).padStart(2,"0")}</span>${esc(t)}</li>`).join("")}</ul>`;
+  if(tab==="sns") body=Object.entries({x:"X (Twitter)",threads:"Threads",instagram:"Instagram"}).map(([k,l])=>`
+    <div class="snsbox"><div class="prow"><h4>${l}</h4>
+    <button class="copy" onclick="cp(this,\`${a.sns[k].replace(/`/g,"\\`")}\`)">コピー</button></div>
+    <pre>${esc(a.sns[k])}</pre></div>`).join("");
+  if(tab==="road") body=`<div class="road">${a.roadmap.map(r=>`
+    <div class="rstep"><span class="lv">LV.${r.lv} — ${esc(r.type)}</span><h4>${esc(r.title)}</h4>
+    <small>⏱ ${esc(r.when)} / 📍 ${esc(r.platform)}</small></div>`).join("")}</div>`;
+  if(tab==="combine") body=`<div class="combine">
+    <p style="font-size:13px;color:var(--sub)">この記事を「事例・動機づけ」として、もう1つの記事を「手法・やり方」として掛け合わせた記事プロンプトを作ります。</p>
+    <select id="cbsel">
+      <option value="">— 組み合わせる記事を選ぶ —</option>
+      ${DATA.articles.filter(x=>x.id!==a.id).map(x=>`<option value="${x.id}">${esc(x.title.slice(0,42))}</option>`).join("")}
+    </select>
+    <button class="gen" onclick="makeManualCombo('${a.id}')">組み合わせプロンプトを生成</button>
+    <div id="cbout"></div>
+  </div>`;
+
+  document.getElementById("ws").innerHTML=`
+    <div class="ws-head">
+      <button class="back" onclick="closeWS()">← ニュース一覧へ戻る</button>
+      <div class="meta"><span class="cat ${a.category}">${CAT[a.category]}</span><span>${esc(a.source)}</span>
+      <span class="stars">${star(a.stars.importance)}</span></div>
+      <h2>${esc(a.title)}</h2>
+      <a href="${a.link}" target="_blank" rel="noopener">出典を読む ↗</a>
+    </div>
+    <div class="tabs">${Object.entries(T).map(([k,l])=>`<div class="tab ${tab===k?'on':''}" onclick="setTab('${k}')">${l}</div>`).join("")}</div>
+    <div class="tabbody">${body}</div>`;
+}
+
+function cp(btn,text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.classList.add("done"); btn.textContent="✓ コピー済";
+    const t=document.getElementById("toast"); t.classList.add("show");
+    setTimeout(()=>{btn.classList.remove("done");btn.textContent="コピー";t.classList.remove("show")},1800);
+  });
+}
+load();
+</script>
+</body>
+</html>
