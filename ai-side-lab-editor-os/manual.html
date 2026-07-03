@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI SIDE LAB Editor OS — ご利用にあたって</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d12;--panel:#11161f;--panel2:#161d29;--line:#232d3d;
+  --txt:#e8edf5;--sub:#8a97ab;--dim:#5a6577;--acc:#ffb03a;--acc2:#4ade80;--acc3:#60a5fa;--ng:#f87171}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Noto Sans JP',sans-serif;font-size:15px;
+  line-height:1.85;overflow-wrap:anywhere;word-break:break-word;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(255,176,58,.06),transparent)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px calc(60px + env(safe-area-inset-bottom))}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--sub)}
+.logo b{color:var(--acc)}
+h1{font-size:22px;line-height:1.5;margin:6px 0 4px}
+.lead{color:var(--sub);font-size:13.5px;margin-bottom:28px}
+h2{font-size:17px;margin:40px 0 14px;padding-left:12px;border-left:3px solid var(--acc)}
+p{margin-bottom:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.step{display:flex;gap:14px;margin-bottom:14px}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#0a0d12;
+  font-family:'Space Grotesk';font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step h4{font-size:14.5px;margin-bottom:2px}
+.step p{font-size:13.5px;color:var(--sub);margin:0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:700;margin-right:6px;flex:none;margin-top:2px}
+.ok{background:rgba(74,222,128,.14);color:var(--acc2)}
+.no{background:rgba(248,113,113,.13);color:var(--ng)}
+.must{background:rgba(255,176,58,.16);color:var(--acc)}
+ul{list-style:none}
+li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;display:flex;gap:10px;align-items:flex-start}
+li:last-child{border-bottom:none}
+.note{background:rgba(255,176,58,.07);border:1px solid rgba(255,176,58,.25);border-radius:11px;
+  padding:13px 15px;font-size:13px;margin:14px 0}
+.note b{color:var(--acc)}
+.warn{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.3);border-radius:11px;
+  padding:13px 15px;font-size:13px;margin:14px 0}
+.warn b{color:var(--ng)}
+.check{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin:10px 0;font-size:13.5px}
+.check b{color:var(--acc2)}
+footer{text-align:center;color:var(--dim);font-size:11px;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">AI SIDE <b>LAB</b> / EDITOR OS</div>
+  <h1>ご利用にあたって</h1>
+  <p class="lead">本ツールは、AIニュースを自動収集し、note記事の「材料一式」に変換する編集支援システムです。この文書では、ツールの概要・信頼性を担保する仕組み・お守りいただきたいルールをご説明します。</p>
+
+  <h2>このツールは何をするものか</h2>
+  <div class="card">
+    <p style="font-size:13.5px">世界のAIニュース約20ソース（公式ブログ・大手メディア・日本語メディア・コミュニティ）を毎日3回（朝7時・昼12時・夜19時）自動で収集し、ニュース1件ごとに以下を自動生成します。</p>
+    <ul>
+      <li><span class="tag ok">生成</span><span>記事ネタ5案（初心者向け／副業／比較／体験談／収益化）</span></li>
+      <li><span class="tag ok">生成</span><span>note記事の設計書（想定読者・構成・SEOキーワード）</span></li>
+      <li><span class="tag ok">生成</span><span>AI（Claude・ChatGPT等）に貼るだけで記事が書き上がるプロンプト</span></li>
+      <li><span class="tag ok">生成</span><span>タイトル20案／SNS告知文（X・Threads・Instagram）</span></li>
+      <li><span class="tag ok">生成</span><span>2つのニュースを掛け合わせた「組み合わせ記事案」</span></li>
+      <li><span class="tag ok">生成</span><span>1つのニュースを無料記事→有料記事へ育てる展開ロードマップ</span></li>
+    </ul>
+  </div>
+  <p style="font-size:13px;color:var(--sub)">使い方は「ニュースを選ぶ → プロンプトをコピー → お使いのAIに貼る → 出てきた本文をnoteに貼る」の4手順です。詳しい操作は別紙の使い方ガイドをご覧ください。</p>
+
+  <h2>情報の信頼性について（仕組みで守っている部分）</h2>
+  <div class="card">
+    <ul>
+      <li><span class="tag ok">対策済</span><span><b>材料は配信元の一次情報のみ。</b>ニュースの要約は、配信元（OpenAI公式やITmedia等）が自ら書いた文章を180字以内で使用し、必ず出典リンクを併記しています。伝聞や無関係な情報は混ざりません</span></li>
+      <li><span class="tag ok">対策済</span><span><b>情報源に信頼度の重み付け。</b>公式発表は高く、コミュニティ投稿は低く評価する設計です</span></li>
+      <li><span class="tag ok">対策済</span><span><b>AIへの捏造禁止命令。</b>プロンプトには「要約にない数値・日付・料金・仕様・発言を創作しない」「出典が読めない場合は確定情報の範囲だけで書く」という指示が最初から組み込まれています</span></li>
+      <li><span class="tag ok">対策済</span><span><b>確認ポイントの自動リスト化。</b>生成された記事の末尾に【投稿前チェック】として「出典で確認すべき事実3点」がAI自身によって出力されます</span></li>
+    </ul>
+  </div>
+
+  <h2>お願い：投稿前の最終確認は必ずご自身で</h2>
+  <div class="warn"><b>ここが唯一かつ最重要のルールです。</b>上記の仕組みでリスクは大幅に減らしていますが、AIは稀に指示を破り、もっともらしい誤りを書くことがあります。生成された記事は<b>必ずご自身で一読してから</b>投稿してください。投稿した内容への責任は、仕組み上もnoteの規約上も、投稿者ご本人にあります。</div>
+  <div class="card">
+    <div class="step"><div class="num">1</div><div><h4>【投稿前チェック】3点を照合する（約30秒）</h4><p>記事末尾にAIが挙げた確認ポイント3点を、「出典を読む↗」のリンク先と照らし合わせる。</p></div></div>
+    <div class="step"><div class="num">2</div><div><h4>数字・固有名詞・日付を目視確認</h4><p>AIが最も間違えやすい箇所です。料金・バージョン名・発表日は特に注意。</p></div></div>
+    <div class="step"><div class="num">3</div><div><h4>ご自身の言葉を1〜2箇所加える</h4><p>体験・感想・独自の視点を足してください。品質が上がるだけでなく、AI単独生成物には著作権が発生しないため、ご自身の創作的な寄与を加えることが権利面でも重要です。</p></div></div>
+  </div>
+
+  <h2>投稿前チェックリスト（法務・権利まわり）</h2>
+  <div class="check">☑ <b>元記事の画像・スクリーンショットを転載していない</b>（本文以上に事故が多いポイントです）</div>
+  <div class="check">☑ 生成文が元記事の表現をなぞっていない（言い回しが似すぎていたら書き直し）</div>
+  <div class="check">☑ アフィリエイトリンクや案件紹介を入れる場合は「#PR」表記を付けた（純粋なニュース解説なら不要）</div>
+  <div class="check">☑ 企業のトラブル等に触れる場合、出典に書かれた範囲を超えた断定をしていない</div>
+  <div class="check">☑ 有料販売する記事には、自分の体験・編集がしっかり入っている</div>
+
+  <h2>記事内の画像について</h2>
+  <div class="card">
+    <ul>
+      <li><span class="tag no">禁止</span><span>元記事・他サイトの画像やスクリーンショットの転載（著作権侵害のリスクが最も高い行為です）</span></li>
+      <li><span class="tag must">推奨</span><span>アイキャッチや図解は<b>ご自身で用意</b>してください。AI画像生成・Canva等の作成ツール・ご自身の撮影素材が安全です</span></li>
+      <li><span class="tag must">注意</span><span>AI画像を生成する場合、実在の作家名・作品名・キャラクター名・ブランド名をプロンプトに入れないでください。画風は「線の質感・配色・雰囲気」など客観的な言葉で指定するのが安全です</span></li>
+    </ul>
+  </div>
+
+  <div class="note"><b>本文書の位置づけ:</b> ここに記載した法務関連の内容は一般的な注意点の整理であり、法律相談に代わるものではありません。大きな収益が動く段階では専門家への確認をお勧めします。</div>
+
+  <footer>AI SIDE LAB Editor OS — 運用コストゼロ設計 / 収集は無料RSS・生成はテンプレート方式</footer>
+</div>
+</body>
+</html>

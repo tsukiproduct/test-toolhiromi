@@ -19,6 +19,7 @@ from pathlib import Path
 DATA = Path(__file__).parent / "data"
 SRC = DATA / "raw.json"
 OUT = DATA / "articles.json"
+ARCHIVE = DATA / "archive.json"
 
 CAT_LABEL = {
     "model": "AIモデル", "imggen": "画像生成", "vidgen": "動画生成",
@@ -94,6 +95,12 @@ BASE_BRIEF = """テーマ: {t}
 SEOキーワード: {kw}
 文字数: 2,600〜3,000字 / 見出し6〜7個 / 3〜4行ごとに改行
 口調: です・ます調。専門用語は必ず一言で補足。押し付けず、読者に寄り添う
+情報の扱い（重要）:
+- Web閲覧ができる場合、まず出典URLを開いて内容を確認してから書くこと
+- 出典が開けない・閲覧機能がない場合は、上記の要約にある事実「だけ」を根拠にすること
+- 要約にない数値・日付・料金・仕様・発言の引用を創作しない。書けない詳細は「詳細は出典を参照してください」と誘導する
+- 確定情報と推測を区別し、推測は「〜と考えられます」と明示する
+- 記事本文の最後に【投稿前チェック】として、出典で確認すべき事実を3点、箇条書きで出力する（これは読者向けではなく執筆者向けメモ）
 禁止事項: 事実の捏造 / 誇大表現 / 出典のない数値 / 元記事の文章コピー"""
 
 def prompts(a) -> dict:
@@ -220,6 +227,10 @@ COMBO_PROMPT = """あなたはnoteで人気のAI副業系編集者です。
 構成: 導入(2つのニュースの接点を一言で)→news_aの紹介(何が起きたか)→news_bの紹介(どう使うか)→2つを組み合わせた実践ステップ3つ→注意点→まとめ+今日やること1つ
 文字数: 2,600〜3,000字 / 見出し6〜7個 / 3〜4行ごとに改行
 口調: です・ます調。専門用語は一言で補足
+情報の扱い（重要）:
+- Web閲覧ができる場合、2つの出典URLを両方開いて確認してから書くこと
+- 開けない場合は、上記の各要約にある事実「だけ」を根拠にし、要約にない数値・仕様を創作しない
+- 記事本文の最後に【投稿前チェック】として、各出典で確認すべき事実を計3点、箇条書きで出力する（執筆者向けメモ）
 禁止事項: 事実の捏造 / 誇大表現 / 出典のない数値 / 2つのニュースの因果関係の捏造(「関連する動き」として紹介し、無理につなげない)
 </brief>"""
 
@@ -271,6 +282,26 @@ def build_combos(articles) -> list:
     return combos
 
 # ────────────────────────────────────────────
+
+def merge_archive(current_articles) -> list:
+    merged = {}
+    if ARCHIVE.exists():
+        try:
+            old = json.loads(ARCHIVE.read_text(encoding="utf-8")).get("articles", [])
+        except Exception:
+            old = []
+        for a in old:
+            if a.get("id"):
+                merged[a["id"]] = a
+    for a in current_articles:
+        if a.get("id"):
+            merged[a["id"]] = a
+    return sorted(
+        merged.values(),
+        key=lambda a: a.get("published") or "",
+        reverse=True,
+    )[:1000]
+
 def main():
     src = json.loads(SRC.read_text(encoding="utf-8"))
     for a in src["articles"]:
@@ -281,8 +312,14 @@ def main():
         a["sns"] = sns(a)
         a["roadmap"] = roadmap(a)
     src["combos"] = build_combos(src["articles"])
+    archive_articles = merge_archive(src["articles"])
+    archive = dict(src)
+    archive["articles"] = archive_articles
+    archive["count"] = len(archive_articles)
+    archive["combos"] = build_combos(archive_articles[:60])
     OUT.write_text(json.dumps(src, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"→ {OUT} に編集材料を付与しました（記事{src['count']}件 / 組み合わせ{len(src['combos'])}案）")
+    ARCHIVE.write_text(json.dumps(archive, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"→ {OUT} に編集材料を付与しました（記事{src['count']}件 / 組み合わせ{len(src['combos'])}案 / アーカイブ{len(archive_articles)}件）")
 
 if __name__ == "__main__":
     main()

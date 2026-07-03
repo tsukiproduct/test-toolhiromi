@@ -30,7 +30,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,13,18,.92);backdrop-f
 .logo{font-family:'Space Grotesk';font-weight:700;font-size:17px;letter-spacing:.06em;white-space:nowrap}
 .logo b{color:var(--acc)}
 .logo small{display:block;font-size:9px;color:var(--dim);letter-spacing:.3em;font-weight:400}
-.status{margin-left:auto;font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.nav{margin-left:auto;display:flex;align-items:center;gap:10px;min-width:0}
+.manual-link{color:var(--sub);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 10px;font-size:11px;white-space:nowrap}
+.manual-link:hover{border-color:var(--acc);color:var(--txt)}
+.status{font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;white-space:nowrap}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--acc2);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
@@ -50,8 +53,10 @@ main{max-width:1280px;margin:0 auto;padding:16px;display:grid;grid-template-colu
   color:var(--sub);font-size:12px;cursor:pointer;transition:all .2s;min-height:32px}
 .chip:hover{border-color:var(--acc);color:var(--txt)}
 .chip.on{background:var(--acc);color:#0a0d12;border-color:var(--acc);font-weight:700}
-select{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:99px;
-  padding:6px 12px;font-size:12px;font-family:inherit}
+select,.search{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:99px;
+  padding:6px 12px;font-size:12px;font-family:inherit;min-height:32px}
+.search{min-width:180px;flex:1}
+.empty-note{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--sub);font-size:13px;padding:16px;text-align:center;width:100%}
 
 /* ── article cards ── */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;
@@ -187,7 +192,10 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
 <header>
   <div class="hrow">
     <div class="logo mono">AI SIDE <b>LAB</b><small>EDITOR OS</small></div>
-    <div class="status"><span class="dot"></span><span id="updated">LOADING…</span></div>
+    <div class="nav">
+      <a class="manual-link" href="manual.html">マニュアル</a>
+      <div class="status"><span class="dot"></span><span id="updated">LOADING…</span></div>
+    </div>
   </div>
 </header>
 <div class="ticker"><div class="ticker-in" id="ticker"></div></div>
@@ -196,8 +204,18 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
   <section class="list-col">
     <div class="filters" id="filters"></div>
     <div class="filters">
+      <input id="search" class="search" type="search" placeholder="キーワード検索">
+      <select id="sourceFilter"><option value="all">全ソース</option></select>
+      <select id="rangeFilter">
+        <option value="latest">最新のみ</option>
+        <option value="7d">過去7日</option>
+        <option value="30d">過去30日</option>
+        <option value="alltime">全期間</option>
+      </select>
       <select id="sort">
         <option value="all">総合スコア順</option>
+        <option value="new">新着順</option>
+        <option value="old">古い順</option>
         <option value="note">note適性順</option>
         <option value="monetize">収益化期待順</option>
         <option value="beginner">初心者向け順</option>
@@ -223,12 +241,16 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:30px 16px calc(
 <script>
 const CAT = {model:"AIモデル", imggen:"画像生成", vidgen:"動画生成", tool:"AIツール", biz:"AIビジネス", news:"AIニュース"};
 const LLM = {claude:"Claude", gpt:"GPT", gemini:"Gemini", grok:"Grok"};
-let DATA=null, sel=null, catFilter="all", tab="ideas";
+let DATA=null, ARCHIVE=null, sel=null, catFilter="all", tab="ideas";
 
 async function load(){
   try{
     const r = await fetch("data/articles.json?t="+Date.now());
     DATA = await r.json();
+    try{
+      const ar = await fetch("data/archive.json?t="+Date.now());
+      if(ar.ok) ARCHIVE = await ar.json();
+    }catch(_e){}
   }catch(e){
     if(window.EMBED){ DATA = window.EMBED; }
     else { document.getElementById("list").innerHTML="<div class='ws-empty'>data/articles.json が見つかりません。<br>python3 fetch.py → generate.py を実行してください。</div>"; return; }
@@ -238,7 +260,7 @@ async function load(){
     "UPDATED " + d.toLocaleString("ja-JP",{month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}) + " JST / " + DATA.count + "件";
   document.getElementById("ticker").innerHTML =
     DATA.articles.slice(0,8).map(a=>`<b>▲${Math.max(...Object.values(a.score))}</b> ${esc(a.title)}`).join("　◆　");
-  renderFilters(); renderList();
+  renderFilters(); renderSources(); renderList();
 }
 function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function star(n){return "★".repeat(n)+"<span style='color:var(--dim)'>"+"★".repeat(5-n)+"</span>"}
@@ -250,15 +272,41 @@ function renderFilters(){
     `<button class="chip ${c===catFilter?'on':''}" onclick="setCat('${c}')">${c==="all"?"すべて":CAT[c]||c}</button>`).join("");
 }
 function setCat(c){catFilter=c;renderFilters();renderList()}
+
+function activeArticles(){
+  const range=document.getElementById("rangeFilter")?.value || "latest";
+  const base=(range==="latest" || !ARCHIVE) ? DATA.articles : (ARCHIVE.articles || DATA.articles);
+  if(range==="latest" || range==="alltime") return base.slice();
+  const days=range==="7d" ? 7 : 30;
+  const limit=Date.now() - days*24*60*60*1000;
+  return base.filter(a=>new Date(a.published).getTime() >= limit);
+}
+
+function renderSources(){
+  const src=document.getElementById("sourceFilter");
+  const sources=[...new Set(((ARCHIVE&&ARCHIVE.articles)||DATA.articles).map(a=>a.source).filter(Boolean))].sort();
+  src.innerHTML = `<option value="all">全ソース</option>` + sources.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("");
+}
 document.getElementById("sort").onchange=renderList;
+document.getElementById("rangeFilter").onchange=renderList;
+document.getElementById("sourceFilter").onchange=renderList;
+document.getElementById("search").oninput=renderList;
 
 function renderList(){
   const key=document.getElementById("sort").value;
-  let arr=DATA.articles.filter(a=>catFilter==="all"||a.category===catFilter);
-  arr.sort((a,b)=> key==="all"
-    ? Math.max(...Object.values(b.score))-Math.max(...Object.values(a.score))
-    : b.score[key]-a.score[key]);
-  const combos = (DATA.combos && catFilter==="all") ? `
+  const range=document.getElementById("rangeFilter").value;
+  const source=document.getElementById("sourceFilter").value;
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  let arr=activeArticles().filter(a=>catFilter==="all"||a.category===catFilter);
+  if(source!=="all") arr=arr.filter(a=>a.source===source);
+  if(q) arr=arr.filter(a=>[a.title,a.summary_ja,a.summary,a.source,CAT[a.category]].join(" ").toLowerCase().includes(q));
+  arr.sort((a,b)=>{
+    if(key==="new") return new Date(b.published)-new Date(a.published);
+    if(key==="old") return new Date(a.published)-new Date(b.published);
+    if(key==="all") return Math.max(...Object.values(b.score))-Math.max(...Object.values(a.score));
+    return (b.score[key]||0)-(a.score[key]||0);
+  });
+  const combos = (DATA.combos && catFilter==="all" && range==="latest" && source==="all" && !q) ? `
     <div class="combo-head">⚡ COMBO — 2つのニュースを掛け合わせる</div>
     ${DATA.combos.map((c,i)=>`
       <div class="cbcard ${sel===c.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openCombo('${c.id}')">
@@ -267,6 +315,10 @@ function renderList(){
         <div class="pair"><b>事例</b> ${esc(c.a_title)}<br><b>手法</b> ${esc(c.b_title)}</div>
       </div>`).join("")}
     <div class="combo-head" style="margin-top:18px">📰 NEWS — 単体記事</div>` : "";
+  if(!arr.length){
+    document.getElementById("list").innerHTML = combos + `<div class="empty-note">条件に合う記事がありません。</div>`;
+    return;
+  }
   document.getElementById("list").innerHTML = combos + arr.map((a,i)=>`
     <div class="card ${sel===a.id?'sel':''}" style="animation-delay:${i*40}ms" onclick="openArticle('${a.id}')">
       <div class="meta">
@@ -340,6 +392,10 @@ function comboPromptJS(a,b){
 構成: 導入(2つのニュースの接点を一言で)→news_aの紹介(何が起きたか)→news_bの紹介(どう使うか)→2つを組み合わせた実践ステップ3つ→注意点→まとめ+今日やること1つ
 文字数: 2,600〜3,000字 / 見出し6〜7個 / 3〜4行ごとに改行
 口調: です・ます調。専門用語は一言で補足
+情報の扱い（重要）:
+- Web閲覧ができる場合、2つの出典URLを両方開いて確認してから書くこと
+- 開けない場合は、上記の各要約にある事実「だけ」を根拠にし、要約にない数値・仕様を創作しない
+- 記事本文の最後に【投稿前チェック】として、各出典で確認すべき事実を計3点、箇条書きで出力する（執筆者向けメモ）
 禁止事項: 事実の捏造 / 誇大表現 / 出典のない数値 / 2つのニュースの因果関係の捏造(「関連する動き」として紹介し、無理につなげない)
 </brief>`;
 }
