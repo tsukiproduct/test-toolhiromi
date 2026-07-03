@@ -1,6 +1,12 @@
-﻿name: Update AI SIDE LAB Editor OS
+name: Update AI SIDE LAB Editor OS
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update.yml"
+      - "ai-side-lab-editor-os/**"
+      - "!ai-side-lab-editor-os/data/**"
   schedule:
     # JST 07:00 / 12:00 / 19:00 (UTC)
     - cron: "0 22 * * *"
