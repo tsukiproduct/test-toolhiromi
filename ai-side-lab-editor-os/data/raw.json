@@ -1,29 +1,53 @@
 {
- "updated": "2026-07-06T07:48:01.400173+09:00",
- "count": 181,
+ "updated": "2026-07-06T16:14:59.180614+09:00",
+ "count": 188,
  "articles": [
   {
-   "id": "713bc41007c2",
-   "title": "無料の画像生成AI「Krea 2」が話題 実写もアニメもこなす新勢力",
-   "link": "https://ascii.jp/elem/000/004/416/4416343/?rss",
-   "summary": "無料の画像生成AI「Krea 2」は、実写からアニメまで高品質に描ける新モデル。ローカルPCで動作し、プロンプト解釈力やスタイル表現の広さが注目されています。",
-   "source": "ASCII AI",
+   "id": "b9db4cb84a37",
+   "title": "Claudeの新モデル「Fable 5」の全貌：Opus 4.8を超える自律型AIのベストプラクティス",
+   "link": "https://zenn.dev/nijima/articles/6a449fa2365493",
+   "summary": "はじめに Anthropicから、従来のフラッグシップモデルであったClaude Opus 4.8を凌駕する新モデル「Claude Fable 5」（および限定公開の Mythos 5）がリリースされました。 これまでのLLMが「優秀なアシスタント（Copilot）」だったとすれば、Fable 5は「数日間自律して働き続けるシニアエンジニア」です。人間が数時",
+   "source": "Zenn AI",
    "lang": "ja",
    "category": "model",
-   "published": "2026-07-06T07:00:00+09:00",
+   "published": "2026-07-06T06:49:45+09:00",
    "score": {
-    "note": 83,
-    "x": 93,
-    "youtube": 93,
-    "brain": 59,
-    "monetize": 63,
-    "beginner": 73
+    "note": 79,
+    "x": 94,
+    "youtube": 82,
+    "brain": 60,
+    "monetize": 66,
+    "beginner": 66
    },
    "stars": {
     "importance": 5,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 5
+   }
+  },
+  {
+   "id": "04b5cc6eec67",
+   "title": "サムネイル作成の手数を減らしたい。ChatGPTに相談だ。",
+   "link": "https://note.com/1640taro/n/n5538e44aaf6a",
+   "summary": "AI動画をYouTube へpublishの際、サムネイル画像を作っている。毎回ffmpegで1枚切り出してるので、大した工数ではないのだけれど、せっかくなら元の動画から、エフェクトの使用前と使用後を1枚の画像にして、サムネイル画像化したいなと。ざっくりとしたイメージは、テレビ画面での小窓。ワイプ。PinP。食レポ映像の右上とかにちょいちょいスタジオの人が映",
+   "source": "note AI hashtag",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T16:12:37+09:00",
+   "score": {
+    "note": 78,
+    "x": 81,
+    "youtube": 93,
+    "brain": 58,
+    "monetize": 58,
+    "beginner": 64
+   },
+   "stars": {
+    "importance": 5,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
    }
   },
   {
@@ -36,77 +60,29 @@
    "category": "imggen",
    "published": "2026-07-06T07:00:00+09:00",
    "score": {
-    "note": 84,
-    "x": 87,
-    "youtube": 91,
+    "note": 83,
+    "x": 86,
+    "youtube": 90,
     "brain": 60,
     "monetize": 62,
     "beginner": 74
    },
    "stars": {
-    "importance": 5,
+    "importance": 4,
     "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "f16d3e6c2e33",
-   "title": "Physical AI時代に、3Dモデル生成はどこで役に立つのか",
-   "link": "https://zenn.dev/tanchodo265/articles/7e60442ec15f08",
-   "summary": "人型ロボットやPhysical AIの話題が増えるにつれて、AIが画面の中だけでなく、現実世界の物体や空間を扱う方向に進んでいることを感じます。そこで重要になるのが、現実の物体をどうデジタルに表すかという問題です。 この記事では、ロボットを直接動かす話ではなく、画像から3Dモデルを作る技術が、Physical AI周辺のどこで役に立ちそうかを整理します。 2",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-05T23:56:47+09:00",
-   "score": {
-    "note": 79,
-    "x": 86,
-    "youtube": 90,
-    "brain": 60,
-    "monetize": 62,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "2081fd1e782d",
-   "title": "Hollywood wants Seedance banned and reportedly also wants to keep using it",
-   "link": "https://the-decoder.com/hollywood-wants-seedance-banned-and-reportedly-also-wants-to-keep-using-it/",
-   "summary": "Bytedance's AI video tool Seedance is dividing Hollywood. A viral clip featuring AI-generated Brad Pitt and Tom Cruise prompted the Motion Picture Association's first-ever cease-an",
-   "source": "The Decoder",
-   "lang": "en",
-   "category": "vidgen",
-   "published": "2026-07-05T18:02:36+09:00",
-   "score": {
-    "note": 73,
-    "x": 86,
-    "youtube": 90,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "b74fe0282353",
-   "title": "【Win11新機能】データも戻せる「ポイントインタイムリストア」の使い方と、スナップショットの罠",
-   "link": "https://pc.watch.impress.co.jp/docs/topic/feature/2122480.html",
-   "summary": "Windows 11の6月のプレビュー更新(KB5095093)で、新機能である「ポイントインタイムリストア」が追加された。 ボリュームシャドウコピー(VSS)機能を活用し、PCの状態とデータを以前の状態に復元する機能だ。ただし、機能を有効にしても、思い通りにスナップショットを取得してくれないケースもある。この機能の使い方に加え、どのように動作しているのかも",
+   "id": "d36fcb389ffd",
+   "title": "「XPS 13」の体験や特製ジェラートを楽しめるイベント、表参道で開催",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2122705.html",
+   "summary": "デル・テクノロジーズは、薄型軽量の「New XPS 13」をはじめとした最新PCを体験できる「XPS 13体験型ポップアップイベント」を7月9日から12日までZeroBase表参道で開催する。参加費は無料。",
    "source": "PC Watch",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-06T06:06:00+09:00",
+   "published": "2026-07-06T15:33:34+09:00",
    "score": {
     "note": 90,
     "x": 81,
@@ -123,44 +99,44 @@
    }
   },
   {
-   "id": "c0b11f842e09",
-   "title": "World AI News 2026年7月6日号（ダイジェスト）",
-   "link": "https://note.com/sukerokerasu/n/n9a2db3b9e32d",
-   "summary": "英語でしか読めない世界のAI・テクノロジーの最新ニュースを、中学生でも読めるやさしい日本語で。毎日、エンジニア視点と社会視点をそえてまとめています。▶ この号の全文（くわしい解説つき）を無料で読む → https://petitacode.web2050.jp/news/2026-07-06.html続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:22:33+09:00",
+   "id": "2081fd1e782d",
+   "title": "Hollywood wants Seedance banned and reportedly also wants to keep using it",
+   "link": "https://the-decoder.com/hollywood-wants-seedance-banned-and-reportedly-also-wants-to-keep-using-it/",
+   "summary": "Bytedance's AI video tool Seedance is dividing Hollywood. A viral clip featuring AI-generated Brad Pitt and Tom Cruise prompted the Motion Picture Association's first-ever cease-an",
+   "source": "The Decoder",
+   "lang": "en",
+   "category": "vidgen",
+   "published": "2026-07-05T18:02:36+09:00",
    "score": {
-    "note": 90,
-    "x": 79,
-    "youtube": 75,
-    "brain": 58,
-    "monetize": 60,
-    "beginner": 88
+    "note": 72,
+    "x": 85,
+    "youtube": 89,
+    "brain": 61,
+    "monetize": 63,
+    "beginner": 61
    },
    "stars": {
     "importance": 4,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "d1046b57cf29",
-   "title": "AI時代のバックエンドエンジニア基礎",
-   "link": "https://zenn.dev/kosments/books/backend-ai-era-2026",
-   "summary": "AIが当たり前になった2026年、バックエンドエンジニアに求められる基礎力を体系的に整理します。roadmap.sh/backendをベースに、HTTP・API設計・データベース・認証・可観測性・セキュリティを実務視点で解説。「AIが書いたコードを正しくレビューできる力」を軸に、中級者への橋渡しを目指します。",
-   "source": "Zenn AI",
+   "id": "50c913bc9fb7",
+   "title": "Windows 11でデータを過去の状態に復元！新機能「ポイントインタイムリストア」の使い方と“動かない”罠の対策",
+   "link": "https://pc.watch.impress.co.jp/docs/topic/feature/2122480.html",
+   "summary": "Windows 11の6月のプレビュー更新(KB5095093)で、新機能である「ポイントインタイムリストア」が追加された。 ボリュームシャドウコピー(VSS)機能を活用し、PCの状態とデータを以前の状態に復元する機能だ。ただし、機能を有効にしても、思い通りにスナップショットを取得してくれないケースもある。この機能の使い方に加え、どのように動作しているのかも",
+   "source": "PC Watch",
    "lang": "ja",
-   "category": "biz",
-   "published": "2026-07-06T01:41:45+09:00",
+   "category": "news",
+   "published": "2026-07-06T06:06:00+09:00",
    "score": {
     "note": 89,
-    "x": 73,
-    "youtube": 73,
-    "brain": 71,
-    "monetize": 69,
+    "x": 80,
+    "youtube": 76,
+    "brain": 63,
+    "monetize": 62,
     "beginner": 74
    },
    "stars": {
@@ -171,38 +147,14 @@
    }
   },
   {
-   "id": "fb238c180647",
-   "title": "Anthropic「Claude Science」を整理:新モデルではなくワークフロー製品、自社創薬は前臨床から",
-   "link": "https://qiita.com/quotidia/items/6e62fb1bc294572bdc08",
-   "summary": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 「AIが研究者になる」。 完全版はこちら。 一次ソース https://www.technologyreview.com/2026/06/30/1139987/claude-science...",
-   "source": "Qiita 生成AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T06:01:40+09:00",
-   "score": {
-    "note": 89,
-    "x": 80,
-    "youtube": 76,
-    "brain": 62,
-    "monetize": 61,
-    "beginner": 73
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "0c3cd5909eae",
-   "title": "富裕層にいかに金を使わせる？ ダイナースとニューオータニ「18万円超カード」の真意",
-   "link": "https://www.itmedia.co.jp/business/articles/2607/06/news019.html",
-   "summary": "内閣府のデータが示す「85歳でも資産が減らない」というデフレマインドに縛られた日本型富裕層。インフレ時代を迎え「資産を体験に変える」ためのコンパスとして、ダイナースクラブとホテルニューオータニが年会費18万円超のプレミアムカードを解禁した。「全員平等」を守ってきた老舗ホテルの方針転換の裏には、半世紀続く厳格な審査体制と「平均値しか出せないAI」には不可能な人",
+   "id": "eef45f129ad2",
+   "title": "FDEとリコーの新コンサルサービス、どこが違う？ AXのパートナー選びを考察",
+   "link": "https://www.itmedia.co.jp/enterprise/articles/2607/06/news054.html",
+   "summary": "企業はAXに向けてどのようなベンダーをパートナーに選べばよいのか。リコーの新たなAIコンサル会社と最近よく聞く「FDE」との共通点と相違点を明らかにしつつ、考察する。",
    "source": "ITmedia AI+",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
+   "published": "2026-07-06T10:45:00+09:00",
    "score": {
     "note": 88,
     "x": 76,
@@ -219,14 +171,38 @@
    }
   },
   {
-   "id": "840601f05bfa",
-   "title": "生成ＡＩ画像：AI生成の顔 「識別可能」 豪国立大 訓練で能力向上 - 毎日新聞",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAwQUZHcjFESnpZMVZWdFFYVnFRWjEtcjFjbTVxWjFwMlNQd0RtQ0phWFVCalVwenEwNXAwTmIxZ09KSm8wMmdHMFBRNDVfd3ZDdDRuOEpvRUFQbDZPNmZBU3RPbWhOWWlB?oc=5",
-   "summary": "生成ＡＩ画像：AI生成の顔 「識別可能」 豪国立大 訓練で能力向上&nbsp;&nbsp;毎日新聞",
+   "id": "d1046b57cf29",
+   "title": "AI時代のバックエンドエンジニア基礎",
+   "link": "https://zenn.dev/kosments/books/backend-ai-era-2026",
+   "summary": "AIが当たり前になった2026年、バックエンドエンジニアに求められる基礎力を体系的に整理します。roadmap.sh/backendをベースに、HTTP・API設計・データベース・認証・可観測性・セキュリティを実務視点で解説。「AIが書いたコードを正しくレビューできる力」を軸に、中級者への橋渡しを目指します。",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "biz",
+   "published": "2026-07-06T01:41:45+09:00",
+   "score": {
+    "note": 88,
+    "x": 72,
+    "youtube": 72,
+    "brain": 71,
+    "monetize": 69,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "9fe2199fee79",
+   "title": "画像生成AIを開発するMidjourneyが係争中のハリウッドの映画スタジオに対してAIの利用状況の詳細を明らかにするよう要求 - GIGAZINE",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUeTU2OUE1ek8xb3RpU3Y3MDBWTUwyMU0xVXBHRHBFeHU1V2pjcFhMTE5tSEdfNVdkT2lIT004ME5SRk5FMkNHSG44a2l5YnFGWWlvbC1UckFCYlVVNDhRUGJIUlVEajhRc3NoSUVUQXgzQVd2SjVqeElFSGlfdw?oc=5",
+   "summary": "画像生成AIを開発するMidjourneyが係争中のハリウッドの映画スタジオに対してAIの利用状況の詳細を明らかにするよう要求&nbsp;&nbsp;GIGAZINE",
    "source": "Google News 生成AI",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T02:01:42+09:00",
+   "category": "imggen",
+   "published": "2026-07-06T11:08:00+09:00",
    "score": {
     "note": 80,
     "x": 80,
@@ -243,21 +219,21 @@
    }
   },
   {
-   "id": "b72dbad8b61d",
-   "title": "対面接客の音声を記録しAIが解析、音声プラットフォーム「MiiTel for Retail」提供開始 接客品質向上やVoC分析など支援",
-   "link": "https://ascii.jp/elem/000/004/416/4416207/?rss",
-   "summary": "株式会社RevCommは7月2日に、店舗や窓口における対面接客の音声を記録し、電話やWeb会議と併せて一元的にAIが解析するという音声プラットフォームサービス「MiiTel for Retail（ミーテル・フォー・リテール）」のリリースを発表した。これまでデータ化しきれなかった店舗や窓口、現場での対面会話を記録して解析し、接客品質向上やカスタマーハラスメント",
-   "source": "ASCII AI",
+   "id": "a12d8ebc9d2e",
+   "title": "画像生成AIのミッドジャーニー、著作権訴訟でハリウッド映画大手に反撃 - ビジネス+IT",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBOQVRrUHRXeWU4MEd3aW85T2E2TWh3N3kxdUl5NDY2X21pekhJa0Vrekc5WGZlVjlZTmdnWmIzc0NKTTlWR1FUeHFCQThfZkdqdWs0?oc=5",
+   "summary": "画像生成AIのミッドジャーニー、著作権訴訟でハリウッド映画大手に反撃&nbsp;&nbsp;ビジネス+IT",
+   "source": "Google News 生成AI",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
+   "category": "imggen",
+   "published": "2026-07-06T11:05:00+09:00",
    "score": {
-    "note": 79,
-    "x": 87,
-    "youtube": 79,
-    "brain": 59,
-    "monetize": 63,
-    "beginner": 65
+    "note": 80,
+    "x": 80,
+    "youtube": 88,
+    "brain": 68,
+    "monetize": 69,
+    "beginner": 66
    },
    "stars": {
     "importance": 4,
@@ -267,21 +243,69 @@
    }
   },
   {
-   "id": "41dc963c04d0",
-   "title": "短期の冷却、長期の温暖化——カリフォルニア酪農補助金の致命的誤算",
-   "link": "https://ascii.jp/elem/000/004/416/4416344/?rss",
-   "summary": "画像クレジット:Getty Images",
-   "source": "ASCII AI",
+   "id": "e4d4006c98c9",
+   "title": "アシックス、AIでシューズ設計を高度化",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2607/06/news012.html",
+   "summary": "アシックスは、RebuilderAIと共同で、AIを活用した次世代シューズ設計／製造シミュレーション技術を公開した。デザイナーが描いた2Dスケッチやコンセプトを基に、AIが3Dデータを生成し、CAE／FEA解析へとつなげることで、デザインから検証までの期間短縮を目指す。",
+   "source": "ITmedia AI+",
    "lang": "ja",
-   "category": "imggen",
-   "published": "2026-07-06T06:33:37+09:00",
+   "category": "news",
+   "published": "2026-07-06T09:00:00+09:00",
    "score": {
-    "note": 79,
-    "x": 79,
-    "youtube": 87,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 65
+    "note": 87,
+    "x": 85,
+    "youtube": 85,
+    "brain": 65,
+    "monetize": 64,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "0c3cd5909eae",
+   "title": "富裕層にいかに金を使わせる？ ダイナースとニューオータニ「18万円超カード」の真意",
+   "link": "https://www.itmedia.co.jp/business/articles/2607/06/news019.html",
+   "summary": "内閣府のデータが示す「85歳でも資産が減らない」というデフレマインドに縛られた日本型富裕層。インフレ時代を迎え「資産を体験に変える」ためのコンパスとして、ダイナースクラブとホテルニューオータニが年会費18万円超のプレミアムカードを解禁した。「全員平等」を守ってきた老舗ホテルの方針転換の裏には、半世紀続く厳格な審査体制と「平均値しか出せないAI」には不可能な人",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T07:00:00+09:00",
+   "score": {
+    "note": 87,
+    "x": 75,
+    "youtube": 75,
+    "brain": 65,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "5f29c2b81dcb",
+   "title": "TripadvisorのAIレビュー要約が「不潔」「食中毒」の訴えを見落としてホテルを「清潔」と称賛していたことが判明",
+   "link": "https://gigazine.net/news/20260706-tripadvisor-misleading-ai-review-summary/",
+   "summary": "Tripadvisorのホテルページ上部に表示されるAIレビュー要約が、食中毒や性的ハラスメント、深刻な衛生不良を訴えるレビューを十分に反映せず、一部ホテルを「清潔」と好意的に紹介していたことが、イギリスの消費者団体Which?の調査で明らかになりました。続きを読む...",
+   "source": "GIGAZINE",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T16:10:00+09:00",
+   "score": {
+    "note": 86,
+    "x": 74,
+    "youtube": 74,
+    "brain": 63,
+    "monetize": 60,
+    "beginner": 66
    },
    "stars": {
     "importance": 4,
@@ -300,9 +324,9 @@
    "category": "news",
    "published": "2026-07-06T00:52:01+09:00",
    "score": {
-    "note": 87,
-    "x": 73,
-    "youtube": 73,
+    "note": 86,
+    "x": 72,
+    "youtube": 72,
     "brain": 60,
     "monetize": 60,
     "beginner": 82
@@ -315,21 +339,93 @@
    }
   },
   {
-   "id": "ba027bb39c64",
-   "title": "Claude Fable 5の挙動をOpus 4.8で再現する — 「賢さ」を検証ループの工程に置き換える",
-   "link": "https://zenn.dev/ait/articles/fable-emu-opus-harness",
-   "summary": "はじめに Claude Fable 5 のプロンプトガイドを読むと、繰り返し出てくる主張があります。旧世代モデル向けに細かく書き込んだ指示は、Fable 5 にはむしろ規定的すぎて出力品質を下げうるから、消すことを検討せよ——要するに「賢くなった分、こちらの管理を引き算せよ」です。 読みながら、逆のことを考えていました。引き算で上位モデルが伸びるなら、足し算",
-   "source": "Zenn AI",
+   "id": "f0caa12cd328",
+   "title": "ガチくんに! 第423回切り抜き「なぜMenaは最強なのか考察するガチくんとぷげら」",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2122578.html",
+   "summary": "※毎週木曜日にプロ格闘ゲームプレイヤーであるガチくんをパーソナリティに迎え、ストリートファイター6攻略企画「ガチくんに!」をTwitchとYouTubeで配信しています。レギュラー出演者はぷげら、奥村茉実。ここでは当日放送したおおまかな内容を紹介するとともに、YouTubeにアップロードした切り抜きとアーカイブの動画を掲載しています。",
+   "source": "PC Watch",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T02:27:47+09:00",
+   "category": "news",
+   "published": "2026-07-06T12:00:00+09:00",
    "score": {
     "note": 86,
-    "x": 74,
-    "youtube": 74,
+    "x": 77,
+    "youtube": 81,
     "brain": 63,
     "monetize": 60,
     "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "675836918022",
+   "title": "【2026年7月版】AIの現在地・完全まとめ｜米中日の勢力図から規制・投資・仕事への影響まで",
+   "link": "https://note.com/shudentax/n/nfb3d2b209357",
+   "summary": "「AIのニュースが多すぎて、もう何が起きているのか分からない」もしあなたがそう感じているなら、それは正常な感覚です。2026年上半期だけで、AI業界ではこれだけのことが起きました。・OpenAIがGPT-5.5を発表。前モデルからわずか6週間での世代交代・Anthropicの最上位モデル「Claude Fable 5」が公開3日で米政府に止められ、3週間後に",
+   "source": "note AI hashtag",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T16:14:06+09:00",
+   "score": {
+    "note": 82,
+    "x": 86,
+    "youtube": 78,
+    "brain": 58,
+    "monetize": 62,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "c1d1fec2f4fa",
+   "title": "カンバンを動かすだけで全自動コーディング — Loop Engineeringの具体実装を公開した",
+   "link": "https://zenn.dev/kterui9019/articles/ace63436c5bd8a",
+   "summary": "TL;DR カンバン（Notion / GitHub Issues）のチケットを「In Progress」に動かすだけで、ローカルのコーディングエージェントが実装 → PR作成 → CI監視 → レビュー対応 → マージ検知まで全自動で回す baton というOSSを公開しました。人間はカンバンだけ見ていればよい世界を目指しています。 https://git",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T07:10:05+09:00",
+   "score": {
+    "note": 85,
+    "x": 80,
+    "youtube": 76,
+    "brain": 63,
+    "monetize": 62,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "a86e7d71c0b7",
+   "title": "手書き帳票OCRをGeminiとChatGPTで比較、Geminiが圧勝 ― Flash-Lite vs GPT-5.4 nano、ほぼ同コストで精度53pt差【2026年7月】",
+   "link": "https://qiita.com/y_nakahira_prompt-x/items/6358b9389b8c020bcb68",
+   "summary": "生成AIがマルチモーダルを扱えるようになり、紙の帳票のデジタル化が一気に進みそうな気配があります。現場に紙の帳票は、まだまだたくさん残っています。作業日報、点検表など。これらをGASとGeminiを使ってOCRする方法については、下記の記事で紹介しました。 今回は 「...",
+   "source": "Qiita 生成AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T14:36:56+09:00",
+   "score": {
+    "note": 85,
+    "x": 76,
+    "youtube": 80,
+    "brain": 62,
+    "monetize": 59,
+    "beginner": 65
    },
    "stars": {
     "importance": 4,
@@ -348,9 +444,9 @@
    "category": "model",
    "published": "2026-07-06T06:10:00+09:00",
    "score": {
-    "note": 86,
-    "x": 74,
-    "youtube": 74,
+    "note": 85,
+    "x": 73,
+    "youtube": 73,
     "brain": 71,
     "monetize": 69,
     "beginner": 66
@@ -358,30 +454,6 @@
    "stars": {
     "importance": 4,
     "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "52d8f5d68f3f",
-   "title": "無料でスマホ・デスクトップPC・ターミナルからありとあらゆるコーディングAIエージェントを一気にまとめて管理しコントロールする「Paseo」、セルフホスト可能でオープンソース",
-   "link": "https://gigazine.net/news/20260705-paseo/",
-   "summary": "開発ツールとしてコーディング用AIエージェントを利用し外部からも作業を続けたい場合、外部から自PCへの接続設定が面倒であったり、リモート接続の画面共有だと動作が遅かったりと、簡単にリモート操作ができる環境は用意するのが難しいものです。簡単に外部接続の設定ができ、スマホ・デスクトップPC・ターミナルなどからClaude Code・Codex・OpenCodeな",
-   "source": "GIGAZINE",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-05T18:00:00+09:00",
-   "score": {
-    "note": 86,
-    "x": 72,
-    "youtube": 72,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 82
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
@@ -396,9 +468,33 @@
    "category": "news",
    "published": "2026-07-06T06:09:00+09:00",
    "score": {
-    "note": 86,
-    "x": 74,
-    "youtube": 74,
+    "note": 85,
+    "x": 73,
+    "youtube": 73,
+    "brain": 63,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "ba027bb39c64",
+   "title": "Claude Fable 5の挙動をOpus 4.8で再現する — 「賢さ」を検証ループの工程に置き換える",
+   "link": "https://zenn.dev/ait/articles/fable-emu-opus-harness",
+   "summary": "はじめに Claude Fable 5 のプロンプトガイドを読むと、繰り返し出てくる主張があります。旧世代モデル向けに細かく書き込んだ指示は、Fable 5 にはむしろ規定的すぎて出力品質を下げうるから、消すことを検討せよ——要するに「賢くなった分、こちらの管理を引き算せよ」です。 読みながら、逆のことを考えていました。引き算で上位モデルが伸びるなら、足し算",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T02:27:47+09:00",
+   "score": {
+    "note": 84,
+    "x": 72,
+    "youtube": 72,
     "brain": 63,
     "monetize": 60,
     "beginner": 66
@@ -420,9 +516,9 @@
    "category": "imggen",
    "published": "2026-07-05T19:32:48+09:00",
    "score": {
-    "note": 71,
-    "x": 77,
-    "youtube": 85,
+    "note": 70,
+    "x": 76,
+    "youtube": 84,
     "brain": 59,
     "monetize": 59,
     "beginner": 59
@@ -435,20 +531,20 @@
    }
   },
   {
-   "id": "9f1ead982073",
-   "title": "Looped World Modelsを読んで、未来を予測するAIキャラクターを作りたくなった",
-   "link": "https://zenn.dev/y2yhwh/articles/98c1cc84d76fba",
-   "summary": "はじめに 最近、アプリ開発や技術ブログを、自分の資産として残したいと考えていました。 しかし、便利なアプリの企画や、検索される記事の作成を想像しても、正直あまりワクワクしません。 将来の役に立つのは分かる。でも、めんどくさい。 そんな状態で見つけたのが、Looped World Modelsの解説動画でした。 動画を見ている間、久しぶりに「これは面白い」と感",
-   "source": "Zenn AI",
+   "id": "02164c5ddb95",
+   "title": "個人開発者がClaude Fableを使って「Command ＆ Conquer Generals Zero Hour」をMac・iPhone・iPadに移植しオープンソースで無料公開",
+   "link": "https://gigazine.net/news/20260706-command-and-conquer-zero-hour-apple/",
+   "summary": "開発者のammaarreshi氏が、ゲーム「Command ＆ Conquer Generals Zero Hour」をMac・iPhone・iPadに移植しました。ammaarreshi氏はAIを活用したと述べています。続きを読む...",
+   "source": "GIGAZINE",
    "lang": "ja",
    "category": "model",
-   "published": "2026-07-06T05:55:05+09:00",
+   "published": "2026-07-06T15:45:00+09:00",
    "score": {
     "note": 84,
-    "x": 77,
-    "youtube": 81,
+    "x": 81,
+    "youtube": 77,
     "brain": 60,
-    "monetize": 60,
+    "monetize": 62,
     "beginner": 74
    },
    "stars": {
@@ -459,14 +555,14 @@
    }
   },
   {
-   "id": "d65d496b4e9b",
-   "title": "AIに全部書かせたアプリ、リリース前にCanopyにかけたら地獄だった",
-   "link": "https://zenn.dev/kzq/articles/canopy-vibe-coding",
-   "summary": "ゲームアプリを一本、ほとんどAIに書かせて作った。指示を出して、エディタのファイルを直接書き換えてもらって、動いたら次へ。自分でコードを書き写すわけでもないから、生成された中身はろくに読まないまま先へ進んでいた。最近よく言う「バイブコーディング」ってやつだ。正直かなり楽しかったし、一人でよくここまで来たなというスピードで形になった。 問題は、リリースボタンに",
-   "source": "Zenn AI",
+   "id": "538d4be62bb9",
+   "title": "Instagramが児童性的虐待コンテンツを宣伝する広告を掲載、「レイプ動画」や「児童動画」といった用語を使用しTelegramチャンネルへリンク",
+   "link": "https://gigazine.net/news/20260706-instagram-child-sexual-promoting/",
+   "summary": "BBCの調査で、インド向けに配信されたInstagram広告に児童性的虐待コンテンツが含まれていたことが分かりました。この調査が発表された後、インド政府がMetaの関係者を召喚して詳しい説明を求める方針を示したと伝えられました。続きを読む...",
+   "source": "GIGAZINE",
    "lang": "ja",
-   "category": "tool",
-   "published": "2026-07-06T03:12:02+09:00",
+   "category": "news",
+   "published": "2026-07-06T15:40:00+09:00",
    "score": {
     "note": 80,
     "x": 84,
@@ -483,38 +579,38 @@
    }
   },
   {
-   "id": "7f57866dc0bf",
-   "title": "【ざっくり整理】Gemini API Computer Use Preview で何ができるか",
-   "link": "https://qiita.com/Tadataka_Takahashi/items/20548b4f821c13b50714",
-   "summary": "はじめに Gemini API の Computer Use は、モデルにスクリーンショットを渡し、画面上で次に行うべき UI 操作を返してもらうための機能です。 ざっくり言うと、従来の「テキストを返すAI」より一歩進んで、ブラウザやデスクトップの画面を見ながら、クリッ...",
-   "source": "Qiita 生成AI",
+   "id": "4d80ce293cf5",
+   "title": "人間が宇宙人と接触していないのは「宇宙人がAIを導入したから」ではないかという説",
+   "link": "https://gigazine.net/news/20260706-superintelligent-ai-explain-fermi-paradox/",
+   "summary": "フェルミのパラドックスとは、物理学者のエンリコ・フェルミが指摘した「宇宙には人類以外の知的生命体が存在する可能性が高いにもかかわらず、これまで人類と接触した宇宙人や地球外文明が存在しないという矛盾」のことです。この理由については「太陽系に訪れる価値がないから」「他の文明に滅ぼされるのを避けるため身を潜めているから(暗黒森林仮説)」などの説がありますが、新たに",
+   "source": "GIGAZINE",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-07-05T22:57:52+09:00",
+   "category": "news",
+   "published": "2026-07-06T12:05:00+09:00",
    "score": {
     "note": 84,
-    "x": 72,
-    "youtube": 72,
-    "brain": 70,
-    "monetize": 68,
-    "beginner": 65
+    "x": 74,
+    "youtube": 74,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
    },
    "stars": {
     "importance": 4,
-    "beginner": 3,
+    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "d2aab042626b",
-   "title": "技術選定・検証で普段心がけていること",
-   "link": "https://qiita.com/takumiida1/items/ee2f5ba8edfe7d38057c",
-   "summary": "Summary 技術選定においては「できること」だけでなく、制約条件（クォータ、想定外のユースケース、責任共有モデルなど）を先に把握することが持続可能な設計の前提になる 採用理由だけでなく「採用しなかった理由」を残すこと、技術検証の成功・失敗条件をあらかじめ定義してお...",
-   "source": "Qiita 生成AI",
+   "id": "6492cd74b089",
+   "title": "手持ちのデバイスすべてに入れておきたいお手軽ファイル共有ツール「LocalSend」／デスクトップ・モバイル対応、クラウド・アカウント不要、同じWi-Fiにつなぐだけ！【レビュー】",
+   "link": "https://forest.watch.impress.co.jp/docs/review/2122218.html",
+   "summary": "",
+   "source": "はてブ テクノロジー人気",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-07-05T22:34:28+09:00",
+   "category": "tool",
+   "published": "2026-07-06T09:31:40+09:00",
    "score": {
     "note": 84,
     "x": 72,
@@ -531,62 +627,14 @@
    }
   },
   {
-   "id": "dde08aed5228",
-   "title": "AI用語の基礎知識 【第13回】「AIスロップ」とは――ネットにあふれる“それっぽい低品質コンテンツ” - 株式会社インプレス",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Dc0JtSFhzWHczOVRNWEtFdmRwYnVRSk15b0x4NC1xRkowT1JuMlA1UVdpb2MzX1YtNTI4VHB5NHhoenFoeUdHU1F3X21XX3FmZTBYazdWVVdrWVhSbS04RFlVQ1l5ay00andNSTVSbmF1QQ?oc=5",
-   "summary": "AI用語の基礎知識 【第13回】「AIスロップ」とは――ネットにあふれる“それっぽい低品質コンテンツ”&nbsp;&nbsp;株式会社インプレス",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
-   "score": {
-    "note": 84,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 74
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "1cdd976ed9c1",
-   "title": "AI時代に大学のコンピューターサイエンス学科はどうやって学生を教育すればいいのか？",
-   "link": "https://gigazine.net/news/20260706-university-in-the-ai-era/",
-   "summary": "記事作成時点では多くの大学生がAIを利用しており、持ち帰り試験で平均96点のクラスが対面試験に切り替えると平均48点になってしまうという事態も発生しています。そんな中、「AI時代における大学の価値とは何なのか」「AI時代にどのように教育を行えばいいのか」といったトピックについて、アメリカのモンタナ州立大学でコンピューターサイエンスを教えるカーソン・グロス氏が",
-   "source": "GIGAZINE",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
-   "score": {
-    "note": 84,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 74
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "190a749bf6a9",
-   "title": "カクヤス「30年物の泥沼システム」をAIでどう解読？ 現場が思いついた“ある考え”",
-   "link": "https://kn.itmedia.co.jp/kn/articles/2607/06/news040.html",
-   "summary": "動いてはいるものの、誰もその中身を把握できない。多くの企業が直面する基幹システムの“老い”に、カクヤスは生成AIを使った。鍵となったのは、AIによる解析と現場の業務知見を組み合わせ、「AIを制御する技術」を確立したことだ。",
+   "id": "d4af348f42b0",
+   "title": "目が不自由な人の歩行をAIが音声で支援、歩行補助デバイス開発へ",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2607/06/news086.html",
+   "summary": "サフラテクノは、AI画像認識技術で障害物を検知する歩行支援デバイスの試作機を開発している。独自の電力最適化技術により、6時間以上の連続駆動と軽量設計の両立を目指す。",
    "source": "ITmedia AI+",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
+   "published": "2026-07-06T15:00:00+09:00",
    "score": {
     "note": 82,
     "x": 79,
@@ -603,14 +651,62 @@
    }
   },
   {
-   "id": "d8d7941c58cd",
-   "title": "契約管理情報を活用し複数の契約をAIがまとめて分析 「LegalOn」、「ファイル分析機能」提供開始",
-   "link": "https://ascii.jp/elem/000/004/416/4416154/?rss",
-   "summary": "株式会社LegalOn Technologiesは7月2日に、法務特化型AIエージェント搭載のProfessional AI for Legal「LegalOn」において、複数の契約書をAIが横断的に分析し表形式で一覧表示する「ファイル分析機能」の提供開始を発表した。",
+   "id": "7b69e80a4faf",
+   "title": "キオクシア、新型メモリのサンプル出荷開始 岩手の工場の最先端設備活用",
+   "link": "https://www.itmedia.co.jp/news/articles/2607/06/news059.html",
+   "summary": "半導体大手キオクシアホールディングスが、大容量で低消費電力の新型メモリのサンプル品の出荷を開始したと発表した。北上工場（岩手県北上市）第2製造棟の最先端設備を活用して生産する。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T10:22:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 83,
+    "youtube": 79,
+    "brain": 62,
+    "monetize": 64,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "c885268c44af",
+   "title": "「空の軌跡」無料で遊び放題 今日から一週間、いっせいトライアル開始",
+   "link": "https://ascii.jp/elem/000/004/416/4416571/?rss",
+   "summary": "任天堂はNintendo Switch Online加入者限定イベント「いっせいトライアル」にて、日本ファルコムのRPG「空の軌跡 the 1st」を配信開始。7月6日～7月12日まで無料でプレイできる。",
    "source": "ASCII AI",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
+   "published": "2026-07-06T15:45:00+09:00",
+   "score": {
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 73
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "7d33e0ca5deb",
+   "title": "「性格診断は入れてるけど…」その先、ありますか？中小企業向けAI採用アセスメント「PitA（ピタ）」正式リリース（１名まで無料チケット贈呈）",
+   "link": "https://ascii.jp/elem/000/004/416/4416587/?rss",
+   "summary": "「性格診断は入れてるけど…」その先、ありますか？中小企業向けAI採用アセスメント「PitA（ピタ）」正式リリース（１名まで無料チケット贈呈）",
+   "source": "ASCII AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T15:04:00+09:00",
    "score": {
     "note": 83,
     "x": 80,
@@ -627,14 +723,38 @@
    }
   },
   {
-   "id": "c91eef0e85c7",
-   "title": "被害者は誰だ？AI情報流通における劣化と同一化",
-   "link": "https://zenn.dev/continuitymodel/articles/7748b1244ca23c",
-   "summary": "被害者は誰だ？AI情報流通における劣化と同一化 新聞で見た。 ネット記事で読んだ。 ニュースでやっていた。 YouTubeで言っていた。 セミナーで聞いた。 ベンダーのデモで見た。 AIの情報は、いろいろな場所から入ってくる。 それぞれが嘘を言っているとは限らない。 ただし、それぞれが語っているAIは違う。 新聞は、大きな潮流としてのAIを語る。 ネット記事",
+   "id": "6a89ca33d3b1",
+   "title": "コードが書けない大学生が、Claude Codeだけでモンスター78体のブラウザRPGを作って公開した話",
+   "link": "https://zenn.dev/itamoko/articles/55ccb137aa922e",
+   "summary": "はじめに Claude Codeを使って、モンスター育成RPG「モンキュペ」を1人で作り、itch.ioに公開しました。 モンスター 78体（進化系統あり）を育成・進化 農園でエサを育てて 9つのダンジョン を攻略 パスワード（対戦コード）で友達のパーティーと対戦 ブラウザだけで動きます。PC・スマホどちらでも無料で遊べるので、よければ先に触ってみてください",
    "source": "Zenn AI",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T01:10:49+09:00",
+   "category": "model",
+   "published": "2026-07-06T07:10:05+09:00",
+   "score": {
+    "note": 83,
+    "x": 80,
+    "youtube": 76,
+    "brain": 60,
+    "monetize": 62,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "9f1ead982073",
+   "title": "Looped World Modelsを読んで、未来を予測するAIキャラクターを作りたくなった",
+   "link": "https://zenn.dev/y2yhwh/articles/98c1cc84d76fba",
+   "summary": "はじめに 最近、アプリ開発や技術ブログを、自分の資産として残したいと考えていました。 しかし、便利なアプリの企画や、検索される記事の作成を想像しても、正直あまりワクワクしません。 将来の役に立つのは分かる。でも、めんどくさい。 そんな状態で見つけたのが、Looped World Modelsの解説動画でした。 動画を見ている間、久しぶりに「これは面白い」と感",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T05:55:05+09:00",
    "score": {
     "note": 83,
     "x": 76,
@@ -651,45 +771,21 @@
    }
   },
   {
-   "id": "2b95f905bae7",
-   "title": "テーマごとに構造を設計する Deep Research スキルの構成と動作",
-   "link": "https://zenn.dev/daimatsu/articles/e4c7b9dd47feea",
-   "summary": "はじめに 生成 AI エージェントツール用の Deep Research スキルを作り、GitHub で公開しました。 スキルの説明を兼ねた備忘録として記事を書いておくことにしました。 https://github.com/h-daimatsu/deep-research このスキルは、「深く調べて」「ディープリサーチして」といったキーワードで起動します。 ",
-   "source": "Zenn AI",
+   "id": "484befdfda6f",
+   "title": "【全部AI】プログラミング初心者が1行もコードを書かずに、世界400都市のビジュアル都市アトラスを作り始めた話",
+   "link": "https://qiita.com/jin0g/items/8890e33399eefd88a6f0",
+   "summary": "この記事について この記事は、プログラミング初心者の私が、生成AIもほぼ触ったことがない状態から、コードを1行も自分で書かずにWebサイトを作った記録です。 作ったものはこちらです。 名前は World City Atlas。 世界の都市を、経済だけではなく、政治、...",
+   "source": "Qiita 生成AI",
    "lang": "ja",
-   "category": "tool",
-   "published": "2026-07-06T00:41:44+09:00",
-   "score": {
-    "note": 79,
-    "x": 83,
-    "youtube": 83,
-    "brain": 60,
-    "monetize": 62,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "e306bfdfc15d",
-   "title": "[AWS Batch × Claude Code] YouTube動画 as Code",
-   "link": "https://zenn.dev/yamachan_gogo/articles/07385c4ea7d9f8",
-   "summary": "どうも！山ちゃんです。 私はデザインセンス皆無な人間です。動画編集ソフトは開いた瞬間にそっと閉じるレベルです。 それでも毎週、AWSアップデートの解説動画をYouTubeに配信しています。 動画を作っているのは私ではなく、AWS Batchの上で動く自作パイプラインです。 ! この記事の結論 動画編集ができなくても、動画はコードで作れる（Remotion +",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T00:06:04+09:00",
+   "category": "news",
+   "published": "2026-07-06T15:37:50+09:00",
    "score": {
     "note": 83,
     "x": 76,
     "youtube": 80,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 74
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 73
    },
    "stars": {
     "importance": 4,
@@ -708,9 +804,9 @@
    "category": "tool",
    "published": "2026-07-04T03:15:31+09:00",
    "score": {
-    "note": 81,
-    "x": 67,
-    "youtube": 67,
+    "note": 79,
+    "x": 65,
+    "youtube": 65,
     "brain": 61,
     "monetize": 61,
     "beginner": 83
@@ -723,21 +819,21 @@
    }
   },
   {
-   "id": "4599ff10ea6c",
-   "title": "色空間について知っておくべきXYZ・RGB・ICC・xyY・TRCの概要まとめ",
-   "link": "https://gigazine.net/news/20260704-color-space-xyz-rgb-icc-xyy-trc/",
-   "summary": "画像編集ソフトなどでは色を「R：255、G：0、B：0」のようなRGB値で指定できます。しかし、同じRGB値でもsRGBやProPhotoRGBなど使っている色空間が違えば実際に表される色は変わります。デジタル写真家のエル・ストーン氏は自らが運営するサイトで画像処理や色管理を理解する上で必要になるXYZ・RGB・ICC・xyY・TRCについて解説しています。",
-   "source": "GIGAZINE",
+   "id": "aec4015ca0ae",
+   "title": "生成AIを上手に使いこなすために、わたし達が学ぶべき事とは | マネジメントのテクノロジーを考える",
+   "link": "https://mgt-technology.info/%E7%94%9F%E6%88%90ai%E3%82%92%E4%B8%8A%E6%89%8B%E3%81%AB%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%99%E3%81%9F%E3%82%81%E3%81%AB%E3%80%81%E3%82%8F%E3%81%9F%E3%81%97%E9%81%94%E3%81%8C%E5%AD%A6%E3%81%B6/",
+   "summary": "生成AIの能力向上 出張先で急に携帯が不調になった。データ通信がインターネットにつながらないのだ。WiFi経由だと通信できるので、別の端末のテザリングで当座はしのいだが、不便でならない。帰ってからネットを頼りに調べたら、どうも物理SIM関連の故障が疑われた。スマホを買ってから丸4年。床に落としたりしたことも...",
+   "source": "はてブ テクノロジー人気",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-04T21:40:00+09:00",
+   "published": "2026-07-06T13:26:14+09:00",
    "score": {
     "note": 83,
-    "x": 72,
-    "youtube": 76,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 82
+    "x": 76,
+    "youtube": 80,
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 73
    },
    "stars": {
     "importance": 4,
@@ -747,20 +843,140 @@
    }
   },
   {
-   "id": "be5ece9c7424",
-   "title": "【今すぐ読みたい！人気記事】さすがMacBook Pro M5 Max！秒間100トークン超え、画像生成4.4倍でM5とProを蹴散らす - PC Watch",
-   "link": "https://pc.watch.impress.co.jp/docs/topic/readitnow/2122407.html",
-   "summary": "PCのパフォーマンスは、高いに越したことはない。処理能力に余裕があれば、クリエイティブアプリの動作は高速化され、最新AAAタイトルもリッチな3Dグラフィックスで堪能できる。これはPC選びにおける変わることがない基準といえる。",
-   "source": "PC Watch",
+   "id": "d32b7ec9d316",
+   "title": "AI推進にブレーキ？ AWS「コスト抑制の動きある」 “トークン消費問題”への有効策は",
+   "link": "https://www.itmedia.co.jp/business/articles/2607/06/news072.html",
+   "summary": "AI利用を巡って、処理コストを抑えようとする動きが出てきている。AWSも把握しているという“トークンコスト問題”について、対策を聞いた。",
+   "source": "ITmedia AI+",
    "lang": "ja",
-   "category": "imggen",
-   "published": "2026-07-04T06:06:00+09:00",
+   "category": "news",
+   "published": "2026-07-06T11:50:00+09:00",
    "score": {
-    "note": 76,
-    "x": 79,
-    "youtube": 83,
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "1b81466a8fb2",
+   "title": "「AIは依然として古い性能法則に従っている」 Tenstorrent Jim Keller氏",
+   "link": "https://eetimes.itmedia.co.jp/ee/articles/2607/06/news069.html",
+   "summary": "Tenstorrentは2026年4月に、同社のチップを搭載したサーバの性能を披露するイベントを開催した。Tenstorrent CEOのJim Keller氏は米国EE Timesのインタビューに答え、同社のサーバ「Galaxy」の性能や、競争環境について語った。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T11:30:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "22fc1e9b8d12",
+   "title": "AIサーバで稼ぐシャープ 2030年度の新規事業売上高の8割強目指す 鴻海と連携",
+   "link": "https://www.itmedia.co.jp/news/articles/2607/06/news060.html",
+   "summary": "シャープの河村哲治社長は7月3日、大阪市内で報道陣の取材に応じ、目標とする2030年度の新規事業の年間売上高2000億～3000億円のうち、8割強はAI向けサーバ関連を想定していると明らかにした。親会社の鴻海（ホンハイ）精密工業の調達・製造力を活用し、シャープが国内販売や保守を担う方向で調整を進める。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "biz",
+   "published": "2026-07-06T10:35:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 78,
+    "monetize": 80,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "190a749bf6a9",
+   "title": "カクヤス「30年物の泥沼システム」をAIでどう解読？ 現場が思いついた“ある考え”",
+   "link": "https://kn.itmedia.co.jp/kn/articles/2607/06/news040.html",
+   "summary": "動いてはいるものの、誰もその中身を把握できない。多くの企業が直面する基幹システムの“老い”に、カクヤスは生成AIを使った。鍵となったのは、AIによる解析と現場の業務知見を組み合わせ、「AIを制御する技術」を確立したことだ。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T07:00:00+09:00",
+   "score": {
+    "note": 81,
+    "x": 78,
+    "youtube": 82,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "d65d496b4e9b",
+   "title": "AIに全部書かせたアプリ、リリース前にCanopyにかけたら地獄だった",
+   "link": "https://zenn.dev/kzq/articles/canopy-vibe-coding",
+   "summary": "ゲームアプリを一本、ほとんどAIに書かせて作った。指示を出して、エディタのファイルを直接書き換えてもらって、動いたら次へ。自分でコードを書き写すわけでもないから、生成された中身はろくに読まないまま先へ進んでいた。最近よく言う「バイブコーディング」ってやつだ。正直かなり楽しかったし、一人でよくここまで来たなというスピードで形になった。 問題は、リリースボタンに",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "tool",
+   "published": "2026-07-06T03:12:02+09:00",
+   "score": {
+    "note": 78,
+    "x": 82,
+    "youtube": 82,
     "brain": 60,
     "monetize": 62,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "c91eef0e85c7",
+   "title": "被害者は誰だ？AI情報流通における劣化と同一化",
+   "link": "https://zenn.dev/continuitymodel/articles/7748b1244ca23c",
+   "summary": "被害者は誰だ？AI情報流通における劣化と同一化 新聞で見た。 ネット記事で読んだ。 ニュースでやっていた。 YouTubeで言っていた。 セミナーで聞いた。 ベンダーのデモで見た。 AIの情報は、いろいろな場所から入ってくる。 それぞれが嘘を言っているとは限らない。 ただし、それぞれが語っているAIは違う。 新聞は、大きな潮流としてのAIを語る。 ネット記事",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T01:10:49+09:00",
+   "score": {
+    "note": 82,
+    "x": 75,
+    "youtube": 79,
+    "brain": 60,
+    "monetize": 60,
     "beginner": 74
    },
    "stars": {
@@ -771,19 +987,307 @@
    }
   },
   {
-   "id": "b41dc352529a",
-   "title": "コードレビュー指摘300件を3ヶ月分類したら効いていたのは2種類だけだった",
-   "link": "https://zenn.dev/kenimo49/articles/code-review-300-comments-2-effective-categories",
-   "summary": "Bug指摘の欠陥相関0.51は、Style指摘の0.04の約13倍。同じ「1件のレビューコメント」でも、効きめが1桁違う。 「nit:が多いレビューほどコードが歪む」という逆説 集計の途中で、不気味な相関に気づいた。nit: (Style系) が多いPRほど、3ヶ月後の欠陥相関がむしろ高い。Style指摘の自己相関ではなく、他カテゴリの欠陥相...",
-   "source": "はてブ テクノロジー人気",
+   "id": "166ef5238bb0",
+   "title": "Free Artificial Intelligence Course with Certificate | UniAthena",
+   "link": "https://note.com/nice_digital/n/ne945169438ff",
+   "summary": "Artificial intelligence is changing the way businesses operate across industries like healthcare, finance, education, retail, and manufacturing. Whether you want to advance your ca",
+   "source": "note AI hashtag",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-07-05T10:01:02+09:00",
+   "category": "biz",
+   "published": "2026-07-06T16:14:00+09:00",
    "score": {
     "note": 82,
-    "x": 70,
-    "youtube": 70,
-    "brain": 62,
+    "x": 72,
+    "youtube": 72,
+    "brain": 66,
+    "monetize": 67,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "8b57b4e3fa12",
+   "title": "メモリ容量はもう買われた。次はGPU秒だ | CMXとCXLが炙り出す、AIメモリ相場の次の受益者",
+   "link": "https://note.com/fabymetal/n/n1020e0c536a1",
+   "summary": "いま市場が買っているのは、メモリ不足だ。HBMが足りない。DRAMが足りない。NANDが足りない。AIサーバーが増え、一般サーバーにもメモリが戻り、スマートフォンやPCの顧客まで供給枠を奪い合う。数字を見れば、この相場が思惑でないことはすぐわかる。TrendForceによれば、2026年第1四半期、一般DRAMの契約価格は前四半期比でおよそ93〜98%上がり",
+   "source": "note AI hashtag",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T16:06:15+09:00",
+   "score": {
+    "note": 82,
+    "x": 72,
+    "youtube": 72,
+    "brain": 58,
+    "monetize": 58,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "c936b4f50e0f",
+   "title": "sqlite-utils 4.0rc3",
+   "link": "https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything",
+   "summary": "Release: sqlite-utils 4.0rc3 I hoped to release sqlite-utils 4.0 stable this weekend, but as I worked through the backlog of issues and PRs with a combination of Claude Fable 5 and",
+   "source": "Simon Willison Weblog",
+   "lang": "en",
+   "category": "model",
+   "published": "2026-07-06T14:40:08+09:00",
+   "score": {
+    "note": 74,
+    "x": 81,
+    "youtube": 77,
+    "brain": 60,
+    "monetize": 62,
+    "beginner": 60
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "ef4b7061e0be",
+   "title": "提訴された画像生成AIのMidjourney、大手に「社内でのAI利用有無を明かせ」と要求（映画.com） - Yahoo!ニュース",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9SZndwUXRIczA1TklUM0trbzZLSEJiSkxQR0dIMlRKeGVqM2I3b2ZaR0ZqY2k0TEl0VXJ6SUllVlBnZjNLcnd6LUNTcTlqNHRGTHJVNDdrQVBEUVRmeUtPMDRCN0Jibk1zMThPSjIzSE5SN0IzLWVwRmNVUlE0ems?oc=5",
+   "summary": "提訴された画像生成AIのMidjourney、大手に「社内でのAI利用有無を明かせ」と要求（映画.com）&nbsp;&nbsp;Yahoo!ニュース",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "imggen",
+   "published": "2026-07-04T20:00:00+09:00",
+   "score": {
+    "note": 73,
+    "x": 73,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "e93c28d10a09",
+   "title": "大学1年生の9割「生成AIを普段から利用」私大が調査 どう使う？ [AIの時代] - 朝日新聞",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9jRGc1c19nYkVmajJxSVZLMmtqVFpvVk13QVRhN2JCUXNTNVp4NVJyX1hta0dpdW1mbHIxT1JRN2Vpel9UYU13WTRqeUJnNE1McTJuZjdyZnNqWlZTenplTEpxSWxqUGM?oc=5",
+   "summary": "大学1年生の9割「生成AIを普段から利用」私大が調査 どう使う？ [AIの時代]&nbsp;&nbsp;朝日新聞",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T16:00:00+09:00",
+   "score": {
+    "note": 80,
+    "x": 77,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "dc10711f3368",
+   "title": "ニュース 生成AI産の現場アプリを「会社で使える状態」に整える信頼化サービス「ハルシナリオ」 - 株式会社インプレス",
+   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE81RDBldDkza2ZPWXJEUUM3OEdINjlZUnROQ05wR25qMFdKcW55RUNERWFjbFhnTTVobDI5VHU3R3A1SnB2TWplczgzVlpxcHRaTk9CTjhMVXk4TDJ1UEUwMENETQ?oc=5",
+   "summary": "ニュース 生成AI産の現場アプリを「会社で使える状態」に整える信頼化サービス「ハルシナリオ」&nbsp;&nbsp;株式会社インプレス",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "tool",
+   "published": "2026-07-06T15:20:53+09:00",
+   "score": {
+    "note": 80,
+    "x": 77,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "041d672aa292",
+   "title": "【速報】「バンダイチャンネル」にサイバー攻撃か 少年（15）逮捕 生成AI「ChatGPT」でプログラム作成 会員を退会処理し全サービスを一時的に停止に 警視庁 - TBS NEWS DIG",
+   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBTSFZySzZUTFBSNDFmUzdrdElpQmlIdVZBNTdwX0xlWlVXX0FZR0VFZE56cHVPRXByUURvZk5UeTNvdkJhY3NheVJmUmdyb0tsWklLcWFKVQ?oc=5",
+   "summary": "【速報】「バンダイチャンネル」にサイバー攻撃か 少年（15）逮捕 生成AI「ChatGPT」でプログラム作成 会員を退会処理し全サービスを一時的に停止に 警視庁&nbsp;&nbsp;TBS NEWS DIG",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T13:26:00+09:00",
+   "score": {
+    "note": 80,
+    "x": 77,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "45953a7e5311",
+   "title": "15歳不正アクセスが示す、生成AI時代の危うさ～小中学生でもできる！？スクリプトキディを英雄視するな #エキスパートトピ - Yahoo!ニュース",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZnB2SlVNd3BvMnBhaXl1QWZObWFjd3J3ZmxqMWFFN3JPWnB1bHR3SzBxLTQ5TVlJaHdIekhhVU5uaERXZ1pmeEdIYWI5MDNsLTMzcVI4WmZlMG1RVVk4eEVGZ09pdkNfTDB5MHdWRE1RYk5ZYW92bUxSalE0TWh6blkzUHRxRHJW?oc=5",
+   "summary": "15歳不正アクセスが示す、生成AI時代の危うさ～小中学生でもできる！？スクリプトキディを英雄視するな #エキスパートトピ&nbsp;&nbsp;Yahoo!ニュース",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T12:12:30+09:00",
+   "score": {
+    "note": 80,
+    "x": 77,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "f32bbf96eef3",
+   "title": "PC版「MARVEL Tōkon: Fighting Souls」が132カ国で販売ブロックされる、原因はPlaystation Networkの要件か",
+   "link": "https://gigazine.net/news/20260706-marvel-tokon-fighting-souls-blocks-132-countries/",
+   "summary": "ギルティギアシリーズの開発元として知られるアークシステムワークスが開発を担当した、マーベル・コミックの人気キャラクターによる格闘ゲーム「MARVEL Tōkon: Fighting Souls」は2026年8月7日発売予定です。Playstation 5(PS5)およびWindows向けにリリース予定の同作ですが、PC版は132カ国で販売がブロックされている",
+   "source": "GIGAZINE",
+   "lang": "ja",
+   "category": "biz",
+   "published": "2026-07-06T13:41:00+09:00",
+   "score": {
+    "note": 80,
+    "x": 81,
+    "youtube": 77,
+    "brain": 68,
+    "monetize": 71,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "efa4822589a7",
+   "title": "「フランス最大のトレントサイトの運営組織を摘発した」とフランス警察が発表",
+   "link": "https://gigazine.net/news/20260706-france-yggtorrent/",
+   "summary": "フランス語圏最大のトレントコミュニティ「YggTorrent」は2026年3月に壊滅的なハッキング被害を受けて閉鎖されました。それから約4カ月後には、フランス警察が「YggTorrentサイトを管理する組織の活動を終結させる国家司法作戦を実施した」と発表しています。続きを読む...",
+   "source": "GIGAZINE",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T12:15:00+09:00",
+   "score": {
+    "note": 80,
+    "x": 81,
+    "youtube": 77,
+    "brain": 60,
+    "monetize": 62,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "199b9b66e0f6",
+   "title": "Amazonのクラウドソーシングプラットフォーム「Amazon Mechanical Turk」が新規顧客受け入れを停止",
+   "link": "https://gigazine.net/news/20260706-amazon-stop-accepting-customers-mechanical-turk/",
+   "summary": "遠隔地にいるクラウドワーカーを雇用することでオンデマンドタスクを実行できるというクラウドソーシングプラットフォームが「Amazon Mechanical Turk(MTurk)」です。Amazonは2026年7月30日をもってMTurkの新規顧客受付を停止すると発表しました。続きを読む...",
+   "source": "GIGAZINE",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T12:07:00+09:00",
+   "score": {
+    "note": 80,
+    "x": 81,
+    "youtube": 77,
+    "brain": 60,
+    "monetize": 62,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "d45c40bebf3e",
+   "title": "セイコー、大谷翔平選手に世界で1本の腕時計 約114年の時間を刻む特別モデル",
+   "link": "https://ascii.jp/elem/000/004/416/4416572/?rss",
+   "summary": "セイコーウオッチは7月3日、ブランドアンバサダー就任10周年を迎えた大谷翔平選手へ、世界で1本だけの特別な機械式腕時計「Seiko Star Time」を贈呈したと発表した。",
+   "source": "ASCII AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-07-06T15:40:00+09:00",
+   "score": {
+    "note": 79,
+    "x": 80,
+    "youtube": 76,
+    "brain": 59,
+    "monetize": 61,
+    "beginner": 65
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "e8b951f33d77",
+   "title": "[映像関連機器セール情報] Amazon プライムデー参加のお知らせ",
+   "link": "https://ascii.jp/elem/000/004/416/4416577/?rss",
+   "summary": "[映像関連機器セール情報] Amazon プライムデー参加のお知らせ",
+   "source": "ASCII AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-07-06T15:30:00+09:00",
+   "score": {
+    "note": 79,
+    "x": 76,
+    "youtube": 80,
+    "brain": 59,
     "monetize": 59,
     "beginner": 65
    },
@@ -795,254 +1299,14 @@
    }
   },
   {
-   "id": "92d772577a8d",
-   "title": "「学習に使わない」設定の落とし穴｜企業情報を守れない3つの理由",
-   "link": "https://note.com/chaba08/n/nc8e482fc7d73",
-   "summary": "「学習に使わない」設定にすれば、個人情報も企業の機密情報も安全———そう思っていないだろうか。実はこれ、多くの人が陥る誤解だ。Claude・ChatGPT・Geminiの設定の違いから、本当に守れているものを整理する。「学習オフ」は数あるリスクのうち、たった1つを防ぐだけの設定にすぎない。3社の違いを含めて、今日から実践できる対策まで解説する。続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T07:23:44+09:00",
-   "score": {
-    "note": 82,
-    "x": 72,
-    "youtube": 72,
-    "brain": 58,
-    "monetize": 58,
-    "beginner": 72
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "a77db18813b7",
-   "title": "​【脱初心者】非エンジニアのための2026年最強生成AI「Claude」完全攻略マニュアル",
-   "link": "https://note.com/good_hare505/n/n0d36eb9dcad2",
-   "summary": "AIツールが爆発的に普及する中、「結局、ChatGPTと何が違うの？」「Claude（クロード）が良いって聞くけど、どう使いこなせばいいかわからない」と悩んでいませんか？​多くの人が「AIの選び方」や「複雑なプロンプトの呪文」に時間を取られ、本来の目的である「業務の効率化」にたどり着けていません。続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T07:23:27+09:00",
-   "score": {
-    "note": 82,
-    "x": 75,
-    "youtube": 79,
-    "brain": 58,
-    "monetize": 58,
-    "beginner": 72
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "f92ea18a480f",
-   "title": "【補足】AIはどうして生まれたのか 物の因果とは 未来と終末論",
-   "link": "https://note.com/peercare_tenyu2/n/n95b5e8a85de1",
-   "summary": "他サイトの記事の補足になります。これまで、あらゆる物事の総論として、また洗脳を解くことを中心として、理解を少しずつ生みながら柔軟な思考が持てるようにと発信して来ました。続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:19:46+09:00",
-   "score": {
-    "note": 82,
-    "x": 72,
-    "youtube": 72,
-    "brain": 58,
-    "monetize": 58,
-    "beginner": 72
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "09dba7ee2fae",
-   "title": "【マンガで論文解説】AIの嘘を見破る！超解像技術の幻覚を防ぐ「色付きノイズ」の魔法",
-   "link": "https://note.com/paper_research/n/n9e8bccfc6432",
-   "summary": "続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:19:01+09:00",
-   "score": {
-    "note": 82,
-    "x": 72,
-    "youtube": 72,
-    "brain": 58,
-    "monetize": 58,
-    "beginner": 72
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "9661a457b7e1",
-   "title": "FastSDCPU release v1.0.0-beta.510 with 1 bit GGUF model support for image generation",
-   "link": "https://www.reddit.com/r/StableDiffusion/comments/1unw0fk/fastsdcpu_release_v100beta510_with_1_bit_gguf/",
-   "summary": "&#32; submitted by &#32; /u/simpleuserhere [link] &#32; [comments]",
-   "source": "r/StableDiffusion",
-   "lang": "en",
-   "category": "model",
-   "published": "2026-07-05T16:39:56+09:00",
-   "score": {
-    "note": 71,
-    "x": 81,
-    "youtube": 81,
-    "brain": 59,
-    "monetize": 61,
-    "beginner": 59
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "eea99b7e995e",
-   "title": "生成ＡＩ 著作権侵害恐れ 急拡大…国際ルール導入も焦点 - 読売新聞",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1EN2ZrZnRFQVI4ZUxKbDZfOFJTQ0hEWlEybWJkMVdsOUF1REtneGd6UmNrUUtYRHRLU2JsZUZ0V0hORTlLVWhER1VTZ1VwVVREd1BGMUpiUDBzNFlLVUZCbE9n?oc=5",
-   "summary": "生成ＡＩ 著作権侵害恐れ 急拡大…国際ルール導入も焦点&nbsp;&nbsp;読売新聞",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T05:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "88708c63650f",
-   "title": "青和信用組合の生成AIアシスタントをアップデート - PR TIMES",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6V1hyM1hnX1VtZURMN29xUno2c0pWVGxvQ3gzYWhBdkpUam1oZGxRWmtxQ1ZkUHZLMFNCSU1PWEJ4UExhQWJRVXNvcGFPTzlyTFB6Wm9MZFFDR3hYRHdQSUlRODFNT0RfQUE?oc=5",
-   "summary": "青和信用組合の生成AIアシスタントをアップデート&nbsp;&nbsp;PR TIMES",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T06:40:01+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "357a16dec328",
-   "title": "［韓国発 食と農のいま］生成ＡＩ活用し大転換 全国の農協で導入へ - 日本農業新聞",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE11MUNrSWNXLWZFVEZ4NHVsZ0tPTnBRSU5RZGZtNk1DcWJ5UGZLaUlva0FOMkZjbk5RRXY2V0hSc3FGWlZNcnl4RmZrU214c3I4VDM5Yi1Rcw?oc=5",
-   "summary": "［韓国発 食と農のいま］生成ＡＩ活用し大転換 全国の農協で導入へ&nbsp;&nbsp;日本農業新聞",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T05:03:52+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "298cb4d0e4c6",
-   "title": "《経済やわらかゼミ》キオクシア 生成AI普及で株価急騰 データ記憶に必要な半導体 - 上毛新聞電子版",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE44VHI4aFpUZndWMURwQVE2cFpGcTg0cmVHSWlUWXI4SFhNQkpFTF9tcGhRWVp6QnQwUW9vRXcwdGpfRmUwcWJuVTc4SDZiS2E5ZG5seVFjQTI?oc=5",
-   "summary": "《経済やわらかゼミ》キオクシア 生成AI普及で株価急騰 データ記憶に必要な半導体&nbsp;&nbsp;上毛新聞電子版",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T05:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "b4c191bb5f27",
-   "title": "3万円で「Yahoo!ニュース」にPR掲載 プレスリリースをAIで「ニュース風記事」に",
-   "link": "https://www.itmedia.co.jp/news/articles/2607/03/news116.html",
-   "summary": "Yahoo!ニュース内に、企業の発表情報をニュース記事と同じフォーマットで掲載する。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-03T15:44:00+09:00",
-   "score": {
-    "note": 72,
-    "x": 80,
-    "youtube": 72,
-    "brain": 62,
-    "monetize": 66,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "bd379422e545",
-   "title": "\"買い\"のガチ推し製品はこれだ！〜ガジェット編〜【Amazonプライムデー】ガジェット助成金プレゼント企画あり",
-   "link": "https://ascii.jp/elem/000/004/416/4416243/?rss",
-   "summary": "Amazonプライムデー、もう参戦準備はできていますか？ASCII編集部が3日間連続で「このチャンスに買っておきたいガチ推し製品」を大公開！アマプラ本格スタート中の3日目はガジェットDay。",
+   "id": "dde800263493",
+   "title": "在日ウクライナ商工会議所、「日本・ウクライナ ドローンクラスター（JUDC）」の始動を発表",
+   "link": "https://ascii.jp/elem/000/004/416/4416586/?rss",
+   "summary": "在日ウクライナ商工会議所、「日本・ウクライナ ドローンクラスター（JUDC）」の始動を発表",
    "source": "ASCII AI",
    "lang": "ja",
    "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
+   "published": "2026-07-06T15:20:00+09:00",
    "score": {
     "note": 79,
     "x": 80,
@@ -1059,14 +1323,14 @@
    }
   },
   {
-   "id": "928644e9af37",
-   "title": "VRグローブから産業用フィジカルAIへ急拡張。Melt（旧Diver-X）が狙う「手のデータ」",
-   "link": "https://ascii.jp/elem/000/004/416/4416143/?rss",
-   "summary": "Melt Interface Technologies株式会社（旧Diver-X）はロボティクス向けデータグローブ「ContactGlove3 Pro」を発表。高精度なハンドトラッキングや触覚フィードバックに加え、産業用ロボットや次世代ロボット産業への展開も打ち出した。",
+   "id": "1bbb075edc94",
+   "title": "【株式会社CIO】新製品がいきなり特別価格で登場！Amazonで開催される「Amazon プライムデー」対象商品 第4弾を発表！",
+   "link": "https://ascii.jp/elem/000/004/416/4416597/?rss",
+   "summary": "【株式会社CIO】新製品がいきなり特別価格で登場！Amazonで開催される「Amazon プライムデー」対象商品 第4弾を発表！",
    "source": "ASCII AI",
    "lang": "ja",
-   "category": "tool",
-   "published": "2026-07-06T07:00:00+09:00",
+   "category": "news",
+   "published": "2026-07-06T15:00:00+09:00",
    "score": {
     "note": 79,
     "x": 80,
@@ -1083,158 +1347,14 @@
    }
   },
   {
-   "id": "ee327e5e9f3e",
-   "title": "「アスキーグルメNEWS」生放送（2026年7月10日号）",
-   "link": "https://ascii.jp/elem/000/004/416/4416067/?rss",
-   "summary": "巷で話題のおいしいグルメ情報を生放送でご紹介します。ぜひ、お昼ごはんを楽しみながらどうぞ！",
-   "source": "ASCII AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
-   "score": {
-    "note": 79,
-    "x": 80,
-    "youtube": 76,
-    "brain": 59,
-    "monetize": 61,
-    "beginner": 65
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "a4c8b4801b35",
-   "title": "長文要約で数字が消える原因は「Lost in the Middle」、3分割プロンプトで対処する",
-   "link": "https://zenn.dev/every_ai_recipe/articles/pdf-summary-3-step-prompt",
-   "summary": "TL;DR 長い資料をLLMに一発で要約させると、途中に埋もれた数値や条件が抜け落ちやすい。原因は「Lost in the Middle」と呼ばれる、入力中盤の情報を軽視しやすいLLMの構造的傾向 対策として、1回の要約依頼を「全体構造把握」「数値の逐語抽出」「リスク抽出」の3クエリに分割し、それぞれ出力形式を固定すると見落としが減る 分割してもモデルの読み",
+   "id": "fee77f98af37",
+   "title": "AI エージェントに API を JPYC で売る — HTTP 402 決済を 2 円で試す",
+   "link": "https://zenn.dev/masia02/articles/b977969767e7ee",
+   "summary": "「AI エージェントが自分で財布を持ち、API やコンテンツにその場で支払う」——x402 という決済プロトコルの話です。Coinbase と Cloudflare が推進し、2026 年に入って AWS Bedrock も対応を始めました。ただしエコシステムは USDC 一色。日本円建て（JPYC）でこれをやるインフラを作って公開したので、実際に動くものだ",
    "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-06T05:06:34+09:00",
-   "score": {
-    "note": 80,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "2f9caadaad0b",
-   "title": "AI に脆弱性を探させて「見つけた」と言う前に —— 照準を変え、そして自分の発見を捨てた話",
-   "link": "https://zenn.dev/dkamehat/articles/authz-ai-harness-cve-rediscovery",
-   "summary": "AI 支援の脆弱性リサーチには、派手な \"0-day を見つけた\" の前に、地味だが決定的な工程がある。「本当にそれは新規で、実在する欠陥なのか」を確かめる工程だ。この記事は、認可（authorization）だけに土俵を絞った検査ハーネスを成熟 OSS 3つに当て、非自明な面で実在の CVE 級バグを黒箱再発見し、そして——それが既に修正済みの公開 CVE",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T01:27:50+09:00",
-   "score": {
-    "note": 79,
-    "x": 80,
-    "youtube": 76,
-    "brain": 60,
-    "monetize": 62,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "7df572dcfb18",
-   "title": "C# で出来ること一覧 2026年版（.NET 10）",
-   "link": "https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10",
-   "summary": "はじめに かなり前に「C# で出来ること一覧」という記事を書いて、その後も何度か更新版を書いてきました。一番最初の版が以下です。 https://qiita.com/okazuki/items/e3a8e23f9ac2a10d8fde .NET 10 がリリースされてから半年以上が経ったので、2026 年時点で C# / .NET を使うとどんな種類のアプリ",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "tool",
-   "published": "2026-07-06T00:02:46+09:00",
-   "score": {
-    "note": 79,
-    "x": 80,
-    "youtube": 76,
-    "brain": 60,
-    "monetize": 62,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "36eb1c54bb1b",
-   "title": "PBR対応の3D生成がなぜ重要なのか：albedo / roughness / metalnessを整理する",
-   "link": "https://zenn.dev/tanchodo265/articles/d708e8a24276c1",
-   "summary": "3D生成モデルを見るとき、まず目に入るのは形状です。形がそれっぽいか、テクスチャが貼られているか、ぱっと見で破綻していないか。しかし、ゲームエンジンやWebGL、ARに持ち込むなら、もう一段見るべきなのがマテリアルです。 最近の3D生成技術では、PBRやrelightingへの対応がよく語られます。この記事では、なぜPBRが重要なのかを、albedo、rou",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-07-05T23:59:26+09:00",
-   "score": {
-    "note": 79,
-    "x": 76,
-    "youtube": 80,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "e78dec2a2c31",
-   "title": "雪印がパッケージ制作に生成AI初導入 1500万人の消費者データで評価 - 日経クロストレンド",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9zV0lsaE9iOWNLVHUxSEFFcnVaNXNNRl9rSWl0eTRSQU9Bc1doNWZHQ3JmWHpOQnBUSnJaMl9NVDR4Qm00R3FqNHJFQ3pUM2txR0lRWXF1S1ZoVFVHUXE3UjFkdlVQUQ?oc=5",
-   "summary": "雪印がパッケージ制作に生成AI初導入 1500万人の消費者データで評価&nbsp;&nbsp;日経クロストレンド",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T00:00:00+09:00",
-   "score": {
-    "note": 79,
-    "x": 76,
-    "youtube": 80,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "730b544267c5",
-   "title": "ブロードコムによるVMware製品抱き合わせ販売疑惑、独占禁止法違反と認定されず。公正取引委員会が調査を終了",
-   "link": "https://www.publickey1.jp/blog/26/vmware_9.html",
-   "summary": "公正取引委員会は、ブロードコムに対する独占禁止法違反の調査を、違反に認定するに足る事実が認められなかったとして終了すると発表しました。 VMware製品、ライセンス変更により事実上の大幅値上げ ブロードコムは2023年にVMwareを買収。...",
-   "source": "Publickey",
    "lang": "ja",
    "category": "biz",
-   "published": "2026-07-06T00:11:34+09:00",
+   "published": "2026-07-06T07:29:05+09:00",
    "score": {
     "note": 79,
     "x": 80,
@@ -1251,93 +1371,21 @@
    }
   },
   {
-   "id": "ee7b95de337e",
-   "title": "【配信修行僧】コンデンサー=高音質は誤解？個人配信にダイナミックマイクを勧める理由と設定術",
-   "link": "https://pc.watch.impress.co.jp/docs/column/haishin_shugyousou/2122211.html",
-   "summary": "",
-   "source": "PC Watch",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T06:08:00+09:00",
+   "id": "cc8dab9087bc",
+   "title": "If you're using Krea2 with a SSD in Comfy, check your disk write average by image",
+   "link": "https://www.reddit.com/r/StableDiffusion/comments/1uomu03/if_youre_using_krea2_with_a_ssd_in_comfy_check/",
+   "summary": "I run CrystalDisk every week to check the state of my drives. In almost two years of normal use, including image generation, my C: drive had accumulated 56 TB written. Then, in one",
+   "source": "r/StableDiffusion",
+   "lang": "en",
+   "category": "imggen",
+   "published": "2026-07-06T13:11:55+09:00",
    "score": {
-    "note": 80,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "a8582eb4e8bf",
-   "title": "日本唯一のDRAM拠点。総額1兆5,000億円でMicron広島工場が新建屋を着工",
-   "link": "https://pc.watch.impress.co.jp/docs/news/2122472.html",
-   "summary": "Micronの広島工場は、今の日本で唯一DRAMを製造する拠点だ。総額1兆5,000億円を投じた新しいクリーンルームが起工され、AI向け最先端メモリであるHBM4の開発および量産を担う重要な場所となる。AI時代に不可欠な次世代DRAMの国内生産能力が飛躍的に強化されることになるだろう。",
-   "source": "PC Watch",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T06:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "311ab51fd8bb",
-   "title": "MCPとは？自分だけの「毎朝ニュースを読むMCP」を作ってみる",
-   "link": "https://zenn.dev/sun_asterisk/articles/59fabe45a7aa76",
-   "summary": "MCPとは？自分だけの「毎朝ニュースを読むMCP」を作ってみる はじめに 最近はAIの進化が本当に速くて、「MCP」という言葉を耳にすることも増えてきました。私も同じで、最初は何のことかさっぱりでしたが、しばらく使っているうちに少しずつ慣れてきました。 ただ、これまではずっと誰かが作った既製のMCPを使うばかり。...",
-   "source": "はてブ テクノロジー人気",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-05T09:00:42+09:00",
-   "score": {
-    "note": 80,
-    "x": 70,
-    "youtube": 70,
+    "note": 73,
+    "x": 76,
+    "youtube": 80,
     "brain": 59,
     "monetize": 59,
-    "beginner": 73
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "1507e178d84c",
-   "title": "マイクロン、AI需要で広島工場増強へ起工式 1.5兆円投資",
-   "link": "https://eetimes.itmedia.co.jp/ee/articles/2607/06/news047.html",
-   "summary": "マイクロンメモリ ジャパンは2026年7月、広島工場の生産能力増強に向けた新クリーンルーム建設の起工式を開催した。AI技術の進展に伴うメモリ需要の増加に対応するもので、2028年後半に製造装置の搬入を開始する予定だ。広島工場には今後、この新クリーンルーム建設を含めて1兆5000億円を投じる。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-05T11:00:00+09:00",
-   "score": {
-    "note": 79,
-    "x": 73,
-    "youtube": 73,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 68
+    "beginner": 59
    },
    "stars": {
     "importance": 4,
@@ -1347,21 +1395,21 @@
    }
   },
   {
-   "id": "b7a11ccbc018",
-   "title": "チーム管理は30人が限界？ 7割が「人数増で負荷」と回答",
-   "link": "https://ascii.jp/elem/000/004/416/4416340/?rss",
-   "summary": "ヌーラボは、“チームの人数増加”に伴う業務負荷とマネジメントに関する実態調査の結果を公表した。チーム参加およびチーム人数の増加経験のある600名を対象に2026年2月に実施している。",
-   "source": "ASCII AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:30:00+09:00",
+   "id": "9661a457b7e1",
+   "title": "FastSDCPU release v1.0.0-beta.510 with 1 bit GGUF model support for image generation",
+   "link": "https://www.reddit.com/r/StableDiffusion/comments/1unw0fk/fastsdcpu_release_v100beta510_with_1_bit_gguf/",
+   "summary": "&#32; submitted by &#32; /u/simpleuserhere [link] &#32; [comments]",
+   "source": "r/StableDiffusion",
+   "lang": "en",
+   "category": "model",
+   "published": "2026-07-05T16:39:56+09:00",
    "score": {
-    "note": 79,
-    "x": 73,
-    "youtube": 73,
+    "note": 70,
+    "x": 80,
+    "youtube": 80,
     "brain": 59,
-    "monetize": 59,
-    "beginner": 65
+    "monetize": 61,
+    "beginner": 59
    },
    "stars": {
     "importance": 4,
@@ -1371,69 +1419,21 @@
    }
   },
   {
-   "id": "ae3004ee3d1f",
-   "title": "企業の眠れるコンテンツを“価値ある資産”に Boxが専門エンジニアによる伴走支援サービス",
-   "link": "https://ascii.jp/elem/000/004/416/4416339/?rss",
-   "summary": "Boxは、専門エンジニアによるAI活用の伴走支援サービスを開始した。コンテンツ管理の専門家である「Box Forward Deployed Engineers」が、Box内のコンテンツの整備からAIワークフローの設計・導入・最適化までを一貫してサポートするプログラムで、日本市場でも展開される。",
-   "source": "ASCII AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:30:00+09:00",
+   "id": "0aef29badbb5",
+   "title": "Stanley Studio",
+   "link": "https://www.producthunt.com/products/stanley-studio",
+   "summary": "The AI video editor you hire that edits like a human Discussion | Link",
+   "source": "Product Hunt",
+   "lang": "en",
+   "category": "vidgen",
+   "published": "2026-07-06T12:37:29+09:00",
    "score": {
-    "note": 79,
-    "x": 73,
-    "youtube": 73,
+    "note": 73,
+    "x": 76,
+    "youtube": 80,
     "brain": 59,
     "monetize": 59,
-    "beginner": 65
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "ce0de359dd62",
-   "title": "自作PCトーク『ジサトラKTU』生放送： \"買い\"のガチ推し製品はこれだ！〜ジサトラKTU特別編〜【Amazonプライムデー】ガジェット助成金プレゼント企画あり",
-   "link": "https://ascii.jp/elem/000/004/416/4416238/?rss",
-   "summary": "\"買い\"のガチ推し製品はこれだ！〜ジサトラKTU特別編〜【Amazonプライムデー】ガジェット助成金プレゼント企画あり。木曜20:00から放送スタート！",
-   "source": "ASCII AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
-   "score": {
-    "note": 79,
-    "x": 73,
-    "youtube": 73,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 65
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "f682d8188d60",
-   "title": "次回のスマホ総研定例会は2026年7月13日（月）を予定しております！",
-   "link": "https://ascii.jp/elem/000/004/416/4416213/?rss",
-   "summary": "6月8日（月）のスマホ総研定例会はお休みとなります。次回の生放送は2026年6月15日（月）です。",
-   "source": "ASCII AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-07-06T07:00:00+09:00",
-   "score": {
-    "note": 79,
-    "x": 73,
-    "youtube": 73,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 65
+    "beginner": 59
    },
    "stars": {
     "importance": 4,
