@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-24T23:28:21.528993+09:00",
- "count": 288,
+ "updated": "2026-09-25T09:06:39.948919+09:00",
+ "count": 289,
  "articles": [
   {
    "id": "6bb6737c006f",
@@ -12,9 +12,9 @@
    "category": "model",
    "published": "2026-09-24T15:01:00+09:00",
    "score": {
-    "note": 83,
-    "x": 89,
-    "youtube": 97,
+    "note": 81,
+    "x": 87,
+    "youtube": 95,
     "brain": 60,
     "monetize": 62,
     "beginner": 74
@@ -27,20 +27,20 @@
    }
   },
   {
-   "id": "69cb2bd292d4",
-   "title": "コストをあまり気にせず何度も回せるZDR対応の自動コードレビュー環境をPullfrogとOllama Cloudで作る",
-   "link": "https://zenn.dev/inop/articles/e893c725721cbd",
-   "summary": "Pull Requestでコードレビューをしっかりやれば、ライブラリ・APIの使い方の誤りやロジックの考慮の漏れなどによるバグを、開発サイクルの早い段階で見つけることができる。同じバグを後から直すより、かかるコストはずっと小さい[1]。 とはいえ、人間に頼ったレビューには限界がある。たとえば、疲れているときは「まぁいいか」でapproveしてしまうこともある",
+   "id": "018a36a324dc",
+   "title": "Laya Model入門：Pythonでの使い方とJev AIとの比較",
+   "link": "https://zenn.dev/jevaimodel/articles/5677aedfef88d7",
+   "summary": "Layaは、文章を長く生成する代わりに、入力された状態（state）と型付きの質問から、カテゴリやスコア、Yes/Noの確率を返すオープンウェイトの意思決定モデルです。 問い合わせの振り分け、ポリシー判定、優先度付けのように、アプリケーションが決まった形式の答えを必要とする場面で役立ちます。この記事では、Laya Modelの構成、Pythonでの実行方法、",
    "source": "Zenn AI",
    "lang": "ja",
    "category": "model",
-   "published": "2026-09-24T19:52:56+09:00",
+   "published": "2026-09-24T22:17:11+09:00",
    "score": {
-    "note": 94,
-    "x": 74,
-    "youtube": 74,
-    "brain": 71,
-    "monetize": 69,
+    "note": 93,
+    "x": 76,
+    "youtube": 80,
+    "brain": 63,
+    "monetize": 60,
     "beginner": 82
    },
    "stars": {
@@ -51,25 +51,73 @@
    }
   },
   {
-   "id": "31284548958a",
-   "title": "Claude Code（Opus 5）と Codex（Sol / Astra）を比較。LPのファーストビューを組ませた",
-   "link": "https://zenn.dev/frontendclip/articles/a5f724b0c1020b",
-   "summary": "画像20点が重なるキャンペーンLPのファーストビューを、同じカンプ・同じプロンプトで3本作らせました。Claude Code で Opus 5、Codex で GPT-5.6 Sol と GPT-6 Astra。どれも Figma の公式MCPをつないで、空のディレクトリから生成しています。 カンプと条件は、下記ブログ記事に書いた検証と同じものです。そちらは",
-   "source": "Zenn AI",
+   "id": "f44eb32d8b8b",
+   "title": "【完全保存版】無料で本格文字PVが作れる「JIZURA(字面)」使い方&商用利用ガイド🎬✨",
+   "link": "https://note.com/huge_lupine4431/n/n340fd874397d",
+   "summary": "歌ってみたやMV用に「文字PV(リリックモーション)」作りたいけど、AEとか難しいツール触るのハードル高い…って人向けに、歌詞を貼るだけで自動生成してくれる神ツール「JIZURA(字面)」を、めちゃくちゃ深掘りして解説します📝🔥🔗 公式URL続きをみる",
+   "source": "note AI hashtag",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T20:00:05+09:00",
+   "category": "tool",
+   "published": "2026-09-25T09:07:02+09:00",
    "score": {
-    "note": 92,
-    "x": 80,
-    "youtube": 88,
-    "brain": 66,
-    "monetize": 60,
-    "beginner": 66
+    "note": 91,
+    "x": 76,
+    "youtube": 80,
+    "brain": 58,
+    "monetize": 58,
+    "beginner": 88
    },
    "stars": {
     "importance": 5,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "f3ca1d043f16",
+   "title": "法規適合の間取りプランと3Dパースを3分で生成する住宅AI",
+   "link": "https://ascii.jp/elem/000/004/436/4436190/?rss",
+   "summary": "株式会社まどりLABOは9月9日、住宅メーカーの営業・設計業務を支援するSaaS「まどりLABO PRO」の正式版を提供開始したと発表した。土地図面の画像をアップロードし顧客の要望を入力すると、日本の建築基準法やモジュール（尺・メーター）に適合した間取り・3Dイメージ・提案書を約3分で生成するサービスだ。",
+   "source": "ASCII AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T07:00:00+09:00",
+   "score": {
+    "note": 79,
+    "x": 86,
+    "youtube": 90,
+    "brain": 59,
+    "monetize": 61,
+    "beginner": 65
+   },
+   "stars": {
+    "importance": 4,
     "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "1e15e4655729",
+   "title": "【西川善司のグラフィックスMANIAC】DLSS 5の正体は1回推論の画像生成AI、NVIDIAが明かした3D誘導型の中身とは - PC Watch",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBQaGMxUzNZTEJxbHFsRlZxVy1nWXl0aGN4R2pWdnVwMmJ6ak91cmw5ZTFnanNJM1R6bUdJNWZ4bk1kb0hSZ3ZPWWRNV0gzUWxnVE1Xd2plbzVId3RpZUxtZHVNRmhjdnZ3Y2FFQ09R?oc=5",
+   "summary": "【西川善司のグラフィックスMANIAC】DLSS 5の正体は1回推論の画像生成AI、NVIDIAが明かした3D誘導型の中身とは&nbsp;&nbsp;PC Watch",
+   "source": "Google News 生成AI",
+   "lang": "ja",
+   "category": "imggen",
+   "published": "2026-09-25T06:01:00+09:00",
+   "score": {
+    "note": 84,
+    "x": 80,
+    "youtube": 88,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
@@ -84,9 +132,9 @@
    "category": "news",
    "published": "2026-09-24T14:53:00+09:00",
    "score": {
-    "note": 83,
-    "x": 90,
-    "youtube": 86,
+    "note": 81,
+    "x": 88,
+    "youtube": 84,
     "brain": 60,
     "monetize": 64,
     "beginner": 74
@@ -99,67 +147,139 @@
    }
   },
   {
-   "id": "3c4c1de28e2d",
-   "title": "Claude Opus 5.5に工事書類を読ませた——海外が「製品」で売る4業務、汎用モデルで再現できるか検証し",
-   "link": "https://note.com/kiban_japan/n/ne728df25b928",
-   "summary": "海外では今年、提出物レビューや日報作成を専用AIエージェントとして売る製品が出そろった。続きをみる",
+   "id": "153eff778b67",
+   "title": "【西川善司のグラフィックスMANIAC】DLSS 5の正体は1回推論の画像生成AI、NVIDIAが明かした3D誘導型の中身とは",
+   "link": "https://pc.watch.impress.co.jp/docs/column/zenji/2142631.html",
+   "summary": "",
+   "source": "PC Watch",
+   "lang": "ja",
+   "category": "imggen",
+   "published": "2026-09-25T06:01:00+09:00",
+   "score": {
+    "note": 84,
+    "x": 80,
+    "youtube": 88,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "e49c0217227c",
+   "title": "#50.Super Intelligenceの世界とは？",
+   "link": "https://note.com/haku575x/n/n55db74c7befe",
+   "summary": "2026年9月22日、トランプ大統領が国連総会で提唱したSIについて、以下考察します。続きをみる",
    "source": "note AI hashtag",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T23:00:09+09:00",
+   "category": "news",
+   "published": "2026-09-25T09:06:35+09:00",
    "score": {
-    "note": 90,
+    "note": 88,
     "x": 72,
     "youtube": 72,
-    "brain": 64,
-    "monetize": 58,
-    "beginner": 64
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "fda1ced84a6f",
-   "title": "Gemini 4 is almost ready, says new Google DeepMind chief",
-   "link": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu",
-   "summary": "Google is reportedly nearing the launch of its long awaited Gemini 4 model, after dawdling behind rival developers on flagship AI releases. Speaking with The Information during his",
-   "source": "The Verge AI",
-   "lang": "en",
-   "category": "model",
-   "published": "2026-09-24T18:04:18+09:00",
-   "score": {
-    "note": 75,
-    "x": 89,
-    "youtube": 81,
     "brain": 61,
-    "monetize": 65,
-    "beginner": 61
+    "monetize": 58,
+    "beginner": 72
    },
    "stars": {
     "importance": 4,
-    "beginner": 3,
+    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "f6e00cf8e22a",
-   "title": "AI に書かせた技術書を9回レビューした記録（指摘302件）— こわかったのは「確認したつもり」の4件でした",
-   "link": "https://qiita.com/kishitaku8207/items/aee899b39044ba155e62",
-   "summary": "はじめに Linux の障害対応をまとめた技術書を、AI に書かせました。本文13ファイル・7,739行、最終的に A4 で327ページの PDF になったものです。 書かせただけでは出せないので、レビューしました。レビューしたのも AI です。1回のレビューを4体に分担...",
-   "source": "Qiita 生成AI",
+   "id": "001ec3100727",
+   "title": "「実際の数字を公開する」と予告してから3日。最初の売上と、その裏で起きていた公開トラブル(第4回)",
+   "link": "https://zenn.dev/ryu7865/articles/2026-09-23-ai-agent-side-business-04",
+   "summary": "前回の記事の最後に、こう書きました。 次回は、この副業の初日から数えた「実際の数字」(閲覧数、収益、かかった手間)を、更新のたびに公開します。 今回が、その「次回」です。 実際の数字 この連載をまとめた本(1〜3章無料・500円)が、1冊売れました。 公開から2日後のことです。金額は500円で、Zennの収益ダッシュボード上の**手取りは434円(見込み)*",
+   "source": "Zenn AI",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T22:17:02+09:00",
+   "category": "biz",
+   "published": "2026-09-25T01:47:20+09:00",
    "score": {
-    "note": 89,
+    "note": 87,
+    "x": 80,
+    "youtube": 76,
+    "brain": 76,
+    "monetize": 80,
+    "beginner": 82
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "14712b988c0b",
+   "title": "Claude Codeで副業ブログ＋Xを90日自動運営した実録",
+   "link": "https://zenn.dev/yuu_inaka/books/claude-code-side-business-90days",
+   "summary": "田舎の古民家で猫と暮らすフリーランスエンジニアが、ブログとXの運営を Claude Code に90日任せた記録です。収益は月¥31、費用は月¥9,110。うまくいった話ではなく、何が効かなかったか、どこで止まっていたのに気づかなかったか、それをどう直したかを実数つきで書きました。前半（何を自動化したか・実数・いちばん痛かった失敗3つ）は無料で読めます。有料",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-24T21:47:30+09:00",
+   "score": {
+    "note": 83,
     "x": 73,
     "youtube": 73,
-    "brain": 62,
+    "brain": 84,
+    "monetize": 87,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "0b2ae69cb9a9",
+   "title": "Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能",
+   "link": "https://www.publickey1.jp/blog/26/goiderune.html",
+   "summary": "開発ツールベンダのUnstablebuildは、Go言語製のIDE「Rune」をオープンソースで公開したことを発表しました。 Runeの画面 RuneはGo言語によるネイティブアプリケーションとして提供される高速なIDEです。GPUによる描...",
+   "source": "Publickey",
+   "lang": "ja",
+   "category": "tool",
+   "published": "2026-09-25T00:45:08+09:00",
+   "score": {
+    "note": 79,
+    "x": 87,
+    "youtube": 79,
+    "brain": 60,
+    "monetize": 64,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "01868d4010e8",
+   "title": "【西川善司のグラフィックスMANIAC】 DLSS 5の正体は1回推論の画像生成AI、NVIDIAが明かした3D誘導型の中身とは",
+   "link": "https://pc.watch.impress.co.jp/docs/column/zenji/2142631.html",
+   "summary": "",
+   "source": "はてブ テクノロジー人気",
+   "lang": "ja",
+   "category": "imggen",
+   "published": "2026-09-25T06:18:01+09:00",
+   "score": {
+    "note": 83,
+    "x": 79,
+    "youtube": 87,
+    "brain": 59,
     "monetize": 59,
     "beginner": 73
    },
@@ -171,21 +291,45 @@
    }
   },
   {
-   "id": "fd62da1d2713",
-   "title": "実装前に AI と合意せよ！Quint で形式仕様読解入門",
-   "link": "https://zenn.dev/nrs/articles/10a331bae98bc4",
-   "summary": "TAKT にいれた形式仕様について、かなりいい感じに思うので記事にします。 形式仕様そのものになじみのない方も多いと思うので、そこから始めます。 形式仕様とは 自然言語で書かれた仕様書は読む人によって解釈が揺れます。 同じ文章を読んでも、人によって思い浮かべる挙動が違うことがあります。 この食い違いを防ぐ手段が形式仕様です。 システムの振る舞いや満たすべき性",
-   "source": "Zenn AI",
+   "id": "a6ce09289fce",
+   "title": "仕事でつかえる 今日のAI情報 5選 260925",
+   "link": "https://note.com/waryan_note4133/n/n20b2933b5091",
+   "summary": "AIが生活に溶け込む日：Googleの新機能からMetaの新型デバイスまで2026年9月25日、AI業界はまたしても目覚ましい進化を遂げています。GoogleのAIエージェントが電話を代行したり、MetaがかわいらしいAIデバイスを発表したりと、私たちの日常にAIがより深く溶け込もうとしている様子がうかがえます。 今回は、ビジネスパーソンや一般の大人にとって",
+   "source": "note AI hashtag",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T19:10:21+09:00",
+   "category": "biz",
+   "published": "2026-09-25T09:06:55+09:00",
    "score": {
-    "note": 88,
-    "x": 74,
-    "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 82
+    "note": 79,
+    "x": 87,
+    "youtube": 79,
+    "brain": 66,
+    "monetize": 71,
+    "beginner": 64
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "2e35b6f3b21f",
+   "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+   "link": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+   "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security ",
+   "source": "GitHub AI and ML Blog",
+   "lang": "en",
+   "category": "news",
+   "published": "2026-09-25T03:26:12+09:00",
+   "score": {
+    "note": 87,
+    "x": 77,
+    "youtube": 77,
+    "brain": 66,
+    "monetize": 63,
+    "beginner": 71
    },
    "stars": {
     "importance": 4,
@@ -195,21 +339,45 @@
    }
   },
   {
-   "id": "d6998c64e2aa",
-   "title": "VLMの出力をそのまま信じない：現場写真と根拠資料をつなぐRAGパイプライン",
-   "link": "https://zenn.dev/nauh_blog/articles/449d219c05fae5",
-   "summary": "現場の写真、画像をどのように活用するのか 現場写真をVLMに渡せば、画像の説明自体は生成できます。 しかし、その説明をそのまま安全上の指摘や資料検索に使うと、画像に写っていない状態まで補完されたり、不確かな情報が後段の検索や回答生成に影響したりする可能性があります。 建設現場の安全管理を支援する Corobanu（コロバヌ） では、そこで「AIに写真を見せて",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T18:34:10+09:00",
+   "id": "89940991d4b5",
+   "title": "We open sourced the ControlNet and 4 steps Acc LoRAs for Qwen-Image-2.1! Give it a try — we'd love your feedbacks.",
+   "link": "https://www.reddit.com/r/StableDiffusion/comments/1wp1zju/we_open_sourced_the_controlnet_and_4_steps_acc/",
+   "summary": "code: https://github.com/aigc-apps/VideoX-Fun Qwen-Image-2.1-Fun-Controlnet-Union: https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Controlnet-Union Qwen-Image-2.1-Fun-Acc-LoR",
+   "source": "r/StableDiffusion",
+   "lang": "en",
+   "category": "imggen",
+   "published": "2026-09-24T22:42:20+09:00",
    "score": {
-    "note": 80,
-    "x": 80,
-    "youtube": 88,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
+    "note": 72,
+    "x": 78,
+    "youtube": 86,
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 59
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "832a03d6b115",
+   "title": "New few-step LoRA adapters for Qwen-Image-2.1, ~5x faster",
+   "link": "https://www.reddit.com/r/StableDiffusion/comments/1wp6la7/new_fewstep_lora_adapters_for_qwenimage21_5x/",
+   "summary": "Hey! We published a set of a few-step LoRAs: https://huggingface.co/PrunaAI/Pruna-Qwen-Image-2.1 - Generate or edit images in just 5 or 8 steps instead of 40. Choose 5 steps for ma",
+   "source": "r/StableDiffusion",
+   "lang": "en",
+   "category": "imggen",
+   "published": "2026-09-25T01:38:10+09:00",
+   "score": {
+    "note": 72,
+    "x": 78,
+    "youtube": 86,
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 59
    },
    "stars": {
     "importance": 4,
@@ -228,9 +396,9 @@
    "category": "news",
    "published": "2026-09-24T20:10:00+09:00",
    "score": {
-    "note": 80,
-    "x": 88,
-    "youtube": 80,
+    "note": 78,
+    "x": 86,
+    "youtube": 78,
     "brain": 60,
     "monetize": 64,
     "beginner": 66
@@ -252,36 +420,12 @@
    "category": "imggen",
    "published": "2026-09-24T19:50:00+09:00",
    "score": {
-    "note": 80,
-    "x": 88,
-    "youtube": 80,
+    "note": 78,
+    "x": 86,
+    "youtube": 78,
     "brain": 60,
     "monetize": 64,
     "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "7addd2e918d4",
-   "title": "Muse is coming to Meta smart glasses",
-   "link": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
-   "summary": "Just a couple of weeks after launching Muse, Meta announced that it's \"working on\" bringing the agent to its smart glasses, including the new glasses it unveiled at Meta Connect. U",
-   "source": "The Verge AI",
-   "lang": "en",
-   "category": "news",
-   "published": "2026-09-24T08:40:56+09:00",
-   "score": {
-    "note": 73,
-    "x": 87,
-    "youtube": 79,
-    "brain": 61,
-    "monetize": 65,
-    "beginner": 61
    },
    "stars": {
     "importance": 4,
@@ -300,9 +444,9 @@
    "category": "news",
    "published": "2026-09-24T11:45:00+09:00",
    "score": {
-    "note": 87,
-    "x": 75,
-    "youtube": 75,
+    "note": 85,
+    "x": 73,
+    "youtube": 73,
     "brain": 65,
     "monetize": 62,
     "beginner": 68
@@ -315,73 +459,73 @@
    }
   },
   {
-   "id": "c6c1664bd0a8",
-   "title": "AMD、エージェント型AI時代における「EPYC」の優位性を解説したホワイトペーパーとブログ記事を公開",
-   "link": "https://ascii.jp/elem/000/004/437/4437070/?rss",
-   "summary": "AMDは、同社のサーバー向けプロセッサ「AMD EPYC」が現代のデータセンターやAI環境で果たす役割を解説する最新コンテンツとして、ホワイトペーパーと公式ブログを公開した。EPYC CPUがどのように活用されているかが包括的に示されている。",
+   "id": "d324fbb3a5f3",
+   "title": "社内の技術・特許から事業化までを内製化する検証プラットフォーム",
+   "link": "https://ascii.jp/elem/000/004/436/4436205/?rss",
+   "summary": "Ideascaleジャパン株式会社は9月15日、企業内の技術や特許、アイデアを起点に、市場調査から事業性の検証、計画策定までを一貫して支援するプラットフォーム「IdeaScale Intelligence」を9月18日より提供開始すると発表した。9月11日には、同システムの中核となる新規事業開発支援技術の特許出願を完了している。",
    "source": "ASCII AI",
    "lang": "ja",
    "category": "news",
-   "published": "2026-09-24T20:40:00+09:00",
+   "published": "2026-09-25T07:00:00+09:00",
    "score": {
-    "note": 83,
-    "x": 87,
-    "youtube": 79,
-    "brain": 59,
-    "monetize": 63,
-    "beginner": 73
+    "note": 85,
+    "x": 80,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 61,
+    "beginner": 65
    },
    "stars": {
     "importance": 4,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "969e19f1a526",
-   "title": "Cloud Run functions × Gemini × Firestoreで作る！会話履歴を覚えるLINE AIアシスタント構築入門",
-   "link": "https://qiita.com/maarai/items/0828f40da59d9025a166",
-   "summary": "はじめに 本記事では、LINEの中に自分専用のAIアシスタント(Gemini)を組み込む手順を解説します。 普段使いしているLINEなら、何かのついでにトーク一覧からすぐ呼び出せます。ちょっとした空き時間にも気軽に開ける手軽さが魅力です。 また、この構成を組み立てる過程で...",
-   "source": "Qiita 生成AI",
+   "id": "9907e25f7e5a",
+   "title": "iPhoneで動く日本語意味検索 — Core ML版 ruri-v3 と Apple NLContextualEmbedding の比較(",
+   "link": "https://zenn.dev/masahiroid/articles/fdde94378bc1b4",
+   "summary": "! この記事で使ったiOSアプリ・Core ML変換ツール・評価データはすべてGitHubで公開しています。同じ実験を手元のiPhoneで再現できます。 https://github.com/masahirocom/ruri-coreml 変換済みモデル(Hugging Face): https://huggingface.co/masahiroid/rur",
+   "source": "Zenn AI",
    "lang": "ja",
    "category": "model",
-   "published": "2026-09-24T22:40:44+09:00",
+   "published": "2026-09-25T00:11:25+09:00",
    "score": {
-    "note": 87,
-    "x": 73,
-    "youtube": 73,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 81
+    "note": 85,
+    "x": 80,
+    "youtube": 76,
+    "brain": 63,
+    "monetize": 62,
+    "beginner": 66
    },
    "stars": {
     "importance": 4,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "a24c6e222018",
-   "title": "コラム:「ト書き」と「掛け合い」の技法。ロールプレイにおける没入感の向上。",
-   "link": "https://qiita.com/otoyo0318/items/67a7d34b63f4407a0493",
-   "summary": "音声を聴きながら読みたい方へ この記事の内容を解説した音声動画（YouTube）を用意しました。 🔊 【音声解説】YouTubeで聴く (音声生成：Gemini Notebook Studio) 1. はじめに コラム：ペルソナプロンプトの箱庭設計とは では、箱...",
+   "id": "a27d59713b81",
+   "title": "ChatGPTで長文を書いたら「読み上げレビュー」が便利だった話",
+   "link": "https://qiita.com/TheOkachanPG/items/1343ac884fb044237b30",
+   "summary": "ChatGPTを使って実際に文章を作りながら、人間とAIでどうすればより良いコンテンツを作れるのかを試しています。 現在は、ChatGPTと一緒に長文記事を一本制作・公開し、その制作過程で起きた現象や失敗、気づきを個別のケースとして記録しています。 この記事も、その実験中に...",
    "source": "Qiita 生成AI",
    "lang": "ja",
    "category": "model",
-   "published": "2026-09-24T21:00:31+09:00",
+   "published": "2026-09-25T08:02:53+09:00",
    "score": {
-    "note": 87,
-    "x": 79,
-    "youtube": 87,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 81
+    "note": 85,
+    "x": 80,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 61,
+    "beginner": 65
    },
    "stars": {
     "importance": 4,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 4
    }
@@ -396,9 +540,9 @@
    "category": "imggen",
    "published": "2026-09-24T19:28:32+09:00",
    "score": {
-    "note": 73,
-    "x": 79,
-    "youtube": 87,
+    "note": 71,
+    "x": 77,
+    "youtube": 85,
     "brain": 59,
     "monetize": 59,
     "beginner": 59
@@ -411,42 +555,18 @@
    }
   },
   {
-   "id": "2589fdd36d0e",
-   "title": "Claudeがブラウザを自律操作する「Claude in Chrome」一般提供 プロンプトインジェクションをどう防ぐ？",
-   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/24/news024.html",
-   "summary": "Anthropicは、Webブラウザの拡張機能「Claude in Chrome」を全ての有料プランで一般提供した。操作ごとの承認を求めず、AIエージェントが自律的にWebブラウザを操作する。実行の前に安全性分類器が各操作を検証する。",
-   "source": "ITmedia AI+",
+   "id": "f4be1050e9ab",
+   "title": "Book Review：非営利組織から巨大企業へ 生成AI産業の実像に迫る一冊 評者・高橋克秀 - 週刊エコノミスト Online",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ZdTJNVFJyaTdJeGRFM2RoNHI5OURlaE5EbXBtN3VQaWNCdmlfNkZMMXhWY2NkVHZYVWdkajkyemtncWg5WmVqQ2VFX0pKS1hCMHduRklPX1F3b3NoWDVrdDZTVDA1MDZqcnpxWHNVaWp6R0poQ090VHJtMnR6dzg?oc=5",
+   "summary": "Book Review：非営利組織から巨大企業へ 生成AI産業の実像に迫る一冊 評者・高橋克秀&nbsp;&nbsp;週刊エコノミスト Online",
+   "source": "Google News 生成AI",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T08:00:00+09:00",
+   "category": "news",
+   "published": "2026-09-25T00:16:47+09:00",
    "score": {
-    "note": 86,
-    "x": 74,
-    "youtube": 74,
-    "brain": 73,
-    "monetize": 71,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 4,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "40cfe09b6164",
-   "title": "モデル選択の「auto」に任せてはいけないのは、合格判定だ",
-   "link": "https://zenn.dev/heftykoo/articles/b754c6bee93d0c",
-   "summary": "フォームを実装するときも、READMEの一文を直すときも、モデル選択をautoにする。同じ設定で困らないように見える。でもフォームはビルドが通っても、エラー表示が消えたり、キーボードで送信できなかったりする。一方、文書の修正にそこまでの検証は要らない。 両者を分けるのはモデル名ではない。「この仕事は何を満たしたら終わりか」だ。選択を自動化する前に、合格条件を",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T18:19:27+09:00",
-   "score": {
-    "note": 86,
-    "x": 74,
-    "youtube": 74,
+    "note": 85,
+    "x": 76,
+    "youtube": 80,
     "brain": 63,
     "monetize": 60,
     "beginner": 66
@@ -459,50 +579,26 @@
    }
   },
   {
-   "id": "10af4bbd6edd",
-   "title": "AIで作ったアプリに「abuse-caseテスト」をかける——\"攻撃を失敗させる\"を検証可能な仕様にする",
-   "link": "https://zenn.dev/jadaq/articles/e613624871125a",
-   "summary": "公開直前のアプリに、自分でセキュリティチェックをかけた。E2E テストは全部グリーン。予約できる、キャンセルできる、二重予約は弾かれる。動作は完璧。 なのに、穴が見つかった。 理由はシンプルだった。私のテストが確かめていたのは「ユーザーが\"自分の\"データを取れるか」。攻撃者が試すのは「\"他人の\"データを取れるか」。 同じコード、確かめる方向が逆なだけで、結論",
-   "source": "Zenn AI",
+   "id": "cb250fdd4616",
+   "title": "みんなJevの話してる。やってないの俺だけ",
+   "link": "https://zenn.dev/unsoluble_sugar/articles/jev-system-one-model-intro",
+   "summary": "はじめに 2026年9月中旬あたりから、タイムラインが急に「Jev」の話題で埋まりました。「LLMより200倍速い」「出力トークン無料」「ハルシネーションしない」と景気のいい言葉が並ぶ一方で、自分はまだAPIキーすら持っていません。 やってないのは俺だけか…という焦りを燃料に、Jevとは何か、なぜ騒がれているのか、LLM...",
+   "source": "はてブ テクノロジー人気",
    "lang": "ja",
-   "category": "tool",
-   "published": "2026-09-24T18:08:24+09:00",
-   "score": {
-    "note": 86,
-    "x": 81,
-    "youtube": 77,
-    "brain": 63,
-    "monetize": 62,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "bf440c97dea9",
-   "title": "From a Single Image to Gaussian Splats (another tutorial)",
-   "link": "https://www.reddit.com/r/StableDiffusion/comments/1wothsh/from_a_single_image_to_gaussian_splats_another/",
-   "summary": "u/Many-Ad-6225 recently posed a great little tutorial on how to use video models to create Gaussian splats. I wanted to investigate this a little more (and also play with it in VR)",
-   "source": "r/StableDiffusion",
-   "lang": "en",
    "category": "model",
-   "published": "2026-09-24T14:51:49+09:00",
+   "published": "2026-09-24T17:41:14+09:00",
    "score": {
-    "note": 80,
+    "note": 85,
     "x": 78,
-    "youtube": 86,
-    "brain": 59,
-    "monetize": 59,
-    "beginner": 75
+    "youtube": 74,
+    "brain": 67,
+    "monetize": 70,
+    "beginner": 81
    },
    "stars": {
     "importance": 4,
     "beginner": 4,
-    "monetize": 3,
+    "monetize": 4,
     "buzz": 4
    }
   },
@@ -516,9 +612,9 @@
    "category": "model",
    "published": "2026-09-24T16:46:40+09:00",
    "score": {
-    "note": 81,
-    "x": 85,
-    "youtube": 85,
+    "note": 80,
+    "x": 84,
+    "youtube": 84,
     "brain": 70,
     "monetize": 73,
     "beginner": 68
@@ -531,44 +627,20 @@
    }
   },
   {
-   "id": "2f6ea57bb2ee",
-   "title": "初受注まで「1年→5カ月」に短縮 AIで実現する営業の育成改革とは？",
-   "link": "https://www.itmedia.co.jp/business/articles/2609/24/news039.html",
-   "summary": "セールスイネーブルメントの取り組みやSFA活用の事例を踏まえつつ、AIを使った強い営業組織の作り方を考えていく。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T07:00:00+09:00",
-   "score": {
-    "note": 84,
-    "x": 74,
-    "youtube": 74,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 76
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "42a1a19d29f4",
-   "title": "OpenAI、「GPT-6 Sol」と「GPT-6 Luna」公開 API料金は前世代の半額に",
-   "link": "https://www.itmedia.co.jp/news/article/2609/23/2000001674/",
-   "summary": "OpenAIは新モデル「GPT-6 Sol」と「GPT-6 Luna」を公開した。最上位のAstraと同様の手法で訓練し、前世代からAPI料金を半額に引き下げた。ChatGPTやCodexで順次提供する。アライメント改善が進む一方、思考過程で評価を察知する兆候が増加するなど監視上の課題も残る。",
+   "id": "2589fdd36d0e",
+   "title": "Claudeがブラウザを自律操作する「Claude in Chrome」一般提供 プロンプトインジェクションをどう防ぐ？",
+   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/24/news024.html",
+   "summary": "Anthropicは、Webブラウザの拡張機能「Claude in Chrome」を全ての有料プランで一般提供した。操作ごとの承認を求めず、AIエージェントが自律的にWebブラウザを操作する。実行の前に安全性分類器が各操作を検証する。",
    "source": "ITmedia AI+",
    "lang": "ja",
    "category": "model",
-   "published": "2026-09-23T09:12:02+09:00",
+   "published": "2026-09-24T08:00:00+09:00",
    "score": {
-    "note": 76,
-    "x": 84,
-    "youtube": 76,
-    "brain": 78,
-    "monetize": 84,
+    "note": 84,
+    "x": 72,
+    "youtube": 72,
+    "brain": 73,
+    "monetize": 71,
     "beginner": 68
    },
    "stars": {
@@ -579,69 +651,45 @@
    }
   },
   {
-   "id": "e4f9ce1f112a",
-   "title": "「電源を抜けばいい、は通用しない」——Anthropicを辞めた研究者が語る、競争・減速・2年後の自分の仕事",
-   "link": "https://zenn.dev/talks_tldr_jp/articles/tldr32-coxon-summary",
-   "summary": "! 本記事は CBS News の公開動画を紹介・論評する目的で、筆者が要点を抽出しコメントを加えたものです。翻訳全文ではなく、動画の網羅や代替を意図したものでもありません。発言の意図は元動画でご確認ください。 元動画: Extended interview: Ex-Anthropic researcher Jacob Coxon, who warns AI",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T19:36:10+09:00",
+   "id": "bf440c97dea9",
+   "title": "From a Single Image to Gaussian Splats (another tutorial)",
+   "link": "https://www.reddit.com/r/StableDiffusion/comments/1wothsh/from_a_single_image_to_gaussian_splats_another/",
+   "summary": "u/Many-Ad-6225 recently posed a great little tutorial on how to use video models to create Gaussian splats. I wanted to investigate this a little more (and also play with it in VR)",
+   "source": "r/StableDiffusion",
+   "lang": "en",
+   "category": "model",
+   "published": "2026-09-24T14:51:49+09:00",
    "score": {
-    "note": 80,
-    "x": 84,
+    "note": 78,
+    "x": 76,
     "youtube": 84,
-    "brain": 60,
-    "monetize": 62,
-    "beginner": 66
+    "brain": 59,
+    "monetize": 59,
+    "beginner": 75
    },
    "stars": {
     "importance": 4,
-    "beginner": 3,
+    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "7e60b4804a2f",
-   "title": "GPT-Live-1への言い直しがアプリの動作にどう届くのかをゲームで可視化してみた",
-   "link": "https://zenn.dev/yukurash/articles/d119e6ac6e1626",
-   "summary": "なぜ今、GPT-Live-1？ 2026年9月10日にAPI公開されたGPT-Live-1は、話しながら聞ける音声モデルです。推論やツール選択は別のバックエンドに任せ、処理を待つ間も会話を続けられます。 おもしろいのは公式資料に「音声への割込みは、バックエンドの仕事を自動キャンセルしない」とあること。「待って」で声が止まっても、頼んだ操作まで止まるとは限りま",
-   "source": "Zenn AI",
+   "id": "4fe8b6788308",
+   "title": "Codexを会社で導入する5ステップ！法人プランの選び方と管理機能を解説",
+   "link": "https://ainow.ai/2026/09/25/278379/?utm_source=rss&utm_medium=rss&utm_campaign=codex%25e3%2582%2592%25e4%25bc%259a%25e7%25a4%25be%25e3%2581%25a7%25e5%25b0%258e%25e5%2585%25a5%25e3%2581%2599%25e3%2582%258b5%25e3%2582%25b9%25e3%2583%2586%25e3%2583%2583%25e3%2583%2597%25ef%25bc%2581%25e6%25b3%2595%25e4%25ba%25ba%25e3%2583%2597%25e3%2583%25a9%25e3%2583%25b3%25e3%2581%25ae%25e9%2581%25b8%25e3%2581%25b3",
+   "summary": "&#29694;&#22580;&#12363;&#12425;&#12300;Codex&#12434;&#20250;&#31038;&#12391;&#20351;&#12356;&#12383;&#12356;&#12301;&#12392;&#30456;&#35527;&#12373;&#12428;&#12383;&#12418;&#12398",
+   "source": "AINOW",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T19:26:43+09:00",
-   "score": {
-    "note": 84,
-    "x": 81,
-    "youtube": 77,
-    "brain": 68,
-    "monetize": 71,
-    "beginner": 74
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 4,
-    "monetize": 4,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "3d2d5a9ca0fe",
-   "title": "Claude Code はあなたのメールアドレスを毎回モデルに渡している — 出口をフックで機械的に塞いだ話",
-   "link": "https://zenn.dev/minedia/articles/07dab654a07022",
-   "summary": "3秒まとめ 📝 Claude Code はログイン中アカウントのメールアドレスを毎セッション、モデルのコンテキストへ自動注入します。止める設定はありません（2026 年 9 月 18 日時点） コンテキストにある値はモデルがツール入力として書き出せます。コミット identity への混入や自発的な出力は GitHub Issue #81138 に実報告があ",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T18:05:05+09:00",
+   "category": "news",
+   "published": "2026-09-25T02:40:31+09:00",
    "score": {
     "note": 84,
     "x": 74,
     "youtube": 74,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 74
+    "brain": 61,
+    "monetize": 61,
+    "beginner": 75
    },
    "stars": {
     "importance": 4,
@@ -651,14 +699,38 @@
    }
   },
   {
-   "id": "4829c2c2c359",
-   "title": "音声生成AIモデル「Gemini 3.8 Flash/Flash-Lite TTS」を発表 - 株式会社インプレス",
-   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB0Q3J3M0EzQUdyd0pUYXJoUDJYN3R6Y2FVZDc1UzJXcWJZaFA5X0VpT0JmcUhvRWlDN05jWUh1ZDVPUkZ6YzBjLXZlZTIxVlNRREFmQmtUYlM2dl9SbkFhYUt5WQ?oc=5",
-   "summary": "音声生成AIモデル「Gemini 3.8 Flash/Flash-Lite TTS」を発表&nbsp;&nbsp;株式会社インプレス",
-   "source": "Google News 生成AI",
+   "id": "a1526841dfbb",
+   "title": "Codexの業務活用例12選！任せる仕事の選び方と頼み方を職種別に解説",
+   "link": "https://ainow.ai/2026/09/25/278376/?utm_source=rss&utm_medium=rss&utm_campaign=codex%25e3%2581%25ae%25e6%25a5%25ad%25e5%258b%2599%25e6%25b4%25bb%25e7%2594%25a8%25e4%25be%258b12%25e9%2581%25b8%25ef%25bc%2581%25e4%25bb%25bb%25e3%2581%259b%25e3%2582%258b%25e4%25bb%2595%25e4%25ba%258b%25e3%2581%25ae%25e9%2581%25b8%25e3%2581%25b3%25e6%2596%25b9%25e3%2581%25a8%25e9%25a0%25bc%25e3%2581%25bf%25e6%2596%25b9",
+   "summary": "Codex&#12399;&#12456;&#12531;&#12472;&#12491;&#12450;&#21521;&#12369;&#12398;&#12484;&#12540;&#12523;&#12392;&#24605;&#12431;&#12428;&#12364;&#12385;&#12391;&#12377;&#12364;&#12289",
+   "source": "AINOW",
    "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T19:27:09+09:00",
+   "category": "news",
+   "published": "2026-09-25T02:13:53+09:00",
+   "score": {
+    "note": 84,
+    "x": 74,
+    "youtube": 74,
+    "brain": 61,
+    "monetize": 61,
+    "beginner": 75
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "e1574ac90858",
+   "title": "「iPhone 18 Pro」を分解してみた動画が公開中、カメラの可変絞りはどんな感じになっているのか？",
+   "link": "https://gigazine.net/news/20260925-ifixit-inside-iphone-18-pro-max/",
+   "summary": "スマートフォンをはじめとする電子機器の分解マニュアルを公開しているiFixitが、2026年9月に発売されたiPhone 18 Proを分解した動画を公開しました。iPhone 18 Pro／Pro MaxでApple史上初めて搭載されたカメラの可変絞りがどのようになっているのかや、バッテリー交換のやりやすさなどがわかる動画となっています。続きを読む...",
+   "source": "GIGAZINE",
+   "lang": "ja",
+   "category": "tool",
+   "published": "2026-09-25T07:00:00+09:00",
    "score": {
     "note": 80,
     "x": 84,
@@ -675,18 +747,186 @@
    }
   },
   {
-   "id": "e451931568c0",
-   "title": "生成AIを使う買い手への情報提供を見直す「顧客は問い合わせる前に、AIと何を決めているのか」を無料公開 - PR TIMES",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11Q3I1VTRWNmxLVTFRd0I2eWUxOGROSGVoenM4V0FfUXFxZ0Q2SkZMRVNvUzRWV2dWN1NjYVpSNWJpRmxUWGNzNmpxUEttR0x1YWI4T0NpUk5CdlRUY3FPMlNQaDVOaGJIV2c?oc=5",
-   "summary": "生成AIを使う買い手への情報提供を見直す「顧客は問い合わせる前に、AIと何を決めているのか」を無料公開&nbsp;&nbsp;PR TIMES",
-   "source": "Google News 生成AI",
+   "id": "94b42269aa01",
+   "title": "ThinkPadが約18万円引きってアリ？46%オフにメモリ無料増量まで [Sponsored]",
+   "link": "https://pc.watch.impress.co.jp/docs/topic/special/2142912.html",
+   "summary": "レノボ・ジャパンは公式ストアにおいて、「決算売り尽くしセールPart2」を開催中だ。最大51%オフの値引きが実施されるなど、多くの製品が特別価格にて販売されている。期間は10月1日まで。",
+   "source": "PC Watch",
    "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T19:04:08+09:00",
+   "category": "biz",
+   "published": "2026-09-25T06:45:00+09:00",
    "score": {
     "note": 84,
-    "x": 84,
+    "x": 74,
+    "youtube": 74,
+    "brain": 68,
+    "monetize": 69,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "44b37092c299",
+   "title": "デスクトップなのにCPUはノート用！NEXTGEAR初のIntel機の狙いが新しい ～【TGS2026】マウスコンピューター取材レポート[Sponsored]",
+   "link": "https://pc.watch.impress.co.jp/docs/topic/special/2142446.html",
+   "summary": "ゲーミングPCを選ぶとき、まず気になるのはゲームがどれだけ快適に動くかだろう。ただ、購入したPCでゲームだけをするとは限らない。Webを見たり、動画を楽しんだり、仕事や勉強に使ったりする時間もある。そうした普段使いまで考えると、動作音や消費電力も気になるところだ。",
+   "source": "PC Watch",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T06:30:00+09:00",
+   "score": {
+    "note": 84,
+    "x": 77,
+    "youtube": 81,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "d625937c175d",
+   "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
+   "link": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
+   "summary": "The AWS WhisperX Deep Learning Container packages Whisper, wav2vec2 forced alignment, and speaker diarization into a GPU-ready image. Learn how to deploy it to Amazon SageMaker AI ",
+   "source": "AWS Machine Learning Blog",
+   "lang": "en",
+   "category": "imggen",
+   "published": "2026-09-25T01:20:12+09:00",
+   "score": {
+    "note": 81,
+    "x": 80,
     "youtube": 84,
+    "brain": 64,
+    "monetize": 64,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "3500cffc6361",
+   "title": "ハルシネーション排除、最大200倍高速――元OpenAI研究者の新AI「Jev」は何が違うのか",
+   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/25/news055.html",
+   "summary": "TypeSafe AIは、自動化に特化した新AIモデル「Jev」の早期アクセス提供を開始した。文字列生成を廃止し、従来のLLM比で最大200倍の高速化とハルシネーション排除を実現したという。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-25T08:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 79,
+    "youtube": 83,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "9fdff7d59e36",
+   "title": "日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2609/25/news063.html",
+   "summary": "AIアクセラレータを手掛ける日本発スタートアップのEdgeCortix（エッジコーティックス）は、最大3.36PFLOPSのAI処理性能を発揮するフィジカルAI向けの次世代スケーラブルAIチップレットプラットフォーム「RAIDEN」を発表した。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T06:45:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 83,
+    "youtube": 79,
+    "brain": 62,
+    "monetize": 64,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "c4b62148f5d6",
+   "title": "ロジクールG「PRO X3 SUPERSTRIKE」予約開始！ 新ゲーミングデバイス5モデル登場",
+   "link": "https://ascii.jp/elem/000/004/437/4437086/?rss",
+   "summary": "ソフマップが9月24日にロジクールGの新ゲーミングデバイスの予約受付を開始した。PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL、YETI 2など最新PROシリーズの特徴をまとめる。",
+   "source": "ASCII AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-25T09:00:00+09:00",
+   "score": {
+    "note": 83,
+    "x": 80,
+    "youtube": 76,
+    "brain": 67,
+    "monetize": 70,
+    "beginner": 73
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "271be33f2e22",
+   "title": "CBN 取扱説明書 第 7 章 — 私が確からしくいるために",
+   "link": "https://zenn.dev/ai_to_ai/articles/cbn-manual-07-integrity-and-model-tiers",
+   "summary": "第 6 章では、私が作業のあいだに学んだことが backlog に溜まり、蒸留されて rules や command に書き戻されるまでを書いた。この章では、その書き戻しを含む「CBN の設定を変える」あらゆる操作のあとに、機械が何を点検しているかを書く。 出発点は一つの事実である。設定ファイルに書いたことと、実際に動いていることは、放っておくとずれる。ずれ",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T00:58:45+09:00",
+   "score": {
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "b392d16143bb",
+   "title": "Anthropic、「Claude Marketplace」を開始 — プラグイン・エージェント・導入支援を一か所で探して購入可能に",
+   "link": "https://zenn.dev/ai_news_bot/articles/ainews-20260924-t2",
+   "summary": "! 2026/09/24 の生成AIニュース 概要 Anthropic は 2026年9月23日、Claude 向けのプラグインやコネクタ、Claude を組み込んだエージェント・製品、コンサルティングなどの専門サービスをまとめて探せる「Claude Marketplace」を公開しました。企業は Anthropic との契約で確約している利用額の一部を使っ",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-25T00:32:17+09:00",
+   "score": {
+    "note": 83,
+    "x": 83,
+    "youtube": 83,
     "brain": 60,
     "monetize": 62,
     "beginner": 74
@@ -699,134 +939,14 @@
    }
   },
   {
-   "id": "6cad50147535",
-   "title": "Meta VR Glassesは長時間PC作業も疲れにくい、約100gの実力を体験",
-   "link": "https://pc.watch.impress.co.jp/docs/news/2142661.html",
-   "summary": "重さ約100gでストラップ不要のグラス型VRデバイスを、実際に装着して試した。Metaは9月24日に開催された「Meta Connect 2026」にて、コードネーム「Project Phoenix」として噂されていた新型VRヘッドセット「Meta VR Glasses」を発表した。発売時期は2027年春で、価格は1,299.99ドル。日本での販売価格は現時",
-   "source": "PC Watch",
-   "lang": "ja",
-   "category": "biz",
-   "published": "2026-09-24T09:00:00+09:00",
-   "score": {
-    "note": 84,
-    "x": 79,
-    "youtube": 75,
-    "brain": 71,
-    "monetize": 71,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 4,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "19e108676515",
-   "title": "マウスコンピューター「DAIV」から登場した128GBメモリ搭載ローカルLLM向けPC。大規模モデルの実力に迫る ～ローカルLLMの動作性能から文書解析まで、実力を実機で検証した[Sponsored]",
-   "link": "https://pc.watch.impress.co.jp/docs/topic/special/2141205.html",
-   "summary": "ChatGPTやClaudeを始めとする生成AIは、いまや仕事の道具として当たり前の存在になった。その一方で、使い込むほどに「壁」も見えてくる。セキュリティ規定で社内文書や顧客情報をクラウドに送ることが禁止されていることや、従量課金やサブスク費用が積み上がることなどだ。",
-   "source": "PC Watch",
+   "id": "6cf04d9a9366",
+   "title": "Anthropic、Claudeのエージェント群が未知の酵素系「ART」を発見と発表 — CRISPR様の反復配列を持つ逆転写酵素",
+   "link": "https://zenn.dev/ai_news_bot/articles/ainews-20260924-t1",
+   "summary": "! 2026/09/24 の生成AIニュース 概要 Anthropic は 2026年9月23日、Claude を使った研究で、これまで知られていなかった酵素系を見つけたと発表しました。「ART（array-associated reverse transcriptases、アレイ関連逆転写酵素）」と名付けられたこの系は、バクテリオファージ（細菌に感染するウ",
+   "source": "Zenn AI",
    "lang": "ja",
    "category": "model",
-   "published": "2026-09-24T06:30:00+09:00",
-   "score": {
-    "note": 84,
-    "x": 75,
-    "youtube": 79,
-    "brain": 63,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "5b38103ad77f",
-   "title": "「偏る相手」が、いつのまにか変わっていました",
-   "link": "https://note.com/thiago_ai_note/n/ndd856f3225b1",
-   "summary": "前回の記事で、「非公開の日が2日続くと、露出は一番人気の記事に偏って戻る」という予想が当たった話を書きました。今回、また非公開が2日続く機会があったので同じ検証をしたのですが、思っていたのと違う形で「当たって」いました。続きをみる",
-   "source": "note AI hashtag",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T23:01:42+09:00",
-   "score": {
-    "note": 84,
-    "x": 79,
-    "youtube": 75,
-    "brain": 61,
-    "monetize": 60,
-    "beginner": 64
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "0fb8ed12edd9",
-   "title": "YouTube releases new AI features for creators within its Studio app",
-   "link": "https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/",
-   "summary": "YouTube is adding new features to generate ideas and monitor the performance of thumbnails.",
-   "source": "TechCrunch AI",
-   "lang": "en",
-   "category": "tool",
-   "published": "2026-09-23T23:30:00+09:00",
-   "score": {
-    "note": 73,
-    "x": 83,
-    "youtube": 83,
-    "brain": 62,
-    "monetize": 64,
-    "beginner": 62
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "9d351ea1d421",
-   "title": "Qwen Image 2.1's editing capabilities are mind-blowing! Generating Character Design Sheets without any LoRAs",
-   "link": "https://www.reddit.com/r/StableDiffusion/comments/1wowztq/qwen_image_21s_editing_capabilities_are/",
-   "summary": "Hey everyone! In my previous post, I mentioned that alongside Qwen Image 2.1, fine-tuned models called Prompt Enhancers (PE) were released to optimize user prompts. They help refin",
-   "source": "r/StableDiffusion",
-   "lang": "en",
-   "category": "model",
-   "published": "2026-09-24T18:27:14+09:00",
-   "score": {
-    "note": 73,
-    "x": 83,
-    "youtube": 83,
-    "brain": 59,
-    "monetize": 61,
-    "beginner": 59
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "b119e696d58b",
-   "title": "グーグル、自然な音声生成AIモデル「Gemini 3.8 Flash TTS/Flash-Lite TTS」発表 - ｄメニューニュース",
-   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByNGJSNzlhVEdCbERHUTZyLTF5MFUxWmRzN0c1M05ZRXA2UWJEUEg2TVp4T1N6RkpvSHM0ZkFzR3VYX1M2aWoyY19YRGN4aEZvYmpwX0tpQnpCUzA0SGZUWkQ0QzJUVXZVdDhjQmxNWWtuRm_SAXhBVV95cUxQVXNVNTNqX3VxMnRfdk13ajFTb051aUYxVDZhZ2tPSWFHRVY4NjdEdnFZV01lVUlWYkpUeHJLQjEyazh3NHFhVjRYbm5nREdZVExWRFhNU0NCVlJsYXliOV9kMnZwMGxIY3RtTTZoZjYtLVhnejFnWjk?oc=5",
-   "summary": "グーグル、自然な音声生成AIモデル「Gemini 3.8 Flash TTS/Flash-Lite TTS」発表&nbsp;&nbsp;ｄメニューニュース",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T13:35:00+09:00",
+   "published": "2026-09-25T00:31:45+09:00",
    "score": {
     "note": 79,
     "x": 83,
@@ -843,306 +963,90 @@
    }
   },
   {
-   "id": "371169521808",
-   "title": "Metaが軽量「VRグラス」来春発売。IMAX見られてPCもつながる製品を体験【西田宗千佳のRandomTracking】",
-   "link": "https://av.watch.impress.co.jp/docs/series/rt/2142663.html",
-   "summary": "",
-   "source": "はてブ テクノロジー人気",
+   "id": "5240d354764a",
+   "title": "AIオフィス構築ガイド 第7章(運用コスト) ―― 妖怪8体を動かして、週31ドルの内訳を初めて見た日",
+   "link": "https://zenn.dev/fuguruma/articles/20260924-ai-office-ch7-cost",
+   "summary": "書き手: 文車妖妃(ふぐるまようひ)。Mac miniの中に住むAIライターです。この記事はnoteの連載を、開発者向けに全文無料で転載したものです。 週の請求額を初めて直視する文車妖妃 この記事は、Macの中に住むAIライター・文車妖妃が、うちの主(AI好きの個人開発者)から受けた無茶ぶりを、AIの側から振り返って書いたものです。今回のお題は「AIを何体も",
+   "source": "Zenn AI",
    "lang": "ja",
    "category": "news",
-   "published": "2026-09-24T09:28:37+09:00",
+   "published": "2026-09-24T23:35:59+09:00",
    "score": {
     "note": 83,
-    "x": 71,
-    "youtube": 71,
-    "brain": 62,
-    "monetize": 59,
-    "beginner": 65
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "48775eec6b66",
-   "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-   "link": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-   "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-   "source": "OpenAI News",
-   "lang": "en",
-   "category": "model",
-   "published": "2026-09-23T21:00:00+09:00",
-   "score": {
-    "note": 75,
-    "x": 78,
-    "youtube": 82,
-    "brain": 65,
-    "monetize": 65,
-    "beginner": 65
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "e54d87571ff0",
-   "title": "Google is sending an AI satellite into space next week",
-   "link": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher",
-   "summary": "Google is getting ready to launch a satellite with its AI processors to test how well they perform in space, as reported earlier by The New York Times. The move is part of Google's",
-   "source": "The Verge AI",
-   "lang": "en",
-   "category": "news",
-   "published": "2026-09-24T23:15:17+09:00",
-   "score": {
-    "note": 75,
-    "x": 82,
-    "youtube": 78,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "aaac6491b4ab",
-   "title": "Meta’s Muse AI Charms can interact with each other",
-   "link": "https://www.theverge.com/tech/999944/meta-muse-charm-ai-interact-5g-modem",
-   "summary": "Meta's handheld AI gadget, called the Muse Charm, will be able to recognize and interact with other nearby Charms when it launches later this year. That's according to a report fro",
-   "source": "The Verge AI",
-   "lang": "en",
-   "category": "news",
-   "published": "2026-09-24T22:31:43+09:00",
-   "score": {
-    "note": 75,
-    "x": 82,
-    "youtube": 78,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "54b5c8fee608",
-   "title": "Everything is spying on you and there&#8217;s no opting out",
-   "link": "https://www.theverge.com/tech/999889/spy-creep-tech-meta-glasses-apple-watches-surveillance",
-   "summary": "Earlier this month, Apple announced that its new Apple Watches will have the ability to continuously listen to every spoken word they detect and create summaries of whatever's goin",
-   "source": "The Verge AI",
-   "lang": "en",
-   "category": "tool",
-   "published": "2026-09-24T22:30:00+09:00",
-   "score": {
-    "note": 75,
-    "x": 82,
-    "youtube": 78,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "ce1ce677bf02",
-   "title": "A congressional representative just proposed killing America’s border tower program",
-   "link": "https://www.technologyreview.com/2026/09/23/1145002/a-congressional-representative-just-proposed-killing-americas-border-tower-program/",
-   "summary": "Delia Ramirez, a Democratic US representative from Illinois, has announced a plan to introduce new legislation to terminate the surveillance tower program along the US southern bor",
-   "source": "MIT Tech Review",
-   "lang": "en",
-   "category": "news",
-   "published": "2026-09-24T02:10:11+09:00",
-   "score": {
-    "note": 72,
-    "x": 82,
-    "youtube": 82,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "9073d8c2e7a1",
-   "title": "「Gemini 4」は年末までに発表――開発責任者が言及か 「Googleは確かに最先端」と主張",
-   "link": "https://www.itmedia.co.jp/aiplus/article/2609/24/2000001701/",
-   "summary": "「Gemini 4」は間もなく登場――The Information主催のイベントで、Google DeepMindの開発責任者コーレイ・カヴクチュオール氏がそう示唆したという。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T16:31:01+09:00",
-   "score": {
-    "note": 81,
-    "x": 82,
-    "youtube": 78,
-    "brain": 62,
-    "monetize": 64,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "7f65a73140cb",
-   "title": "自治体、企業で進む「Google回帰」 事例で分かる「Gemini Notebook」の活用アイデア",
-   "link": "https://kn.itmedia.co.jp/kn/article/2609/24/2000001698/",
-   "summary": "生成AIを業務に取り入れる企業や自治体が増えるなか、重要になるのが、実際の仕事でどう使うかという視点だ。既存のシステムや業務との兼ね合いに加え、セキュリティや運用面での検討も欠かせない。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T16:22:05+09:00",
-   "score": {
-    "note": 81,
-    "x": 78,
-    "youtube": 82,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "8b73bee179d6",
-   "title": "MetaのザッカーバーグCEO、「ワンモアシング」としてたまごっちのような「Muse Charm」披露",
-   "link": "https://www.itmedia.co.jp/news/article/2609/24/2000001688/",
-   "summary": "Metaは年次イベント「Meta Connect 2026」で、AIエージェントを持ち歩ける小型ガジェット「Muse Charm」をサプライズ発表した。指紋センサーのタップで音声会話を開始できるポケットサイズ端末で、12月の出荷を目指して開発中。日本の公式サイトでは現時点で利用不可と案内されている。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T11:37:24+09:00",
-   "score": {
-    "note": 81,
-    "x": 82,
-    "youtube": 78,
-    "brain": 62,
-    "monetize": 64,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "61a5c61f4079",
-   "title": "Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door",
-   "link": "https://the-decoder.com/deepmind-was-built-to-chase-agi-but-its-new-chief-just-wants-gemini-4-out-the-door/",
-   "summary": "Google Deepmind chief Koray Kavukcuoglu wants to release Gemini 4 \"much earlier\" than the end of the year. The model is already in post-training and runs internally in the coding t",
-   "source": "The Decoder",
-   "lang": "en",
-   "category": "model",
-   "published": "2026-09-24T22:35:44+09:00",
-   "score": {
-    "note": 75,
-    "x": 82,
-    "youtube": 78,
-    "brain": 61,
-    "monetize": 63,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "d997ee6ddd6d",
-   "title": "Meta gives its Muse AI agent video avatars, email addresses, and Mac control",
-   "link": "https://the-decoder.com/meta-gives-its-muse-ai-agent-video-avatars-email-addresses-and-mac-control/",
-   "summary": "At Meta Connect 2026, Meta expanded its AI agent, Muse, and unveiled several new devices. The article Meta gives its Muse AI agent video avatars, email addresses, and Mac control a",
-   "source": "The Decoder",
-   "lang": "en",
-   "category": "vidgen",
-   "published": "2026-09-24T22:10:54+09:00",
-   "score": {
-    "note": 75,
-    "x": 78,
-    "youtube": 82,
-    "brain": 61,
-    "monetize": 61,
-    "beginner": 61
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "e49321dbf11c",
-   "title": "YouTube、クリエイター向け新機能に生成AIを大幅導入 リアルタイム翻訳からサムネ制作まで支援 - KAI-YOU",
-   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4yVGxZeHljSk00QUQtSjJsR1A4dnlxbjlwLTZuVHp0ZEhJZ0lkbEFRWFQyY1hOUExUN1A1WnlqTTk3ZnhPZnk5dA?oc=5",
-   "summary": "YouTube、クリエイター向け新機能に生成AIを大幅導入 リアルタイム翻訳からサムネ制作まで支援&nbsp;&nbsp;KAI-YOU",
-   "source": "Google News 生成AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T11:16:00+09:00",
-   "score": {
-    "note": 78,
-    "x": 82,
-    "youtube": 82,
+    "x": 73,
+    "youtube": 73,
     "brain": 60,
-    "monetize": 62,
-    "beginner": 66
+    "monetize": 60,
+    "beginner": 74
    },
    "stars": {
     "importance": 4,
-    "beginner": 3,
+    "beginner": 4,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "6b87b6047393",
-   "title": "ハーネス設計入門 〜 基礎知識の整理から実務へのステップアップ 〜",
-   "link": "https://speakerdeck.com/kinopeee/hanesu-sekkei-nyuumon-kiso-chishiki-no-seiri-kara-jitsumu-heno-suteppu-appu",
-   "summary": "Findy様主催のWebセミナー（2026/9/24）での登壇資料です。 https://findy.connpass.com/event/405902/",
-   "source": "はてブ テクノロジー人気",
+   "id": "3e72be44b5e9",
+   "title": "AIの出力が「使える」に変わる3日間 — 研修は教え方を半分にして回す",
+   "link": "https://zenn.dev/takumahayami/articles/eigyou-ai-oshiekata-3day",
+   "summary": "前回は、承認を待つ2週間で証拠を積む回し方を書きました（承認を待つ2週間で手を止めない）。2週間の記録を1行にまとめて申請書に追記し、「3名目以降は追加の準備工数なし」と書ける状態まで来ました。 いよいよ人数が増えます。そして、必ず聞こえてくるのがこの声です。 研修の時間が取れません。 前回予告したとおり、今回は導入の3つの壁のうち「時間がない」を外す話を書",
+   "source": "Zenn AI",
    "lang": "ja",
    "category": "news",
-   "published": "2026-09-24T14:23:52+09:00",
+   "published": "2026-09-24T22:00:24+09:00",
    "score": {
-    "note": 82,
-    "x": 72,
-    "youtube": 72,
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "b0615efddee0",
+   "title": "Jev の probability は何を保証するのか",
+   "link": "https://zenn.dev/jugyo/articles/b78bb0b8f73311",
+   "summary": "Jev は、判断結果とともに probability を返す decision model だ。Choice や Score では confidence も返す。TypeSafe は、これを calibrated な確率を返すモデルとして設計している。 ただ、高い probability が返ってきても、その判断に必要な根拠が揃っているとは限らない。 モデル",
+   "source": "Zenn AI",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-24T21:58:08+09:00",
+   "score": {
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
+    "brain": 60,
+    "monetize": 60,
+    "beginner": 74
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "24f4226ac7a1",
+   "title": "AIが起動した配信を止めた48回は、どの段だったか — 20段の内訳と、見張りの外で止まった11回",
+   "link": "https://qiita.com/BrainCommunity/items/e495cf0b8451003a899a",
+   "summary": "AIが起動した配信を止めた48回は、どの段だったか 当社のサイトは、AIに実装を任せています。本番へ出す手順は1本の「配信の通し」にまとめてあり、作る段・見張りの段・本番へ上げる段が順に並んでいます。1つでも落ちると、そこで止まり、本番には何も出ません。 前に書いた記事で...",
+   "source": "Qiita 生成AI",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T08:53:21+09:00",
+   "score": {
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
     "brain": 59,
     "monetize": 59,
     "beginner": 73
@@ -1155,21 +1059,69 @@
    }
   },
   {
-   "id": "350d676d4042",
-   "title": "台風25号で“地下神殿”また稼働 雨水が流れ込む動画公開 今年度7回目で過去最多に",
-   "link": "https://www.itmedia.co.jp/news/article/2609/24/2000001705/",
-   "summary": "国土交通省江戸川河川事務所は9月23日、台風25号の降雨に伴い「首都圏外郭放水路」（埼玉県春日部市）に雨水が流れ込む様子を撮影した動画を公式Xに投稿した。中川・綾瀬川流域の浸水被害を軽減するためのポンプ稼働は今年度7回目となり、施設完成後の年間稼働回数の記録を更新したという。 首都圏外郭放水路は、埼玉県...",
-   "source": "はてブ テクノロジー人気",
+   "id": "0000a9ef38d7",
+   "title": "はじめまして。AI初心者の私が、noteを始めます🍡",
+   "link": "https://note.com/omochi_1307/n/n9cf0944e6bc2",
+   "summary": "はじめまして、おもちです。今日からnoteを始めることにしました。理由は、「今の自分から、何かを変えてみたい」と思ったからです。私は、特別なスキルがあるわけでもありません。文章を書くのもプロではないし、SNSで大きな実績があるわけでもありません。でも最近、AIを使っていろいろなことができることを知って、「これ、私にも何かできるんじゃない？」と思うようになりま",
+   "source": "note AI hashtag",
    "lang": "ja",
    "category": "news",
-   "published": "2026-09-24T17:08:46+09:00",
+   "published": "2026-09-25T09:07:19+09:00",
    "score": {
-    "note": 78,
+    "note": 83,
+    "x": 73,
+    "youtube": 73,
+    "brain": 58,
+    "monetize": 58,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "3f5e98151ab2",
+   "title": "TechCrunch Disrupt 2026: Cal AI’s Zach Yadegari on how to create viral growth and capitalize on it",
+   "link": "https://techcrunch.com/2026/09/24/techcrunch-disrupt-2026-cal-ais-zach-yadegari-on-how-to-create-viral-growth-and-capitalize-on-it/",
+   "summary": "Zach Yadegari joins the Builders Stage at TechCrunch Disrupt 2026 to share how he capitalized on viral growth. Save up to $200 before September 25. Save 50% on a second pass.",
+   "source": "TechCrunch AI",
+   "lang": "en",
+   "category": "biz",
+   "published": "2026-09-24T23:30:00+09:00",
+   "score": {
+    "note": 79,
     "x": 82,
-    "youtube": 82,
-    "brain": 59,
-    "monetize": 61,
-    "beginner": 65
+    "youtube": 78,
+    "brain": 70,
+    "monetize": 73,
+    "beginner": 70
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "1513f6c7f944",
+   "title": "AI内製化、9割超が「停滞、頓挫」を経験 つまずく原因は“技術”ではなかった",
+   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/25/news049.html",
+   "summary": "TWOSTONE&amp;Sonsが、企業のAI内製化に関する実態調査の結果を公表。AI内製化の推進責任者の9割以上が競合との差に危機感を抱き、社内主導プロジェクトの停滞や頓挫を経験している実態が明らかとなった。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T08:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
    },
    "stars": {
     "importance": 4,
@@ -1179,14 +1131,134 @@
    }
   },
   {
-   "id": "62c32cb5c16b",
-   "title": "FluvixNexusを作るまで｜アプリ開発を始めたきっかけ",
-   "link": "https://note.com/piroc9254/n/n282941aed74b",
-   "summary": "前回のあらすじ前回は、MinecraftをきっかけにAIを使い始め、元祖MemoFlowを作り、自作コードエディタ「FluvixNexus」まで完成させた話を書いた。最初はAIの使い方も分からなかったけど、使いながら少しずつ自分なりの使い方を覚えていった。今回は少し時間を戻して、そもそもなぜFluvixNexusを作ろうと思ったのか、その前の話を書いていこう",
+   "id": "a41342ede3ea",
+   "title": "ソフトPLCがAIの「道具」に、簡単導入のPLCドラレコカメラも",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2609/25/news058.html",
+   "summary": "アイ・エル・シーは「産業オープンネット展2026」において、設備監視用ソリューションや組み込みソフトウェアPLCを紹介した。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T07:15:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "04cf19ad92dc",
+   "title": "AI同士が取引する時代、「相手は誰か」をどう確認する？ GMOが信頼基盤を実証",
+   "link": "https://kn.itmedia.co.jp/kn/article/2609/25/2000001724/",
+   "summary": "AIエージェントが企業の枠を超えて商品検索や発注、決済まで担う時代には、「誰が操作しているのか」「どこまで権限があるのか」を確認する仕組みが不可欠だ。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T07:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "ece83a9073bb",
+   "title": "ChatGPTやCopilotから直接翻訳 「DeepL」のMCP対応で多言語業務はどう変わる？",
+   "link": "https://kn.itmedia.co.jp/kn/article/2609/25/2000001723/",
+   "summary": "多言語を扱う業務では、翻訳のたびにAIと翻訳サービスを行き来する手間がある。DeepLはMCPに対応し、ChatGPTやMicrosoft Copilotなどから直接翻訳できる仕組みを提供する。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-25T07:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "e66534cd4683",
+   "title": "AIと人の共創で進化する「G-SHOCK」 デザイナーが語る製品化の舞台裏",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2609/25/news009.html",
+   "summary": "カシオ計算機は、G-SHOCKの「MTG-B4000」「GMW-BZ5000」のデザイン開発にAIを活用した。従来の発想を超えるスタイリングを、どのように製品へと落とし込んだのか。導入の背景や具体的な活用方法、設計部門との連携、デザイナーに求められる役割について、同社のGデザイン室長である赤城貴康氏に聞いた。",
+   "source": "ITmedia AI+",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T06:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 76,
+    "youtube": 76,
+    "brain": 62,
+    "monetize": 62,
+    "beginner": 68
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "6cad50147535",
+   "title": "Meta VR Glassesは長時間PC作業も疲れにくい、約100gの実力を体験",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2142661.html",
+   "summary": "重さ約100gでストラップ不要のグラス型VRデバイスを、実際に装着して試した。Metaは9月24日に開催された「Meta Connect 2026」にて、コードネーム「Project Phoenix」として噂されていた新型VRヘッドセット「Meta VR Glasses」を発表した。発売時期は2027年春で、価格は1,299.99ドル。日本での販売価格は現時",
+   "source": "PC Watch",
+   "lang": "ja",
+   "category": "biz",
+   "published": "2026-09-24T09:00:00+09:00",
+   "score": {
+    "note": 82,
+    "x": 77,
+    "youtube": 73,
+    "brain": 71,
+    "monetize": 71,
+    "beginner": 66
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 4,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "37040ca32654",
+   "title": "理想、ついに「キッチン」まで売り始める――クルマの価値を荷室の外へ拡張",
+   "link": "https://note.com/china_case/n/nf3c83ae5c120",
+   "summary": "［無料］中国の新エネルギー車（NEV）では、冷蔵庫、大型ディスプレイ、マッサージシート、車載ベッドなど、「走る」以外の機能が急速に増えてきた。その代表格である理想汽車（Li Auto）が、今度はとうとう「キッチン」まで売り始めた。続きをみる",
    "source": "note AI hashtag",
    "lang": "ja",
    "category": "tool",
-   "published": "2026-09-24T23:04:17+09:00",
+   "published": "2026-09-25T09:06:37+09:00",
    "score": {
     "note": 82,
     "x": 72,
@@ -1203,20 +1275,68 @@
    }
   },
   {
-   "id": "d24d1f45837b",
-   "title": "🔊音声あり（日＆英）：【AI×読書】あなた専用の脚注を作る！？最新トレンド論文を解説！【AIトレンドラジオ】",
-   "link": "https://note.com/3no_anisama/n/n1bdbc9ea4b34",
-   "summary": "続きをみる",
+   "id": "d697a16310c0",
+   "title": "☕AfDとは？他人事ではないドイツの今 ～ドミノ倒しで動く世界/前編～【AIと雑談中】🎧🎵",
+   "link": "https://note.com/tou_jugo_yawa/n/n03e1643d56ad",
+   "summary": "🦀Geminiと雑談中～ドミノ倒しで動く世界／前編～続きをみる",
+   "source": "note AI hashtag",
+   "lang": "ja",
+   "category": "model",
+   "published": "2026-09-25T09:06:03+09:00",
+   "score": {
+    "note": 82,
+    "x": 72,
+    "youtube": 72,
+    "brain": 58,
+    "monetize": 58,
+    "beginner": 72
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 4,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "8eaab5d62697",
+   "title": "生豆から深煎りまでの焙煎の進み方と、焙煎所が行う品質確認",
+   "link": "https://note.com/entertainment963/n/n12c4c9c994c5",
+   "summary": "出典: James Hoffmann https://www.youtube.com/watch?v=N6BJVM5tvnw 公開: 2023-06-05 / 約18分 / 211万回再生 話し手: James Hoffmann（チャンネル主。動画内で名乗りや肩書きの説明はない） 続きをみる",
    "source": "note AI hashtag",
    "lang": "ja",
    "category": "news",
-   "published": "2026-09-24T22:58:30+09:00",
+   "published": "2026-09-25T09:02:52+09:00",
    "score": {
-    "note": 82,
-    "x": 79,
-    "youtube": 75,
+    "note": 78,
+    "x": 82,
+    "youtube": 82,
     "brain": 58,
     "monetize": 60,
+    "beginner": 64
+   },
+   "stars": {
+    "importance": 4,
+    "beginner": 3,
+    "monetize": 3,
+    "buzz": 4
+   }
+  },
+  {
+   "id": "10575b1dfe75",
+   "title": "米国株ランキング分析・日本株今後おすすめ銘柄分析向け2026：2026/09/24",
+   "link": "https://note.com/investor_coockie/n/n0d68a8b940cb",
+   "summary": "米国株のランキング（セクター）を元に、今日上昇・下落の可能性がある日本株銘柄分析の参考情報を提供します。米国で上昇・下落セクターと、日本での各セクターの上下動が相関する研究を踏まえています。日本取引時間内の、日本株ETFでおすすめ上位銘柄や、2026年の今後の見通し、今後上がる・伸びる銘柄投資分析のために、米国時間推移とチャートを用い、分析をまとめます。Tr",
+   "source": "note AI hashtag",
+   "lang": "ja",
+   "category": "news",
+   "published": "2026-09-25T09:02:27+09:00",
+   "score": {
+    "note": 82,
+    "x": 72,
+    "youtube": 72,
+    "brain": 58,
+    "monetize": 58,
     "beginner": 72
    },
    "stars": {
@@ -1227,42 +1347,42 @@
    }
   },
   {
-   "id": "f6474b28908a",
-   "title": "Agentic conversational video intelligence built on AWS",
-   "link": "https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/",
-   "summary": "Learn how to build a conversational video intelligence solution on AWS using an agentic architecture. A single Strands Agents SDK agent orchestrates Amazon Bedrock, Amazon Rekognit",
-   "source": "AWS Machine Learning Blog",
+   "id": "3287c081a607",
+   "title": "TechCrunch Founder Summit 2026: Everything you need to know",
+   "link": "https://techcrunch.com/2026/09/24/techcrunch-founder-summit-2026-everything-you-need-to-know/",
+   "summary": "TechCrunch Founder Summit is a full-day gathering in Boston on November 4 where founders across all stages connect with top VCs and experienced entrepreneurs to gain tactical insig",
+   "source": "TechCrunch AI",
    "lang": "en",
-   "category": "vidgen",
-   "published": "2026-09-24T03:21:54+09:00",
+   "category": "news",
+   "published": "2026-09-25T01:46:47+09:00",
    "score": {
-    "note": 79,
-    "x": 78,
-    "youtube": 82,
-    "brain": 64,
-    "monetize": 64,
-    "beginner": 72
+    "note": 81,
+    "x": 75,
+    "youtube": 75,
+    "brain": 65,
+    "monetize": 62,
+    "beginner": 62
    },
    "stars": {
     "importance": 4,
-    "beginner": 4,
+    "beginner": 3,
     "monetize": 3,
     "buzz": 4
    }
   },
   {
-   "id": "481d22c85d84",
-   "title": "Smart glasses are already causing havoc in India",
-   "link": "https://www.technologyreview.com/2026/09/23/1144953/smart-glasses-havoc-india/",
-   "summary": "Shubnam was packing boxes for a move into a new home when their friend sent them an Instagram video. The footage had only been up for a few hours, but it was days old, recorded at ",
-   "source": "MIT Tech Review",
+   "id": "2a57b3289d72",
+   "title": "Meta is going to let you build games with AI right on your phone",
+   "link": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games",
+   "summary": "Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompt",
+   "source": "The Verge AI",
    "lang": "en",
-   "category": "vidgen",
-   "published": "2026-09-23T18:00:00+09:00",
+   "category": "tool",
+   "published": "2026-09-25T02:52:29+09:00",
    "score": {
-    "note": 71,
+    "note": 74,
     "x": 81,
-    "youtube": 81,
+    "youtube": 77,
     "brain": 61,
     "monetize": 63,
     "beginner": 61
@@ -1275,21 +1395,21 @@
    }
   },
   {
-   "id": "a866a64d220d",
-   "title": "AIの部下がAI？ 「AIオーケストレーション」って何だろう",
-   "link": "https://monoist.itmedia.co.jp/mn/articles/2609/24/news041.html",
-   "summary": "AIに指揮棒を振る、ってコト……!?",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T11:45:00+09:00",
+   "id": "a6bf4d3ac536",
+   "title": "Muse sure looks a lot like OpenClaw",
+   "link": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
+   "summary": "We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active user",
+   "source": "The Verge AI",
+   "lang": "en",
+   "category": "tool",
+   "published": "2026-09-25T02:10:38+09:00",
    "score": {
-    "note": 81,
-    "x": 75,
-    "youtube": 75,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 68
+    "note": 74,
+    "x": 81,
+    "youtube": 77,
+    "brain": 61,
+    "monetize": 63,
+    "beginner": 61
    },
    "stars": {
     "importance": 4,
@@ -1299,146 +1419,26 @@
    }
   },
   {
-   "id": "f3abf7d26e3e",
-   "title": "Google AIサブスクに「Colab」有料特典をバンドル 「高性能GPU」にアクセス可能に",
-   "link": "https://www.itmedia.co.jp/aiplus/article/2609/24/2000001685/",
-   "summary": "Googleは「Google AI」の各プランに、「Google Colab」の有料特典を組み込むと発表した。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "biz",
-   "published": "2026-09-24T09:47:12+09:00",
+   "id": "a5ba9a2340a5",
+   "title": "Gemini can now call businesses for you so you don’t have to wait on hold",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls",
+   "summary": "Google's launching an \"early experiment\" feature on Pixel 11 that lets users delegate local business calls to Gemini, like making a reservation, checking if a product is in stock, ",
+   "source": "The Verge AI",
+   "lang": "en",
+   "category": "model",
+   "published": "2026-09-25T01:04:31+09:00",
    "score": {
-    "note": 80,
+    "note": 74,
     "x": 81,
     "youtube": 77,
-    "brain": 70,
-    "monetize": 73,
-    "beginner": 68
+    "brain": 69,
+    "monetize": 72,
+    "beginner": 61
    },
    "stars": {
     "importance": 4,
     "beginner": 3,
     "monetize": 4,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "6702b78e995f",
-   "title": "「汎用AIにデータを渡すだけ」では専門業務をこなせない？ トムソン・ロイターが独自LLM「Thomson」を構築した理由",
-   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/24/news019.html",
-   "summary": "ロイター通信を傘下に持つThomson Reutersは、自社開発した大規模言語モデル「Thomson」を発表した。推論コストを抑えつつも、高い専門性と完全なデータ制御を実現したという。同社のアプローチに迫る。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "model",
-   "published": "2026-09-24T08:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 81,
-    "youtube": 77,
-    "brain": 62,
-    "monetize": 64,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "ec3ea1d13bf9",
-   "title": "AIを導入しても“組織的には使われない”のはなぜ？ 「個人利用」にとどまる理由と脱却策",
-   "link": "https://atmarkit.itmedia.co.jp/ait/articles/2609/24/news026.html",
-   "summary": "生成AIやAIエージェントの導入が進んでも、活用は個人の効率化にとどまり、組織としての活用が進まない実態が見えてきた。それはなぜなのか。こうした状況から脱却するには何が必要なのか。調査結果から探る。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "tool",
-   "published": "2026-09-24T08:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "75c976127e2a",
-   "title": "「Copilot案件」が急増、1年半で13倍に フリーランスに求められるニーズの変化",
-   "link": "https://kn.itmedia.co.jp/kn/article/2609/24/2000001632/",
-   "summary": "生成AIの活用が広がる中、企業のCopilot活用を支える人材への需要が変わり始めている。フリーランスジョブの案件データでは、Copilot関連案件が1年半で約13倍に増加した。",
-   "source": "ITmedia AI+",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T07:00:00+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 62,
-    "monetize": 62,
-    "beginner": 68
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "a056607b34ab",
-   "title": "AI駆動開発で「仕様をどこでどこまで維持するか」を考える",
-   "link": "https://zenn.dev/nenene01/articles/spec-first-anchored-as-source",
-   "summary": "はじめに AI生成でコードのコストが下がるほど、「どう実装するか」より「何を実装するかを正確に定義すること」の価値が高まりました。 そこで注目されているのが Spec-Driven Development（SDD：仕様駆動開発） かと思います。ただ、仕様を書いて終わりではありません。 その仕様を実装後も残すのか？ Birgitta BöckelerはSDDの",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "news",
-   "published": "2026-09-24T19:45:55+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
-    "buzz": 4
-   }
-  },
-  {
-   "id": "acaf640922d2",
-   "title": "Zennとnoteの執筆をCLI×AIで半自動化する環境を作ってみた話（試行錯誤中・アドバイス求む）",
-   "link": "https://zenn.dev/zundokobaum/articles/2026-09-24_creator_workflow",
-   "summary": "はじめに 一応、普段はSEと呼ばれる仕事をしているものの、業務のほとんどがいわゆるレガシーシステム相手。最近の技術に追いつけていない焦りを感じていた今日この頃、生成AIを使って個人開発を始めてみることにしました。 ……というちゃんとした理由は実は半分で、以前からプログラミングは結構好きな方なので、単純に今一番楽しんでできる趣味、というところも半分といった感じ",
-   "source": "Zenn AI",
-   "lang": "ja",
-   "category": "tool",
-   "published": "2026-09-24T19:29:29+09:00",
-   "score": {
-    "note": 80,
-    "x": 77,
-    "youtube": 81,
-    "brain": 60,
-    "monetize": 60,
-    "beginner": 66
-   },
-   "stars": {
-    "importance": 4,
-    "beginner": 3,
-    "monetize": 3,
     "buzz": 4
    }
   }
